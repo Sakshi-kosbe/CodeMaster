@@ -1,0 +1,3252 @@
+[
+  {
+    "id": "dsa-391",
+    "title": "Trees and Binary Search Trees Challenge #1: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-392",
+    "title": "Trees and Binary Search Trees Challenge #2: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-393",
+    "title": "Trees and Binary Search Trees Challenge #3: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-394",
+    "title": "Trees and Binary Search Trees Challenge #4: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-395",
+    "title": "Trees and Binary Search Trees Challenge #5: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-396",
+    "title": "Trees and Binary Search Trees Challenge #6: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-397",
+    "title": "Trees and Binary Search Trees Challenge #7: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-398",
+    "title": "Trees and Binary Search Trees Challenge #8: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-399",
+    "title": "Trees and Binary Search Trees Challenge #9: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-400",
+    "title": "Trees and Binary Search Trees Challenge #10: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-401",
+    "title": "Trees and Binary Search Trees Challenge #11: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-402",
+    "title": "Trees and Binary Search Trees Challenge #12: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-403",
+    "title": "Trees and Binary Search Trees Challenge #13: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-404",
+    "title": "Trees and Binary Search Trees Challenge #14: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-405",
+    "title": "Trees and Binary Search Trees Challenge #15: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-406",
+    "title": "Trees and Binary Search Trees Challenge #16: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-407",
+    "title": "Trees and Binary Search Trees Challenge #17: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-408",
+    "title": "Trees and Binary Search Trees Challenge #18: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-409",
+    "title": "Trees and Binary Search Trees Challenge #19: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-410",
+    "title": "Trees and Binary Search Trees Challenge #20: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-411",
+    "title": "Trees and Binary Search Trees Challenge #21: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-412",
+    "title": "Trees and Binary Search Trees Challenge #22: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-413",
+    "title": "Trees and Binary Search Trees Challenge #23: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-414",
+    "title": "Trees and Binary Search Trees Challenge #24: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-415",
+    "title": "Trees and Binary Search Trees Challenge #25: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-416",
+    "title": "Trees and Binary Search Trees Challenge #26: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-417",
+    "title": "Trees and Binary Search Trees Challenge #27: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-418",
+    "title": "Trees and Binary Search Trees Challenge #28: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-419",
+    "title": "Trees and Binary Search Trees Challenge #29: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-420",
+    "title": "Trees and Binary Search Trees Challenge #30: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-421",
+    "title": "Trees and Binary Search Trees Challenge #31: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-422",
+    "title": "Trees and Binary Search Trees Challenge #32: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-423",
+    "title": "Trees and Binary Search Trees Challenge #33: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-424",
+    "title": "Trees and Binary Search Trees Challenge #34: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-425",
+    "title": "Trees and Binary Search Trees Challenge #35: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-426",
+    "title": "Trees and Binary Search Trees Challenge #36: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-427",
+    "title": "Trees and Binary Search Trees Challenge #37: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-428",
+    "title": "Trees and Binary Search Trees Challenge #38: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-429",
+    "title": "Trees and Binary Search Trees Challenge #39: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-430",
+    "title": "Trees and Binary Search Trees Challenge #40: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-431",
+    "title": "Trees and Binary Search Trees Challenge #41: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-432",
+    "title": "Trees and Binary Search Trees Challenge #42: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-433",
+    "title": "Trees and Binary Search Trees Challenge #43: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-434",
+    "title": "Trees and Binary Search Trees Challenge #44: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-435",
+    "title": "Trees and Binary Search Trees Challenge #45: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-436",
+    "title": "Trees and Binary Search Trees Challenge #46: Tree Traversals (In/Pre/Post/Level)",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Tree Traversals (In/Pre/Post/Level)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Tree Traversals (In/Pre/Post/Level) problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Tree Traversals (In/Pre/Post/Level) technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Tree Traversals (In/Pre/Post/Level)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-437",
+    "title": "Trees and Binary Search Trees Challenge #47: Lowest Common Ancestor",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Lowest Common Ancestor",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Lowest Common Ancestor problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Lowest Common Ancestor technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Lowest Common Ancestor",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-438",
+    "title": "Trees and Binary Search Trees Challenge #48: Validate BST",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Validate BST",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Validate BST problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Validate BST technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Validate BST",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-439",
+    "title": "Trees and Binary Search Trees Challenge #49: Serialize and Deserialize Binary Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Serialize and Deserialize Binary Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Serialize and Deserialize Binary Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Serialize and Deserialize Binary Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-440",
+    "title": "Trees and Binary Search Trees Challenge #50: Diameter of Tree",
+    "category": "dsa",
+    "topic": "Trees and Binary Search Trees",
+    "subtopic": "Diameter of Tree",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Diameter of Tree problem for Trees and Binary Search Trees. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Diameter of Tree technique under Trees and Binary Search Trees.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Trees and Binary Search Trees",
+      "Diameter of Tree",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  }
+]

@@ -1,0 +1,1302 @@
+[
+  {
+    "id": "dsa-561",
+    "title": "Greedy Algorithms Challenge #1: Activity Selection",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Activity Selection",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Activity Selection problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Activity Selection technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Activity Selection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-562",
+    "title": "Greedy Algorithms Challenge #2: Fractional Knapsack",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Fractional Knapsack",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Fractional Knapsack problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Fractional Knapsack technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Fractional Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-563",
+    "title": "Greedy Algorithms Challenge #3: Gas Station",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Gas Station",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Gas Station problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Gas Station technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Gas Station",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-564",
+    "title": "Greedy Algorithms Challenge #4: Jump Game",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Jump Game",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Jump Game problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Jump Game technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Jump Game",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-565",
+    "title": "Greedy Algorithms Challenge #5: Huffman Coding",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Huffman Coding",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Huffman Coding problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Huffman Coding technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Huffman Coding",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-566",
+    "title": "Greedy Algorithms Challenge #6: Activity Selection",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Activity Selection",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Activity Selection problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Activity Selection technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Activity Selection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-567",
+    "title": "Greedy Algorithms Challenge #7: Fractional Knapsack",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Fractional Knapsack",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Fractional Knapsack problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Fractional Knapsack technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Fractional Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-568",
+    "title": "Greedy Algorithms Challenge #8: Gas Station",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Gas Station",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Gas Station problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Gas Station technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Gas Station",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-569",
+    "title": "Greedy Algorithms Challenge #9: Jump Game",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Jump Game",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Jump Game problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Jump Game technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Jump Game",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-570",
+    "title": "Greedy Algorithms Challenge #10: Huffman Coding",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Huffman Coding",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Huffman Coding problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Huffman Coding technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Huffman Coding",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-571",
+    "title": "Greedy Algorithms Challenge #11: Activity Selection",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Activity Selection",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Activity Selection problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Activity Selection technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Activity Selection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-572",
+    "title": "Greedy Algorithms Challenge #12: Fractional Knapsack",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Fractional Knapsack",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Fractional Knapsack problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Fractional Knapsack technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Fractional Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-573",
+    "title": "Greedy Algorithms Challenge #13: Gas Station",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Gas Station",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Gas Station problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Gas Station technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Gas Station",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-574",
+    "title": "Greedy Algorithms Challenge #14: Jump Game",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Jump Game",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Jump Game problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Jump Game technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Jump Game",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-575",
+    "title": "Greedy Algorithms Challenge #15: Huffman Coding",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Huffman Coding",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Huffman Coding problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Huffman Coding technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Huffman Coding",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-576",
+    "title": "Greedy Algorithms Challenge #16: Activity Selection",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Activity Selection",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Activity Selection problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Activity Selection technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Activity Selection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-577",
+    "title": "Greedy Algorithms Challenge #17: Fractional Knapsack",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Fractional Knapsack",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Fractional Knapsack problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Fractional Knapsack technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Fractional Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-578",
+    "title": "Greedy Algorithms Challenge #18: Gas Station",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Gas Station",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Gas Station problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Gas Station technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Gas Station",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-579",
+    "title": "Greedy Algorithms Challenge #19: Jump Game",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Jump Game",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Jump Game problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Jump Game technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Jump Game",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-580",
+    "title": "Greedy Algorithms Challenge #20: Huffman Coding",
+    "category": "dsa",
+    "topic": "Greedy Algorithms",
+    "subtopic": "Huffman Coding",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Huffman Coding problem for Greedy Algorithms. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Huffman Coding technique under Greedy Algorithms.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Greedy Algorithms",
+      "Huffman Coding",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  }
+]

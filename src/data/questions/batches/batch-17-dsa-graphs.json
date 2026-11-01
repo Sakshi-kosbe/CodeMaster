@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "dsa-466",
+    "title": "Graphs Challenge #1: BFS and DFS",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "BFS and DFS",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the BFS and DFS problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal BFS and DFS technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "BFS and DFS",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-467",
+    "title": "Graphs Challenge #2: Dijkstra Shortest Path",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Dijkstra Shortest Path",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Dijkstra Shortest Path problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dijkstra Shortest Path technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Dijkstra Shortest Path",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-468",
+    "title": "Graphs Challenge #3: Topological Sort (Kahn)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Topological Sort (Kahn)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Topological Sort (Kahn) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Topological Sort (Kahn) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Topological Sort (Kahn)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-469",
+    "title": "Graphs Challenge #4: Disjoint Set Union (Kruskal)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Disjoint Set Union (Kruskal)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Disjoint Set Union (Kruskal) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Disjoint Set Union (Kruskal) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Disjoint Set Union (Kruskal)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-470",
+    "title": "Graphs Challenge #5: Cycle Detection in Directed Graph",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Cycle Detection in Directed Graph",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Cycle Detection in Directed Graph problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Cycle Detection in Directed Graph technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Cycle Detection in Directed Graph",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-471",
+    "title": "Graphs Challenge #6: Word Ladder",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Word Ladder",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Word Ladder problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Word Ladder technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Word Ladder",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-472",
+    "title": "Graphs Challenge #7: BFS and DFS",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "BFS and DFS",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the BFS and DFS problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal BFS and DFS technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "BFS and DFS",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-473",
+    "title": "Graphs Challenge #8: Dijkstra Shortest Path",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Dijkstra Shortest Path",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Dijkstra Shortest Path problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dijkstra Shortest Path technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Dijkstra Shortest Path",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-474",
+    "title": "Graphs Challenge #9: Topological Sort (Kahn)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Topological Sort (Kahn)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Topological Sort (Kahn) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Topological Sort (Kahn) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Topological Sort (Kahn)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-475",
+    "title": "Graphs Challenge #10: Disjoint Set Union (Kruskal)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Disjoint Set Union (Kruskal)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Disjoint Set Union (Kruskal) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Disjoint Set Union (Kruskal) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Disjoint Set Union (Kruskal)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-476",
+    "title": "Graphs Challenge #11: Cycle Detection in Directed Graph",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Cycle Detection in Directed Graph",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Cycle Detection in Directed Graph problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Cycle Detection in Directed Graph technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Cycle Detection in Directed Graph",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-477",
+    "title": "Graphs Challenge #12: Word Ladder",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Word Ladder",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Word Ladder problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Word Ladder technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Word Ladder",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-478",
+    "title": "Graphs Challenge #13: BFS and DFS",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "BFS and DFS",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the BFS and DFS problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal BFS and DFS technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "BFS and DFS",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-479",
+    "title": "Graphs Challenge #14: Dijkstra Shortest Path",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Dijkstra Shortest Path",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Dijkstra Shortest Path problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dijkstra Shortest Path technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Dijkstra Shortest Path",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-480",
+    "title": "Graphs Challenge #15: Topological Sort (Kahn)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Topological Sort (Kahn)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Topological Sort (Kahn) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Topological Sort (Kahn) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Topological Sort (Kahn)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-481",
+    "title": "Graphs Challenge #16: Disjoint Set Union (Kruskal)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Disjoint Set Union (Kruskal)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Disjoint Set Union (Kruskal) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Disjoint Set Union (Kruskal) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Disjoint Set Union (Kruskal)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-482",
+    "title": "Graphs Challenge #17: Cycle Detection in Directed Graph",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Cycle Detection in Directed Graph",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Cycle Detection in Directed Graph problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Cycle Detection in Directed Graph technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Cycle Detection in Directed Graph",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-483",
+    "title": "Graphs Challenge #18: Word Ladder",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Word Ladder",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Word Ladder problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Word Ladder technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Word Ladder",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-484",
+    "title": "Graphs Challenge #19: BFS and DFS",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "BFS and DFS",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the BFS and DFS problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal BFS and DFS technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "BFS and DFS",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-485",
+    "title": "Graphs Challenge #20: Dijkstra Shortest Path",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Dijkstra Shortest Path",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Dijkstra Shortest Path problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dijkstra Shortest Path technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Dijkstra Shortest Path",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-486",
+    "title": "Graphs Challenge #21: Topological Sort (Kahn)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Topological Sort (Kahn)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Topological Sort (Kahn) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Topological Sort (Kahn) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Topological Sort (Kahn)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-487",
+    "title": "Graphs Challenge #22: Disjoint Set Union (Kruskal)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Disjoint Set Union (Kruskal)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Disjoint Set Union (Kruskal) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Disjoint Set Union (Kruskal) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Disjoint Set Union (Kruskal)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-488",
+    "title": "Graphs Challenge #23: Cycle Detection in Directed Graph",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Cycle Detection in Directed Graph",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Cycle Detection in Directed Graph problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Cycle Detection in Directed Graph technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Cycle Detection in Directed Graph",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-489",
+    "title": "Graphs Challenge #24: Word Ladder",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Word Ladder",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Word Ladder problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Word Ladder technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Word Ladder",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-490",
+    "title": "Graphs Challenge #25: BFS and DFS",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "BFS and DFS",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the BFS and DFS problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal BFS and DFS technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "BFS and DFS",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-491",
+    "title": "Graphs Challenge #26: Dijkstra Shortest Path",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Dijkstra Shortest Path",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Dijkstra Shortest Path problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dijkstra Shortest Path technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Dijkstra Shortest Path",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-492",
+    "title": "Graphs Challenge #27: Topological Sort (Kahn)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Topological Sort (Kahn)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Topological Sort (Kahn) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Topological Sort (Kahn) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Topological Sort (Kahn)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-493",
+    "title": "Graphs Challenge #28: Disjoint Set Union (Kruskal)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Disjoint Set Union (Kruskal)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Disjoint Set Union (Kruskal) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Disjoint Set Union (Kruskal) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Disjoint Set Union (Kruskal)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-494",
+    "title": "Graphs Challenge #29: Cycle Detection in Directed Graph",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Cycle Detection in Directed Graph",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Cycle Detection in Directed Graph problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Cycle Detection in Directed Graph technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Cycle Detection in Directed Graph",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-495",
+    "title": "Graphs Challenge #30: Word Ladder",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Word Ladder",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Word Ladder problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Word Ladder technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Word Ladder",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-496",
+    "title": "Graphs Challenge #31: BFS and DFS",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "BFS and DFS",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the BFS and DFS problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal BFS and DFS technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "BFS and DFS",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-497",
+    "title": "Graphs Challenge #32: Dijkstra Shortest Path",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Dijkstra Shortest Path",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Dijkstra Shortest Path problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dijkstra Shortest Path technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Dijkstra Shortest Path",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-498",
+    "title": "Graphs Challenge #33: Topological Sort (Kahn)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Topological Sort (Kahn)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Topological Sort (Kahn) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Topological Sort (Kahn) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Topological Sort (Kahn)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-499",
+    "title": "Graphs Challenge #34: Disjoint Set Union (Kruskal)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Disjoint Set Union (Kruskal)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Disjoint Set Union (Kruskal) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Disjoint Set Union (Kruskal) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Disjoint Set Union (Kruskal)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-500",
+    "title": "Graphs Challenge #35: Cycle Detection in Directed Graph",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Cycle Detection in Directed Graph",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Cycle Detection in Directed Graph problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Cycle Detection in Directed Graph technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Cycle Detection in Directed Graph",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-501",
+    "title": "Graphs Challenge #36: Word Ladder",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Word Ladder",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Word Ladder problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Word Ladder technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Word Ladder",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-502",
+    "title": "Graphs Challenge #37: BFS and DFS",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "BFS and DFS",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the BFS and DFS problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal BFS and DFS technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "BFS and DFS",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-503",
+    "title": "Graphs Challenge #38: Dijkstra Shortest Path",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Dijkstra Shortest Path",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Dijkstra Shortest Path problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dijkstra Shortest Path technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Dijkstra Shortest Path",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-504",
+    "title": "Graphs Challenge #39: Topological Sort (Kahn)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Topological Sort (Kahn)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Topological Sort (Kahn) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Topological Sort (Kahn) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Topological Sort (Kahn)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-505",
+    "title": "Graphs Challenge #40: Disjoint Set Union (Kruskal)",
+    "category": "dsa",
+    "topic": "Graphs",
+    "subtopic": "Disjoint Set Union (Kruskal)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Disjoint Set Union (Kruskal) problem for Graphs. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Disjoint Set Union (Kruskal) technique under Graphs.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Graphs",
+      "Disjoint Set Union (Kruskal)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  }
+]

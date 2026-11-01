@@ -1,0 +1,1962 @@
+[
+  {
+    "id": "py-261",
+    "title": "Python Interview Tracing #261: Output Prediction & Scoping",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Output Prediction & Scoping",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Output Prediction & Scoping",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-262",
+    "title": "Mutable Default Argument Trap #262",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Mutable Default Arguments",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Mutable Default Arguments",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-263",
+    "title": "Identity (is) vs Equality (==) Mechanics #263",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Identity vs Equality",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Identity vs Equality",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-264",
+    "title": "Python Interview Tracing #264: Global Interpreter Lock (GIL)",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Global Interpreter Lock (GIL)",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Global Interpreter Lock (GIL)",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-265",
+    "title": "Mutable Default Argument Trap #265",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Shallow Copy vs Deep Copy",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Shallow Copy vs Deep Copy",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-266",
+    "title": "Identity (is) vs Equality (==) Mechanics #266",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Pass by Object Reference",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Pass by Object Reference",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-267",
+    "title": "Python Interview Tracing #267: Output Prediction & Scoping",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Output Prediction & Scoping",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Output Prediction & Scoping",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-268",
+    "title": "Mutable Default Argument Trap #268",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Mutable Default Arguments",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Mutable Default Arguments",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-269",
+    "title": "Identity (is) vs Equality (==) Mechanics #269",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Identity vs Equality",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Identity vs Equality",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-270",
+    "title": "Python Interview Tracing #270: Global Interpreter Lock (GIL)",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Global Interpreter Lock (GIL)",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Global Interpreter Lock (GIL)",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-271",
+    "title": "Mutable Default Argument Trap #271",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Shallow Copy vs Deep Copy",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Shallow Copy vs Deep Copy",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-272",
+    "title": "Identity (is) vs Equality (==) Mechanics #272",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Pass by Object Reference",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Pass by Object Reference",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-273",
+    "title": "Python Interview Tracing #273: Output Prediction & Scoping",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Output Prediction & Scoping",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Output Prediction & Scoping",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-274",
+    "title": "Mutable Default Argument Trap #274",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Mutable Default Arguments",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Mutable Default Arguments",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-275",
+    "title": "Identity (is) vs Equality (==) Mechanics #275",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Identity vs Equality",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Identity vs Equality",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-276",
+    "title": "Python Interview Tracing #276: Global Interpreter Lock (GIL)",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Global Interpreter Lock (GIL)",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Global Interpreter Lock (GIL)",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-277",
+    "title": "Mutable Default Argument Trap #277",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Shallow Copy vs Deep Copy",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Shallow Copy vs Deep Copy",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-278",
+    "title": "Identity (is) vs Equality (==) Mechanics #278",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Pass by Object Reference",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Pass by Object Reference",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-279",
+    "title": "Python Interview Tracing #279: Output Prediction & Scoping",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Output Prediction & Scoping",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Output Prediction & Scoping",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-280",
+    "title": "Mutable Default Argument Trap #280",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Mutable Default Arguments",
+    "difficulty": "Medium",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Mutable Default Arguments",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-281",
+    "title": "Identity (is) vs Equality (==) Mechanics #281",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Identity vs Equality",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Identity vs Equality",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-282",
+    "title": "Python Interview Tracing #282: Global Interpreter Lock (GIL)",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Global Interpreter Lock (GIL)",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Global Interpreter Lock (GIL)",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-283",
+    "title": "Mutable Default Argument Trap #283",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Shallow Copy vs Deep Copy",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Shallow Copy vs Deep Copy",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-284",
+    "title": "Identity (is) vs Equality (==) Mechanics #284",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Pass by Object Reference",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Pass by Object Reference",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-285",
+    "title": "Python Interview Tracing #285: Output Prediction & Scoping",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Output Prediction & Scoping",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Output Prediction & Scoping",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-286",
+    "title": "Mutable Default Argument Trap #286",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Mutable Default Arguments",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Mutable Default Arguments",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-287",
+    "title": "Identity (is) vs Equality (==) Mechanics #287",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Identity vs Equality",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Identity vs Equality",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-288",
+    "title": "Python Interview Tracing #288: Global Interpreter Lock (GIL)",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Global Interpreter Lock (GIL)",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Global Interpreter Lock (GIL)",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-289",
+    "title": "Mutable Default Argument Trap #289",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Shallow Copy vs Deep Copy",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Shallow Copy vs Deep Copy",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-290",
+    "title": "Identity (is) vs Equality (==) Mechanics #290",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Pass by Object Reference",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Pass by Object Reference",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-291",
+    "title": "Python Interview Tracing #291: Output Prediction & Scoping",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Output Prediction & Scoping",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Output Prediction & Scoping",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-292",
+    "title": "Mutable Default Argument Trap #292",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Mutable Default Arguments",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Mutable Default Arguments",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-293",
+    "title": "Identity (is) vs Equality (==) Mechanics #293",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Identity vs Equality",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Identity vs Equality",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-294",
+    "title": "Python Interview Tracing #294: Global Interpreter Lock (GIL)",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Global Interpreter Lock (GIL)",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Global Interpreter Lock (GIL)",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-295",
+    "title": "Mutable Default Argument Trap #295",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Shallow Copy vs Deep Copy",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Shallow Copy vs Deep Copy",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-296",
+    "title": "Identity (is) vs Equality (==) Mechanics #296",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Pass by Object Reference",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Pass by Object Reference",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-297",
+    "title": "Python Interview Tracing #297: Output Prediction & Scoping",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Output Prediction & Scoping",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Output Prediction & Scoping",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-298",
+    "title": "Mutable Default Argument Trap #298",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Mutable Default Arguments",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is printed by this code?\n```python\ndef append_to(num, target=[]):\n    target.append(num)\n    return target\n\na = append_to(1)\nb = append_to(2)\nprint(a, b)\n```",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[1, 2] [1, 2]",
+        "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[1, 2] [1, 2]",
+    "testCases": [],
+    "explanation": "Default argument expressions are evaluated once when the function is defined, sharing the list across calls.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Mutable Default Arguments",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[1] [2]",
+      "[1, 2] [1, 2]",
+      "[1] [1, 2]",
+      "SyntaxError"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-299",
+    "title": "Identity (is) vs Equality (==) Mechanics #299",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Identity vs Equality",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What does `x = [1, 2]; y = [1, 2]; print((x == y), (x is y))` print?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "True False",
+        "explanation": "== checks value equality (True), whereas is checks memory address identity (False)."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "True False",
+    "testCases": [],
+    "explanation": "== checks value equality (True), whereas is checks memory address identity (False).",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Identity vs Equality",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "True True",
+      "True False",
+      "False True",
+      "False False"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": "py-300",
+    "title": "Python Interview Tracing #300: Global Interpreter Lock (GIL)",
+    "category": "python",
+    "topic": "Python Interview Questions",
+    "subtopic": "Global Interpreter Lock (GIL)",
+    "difficulty": "Hard",
+    "relevance": "Staff/Senior Python Interview Rounds",
+    "type": "conceptual",
+    "statement": "What is the output of the following Python code snippet?\n```python\ndef multipliers():\n    return [lambda x: i * x for i in range(4)]\nprint([m(2) for m in multipliers()])\n```\nChoose the exact output:",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CPython 3.10+ execution model"
+    ],
+    "examples": [
+      {
+        "input": "Evaluate snippet",
+        "output": "[6, 6, 6, 6]",
+        "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6."
+      }
+    ],
+    "starterCode": "# Select answer in UI",
+    "solution": "[6, 6, 6, 6]",
+    "testCases": [],
+    "explanation": "In Python closures, variable i uses late binding. By the time the lambdas execute, i is 3, resulting in 3 * 2 = 6.",
+    "algorithm": [
+      "Trace lexical bindings.",
+      "Evaluate namespace transitions."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Global Interpreter Lock (GIL)",
+      "CPython execution model",
+      "LEGB rule"
+    ],
+    "commonMistakes": [
+      "Confusing == with is.",
+      "Assuming closures capture loop variables by value."
+    ],
+    "conceptualOptions": [
+      "[0, 2, 4, 6]",
+      "[6, 6, 6, 6]",
+      "[0, 0, 0, 0]",
+      "TypeError"
+    ],
+    "correctOptionIndex": 1
+  }
+]

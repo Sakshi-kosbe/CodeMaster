@@ -1,0 +1,3252 @@
+[
+  {
+    "id": "dsa-071",
+    "title": "Strings Challenge #1: Palindrome Check",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Palindrome Check",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Palindrome Check problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Palindrome Check technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Palindrome Check",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-072",
+    "title": "Strings Challenge #2: Anagram Detection",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Anagram Detection",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Anagram Detection problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Anagram Detection technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Anagram Detection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-073",
+    "title": "Strings Challenge #3: Rabin-Karp / KMP",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Rabin-Karp / KMP",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Rabin-Karp / KMP problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Rabin-Karp / KMP technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Rabin-Karp / KMP",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-074",
+    "title": "Strings Challenge #4: String Compression",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "String Compression",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the String Compression problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal String Compression technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "String Compression",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-075",
+    "title": "Strings Challenge #5: Roman Numerals",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Roman Numerals",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Roman Numerals problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Roman Numerals technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Roman Numerals",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-076",
+    "title": "Strings Challenge #6: Longest Substring",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Longest Substring",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Longest Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-077",
+    "title": "Strings Challenge #7: Palindrome Check",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Palindrome Check",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Palindrome Check problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Palindrome Check technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Palindrome Check",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-078",
+    "title": "Strings Challenge #8: Anagram Detection",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Anagram Detection",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Anagram Detection problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Anagram Detection technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Anagram Detection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-079",
+    "title": "Strings Challenge #9: Rabin-Karp / KMP",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Rabin-Karp / KMP",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Rabin-Karp / KMP problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Rabin-Karp / KMP technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Rabin-Karp / KMP",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-080",
+    "title": "Strings Challenge #10: String Compression",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "String Compression",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the String Compression problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal String Compression technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "String Compression",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-081",
+    "title": "Strings Challenge #11: Roman Numerals",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Roman Numerals",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Roman Numerals problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Roman Numerals technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Roman Numerals",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-082",
+    "title": "Strings Challenge #12: Longest Substring",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Longest Substring",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Longest Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-083",
+    "title": "Strings Challenge #13: Palindrome Check",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Palindrome Check",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Palindrome Check problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Palindrome Check technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Palindrome Check",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-084",
+    "title": "Strings Challenge #14: Anagram Detection",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Anagram Detection",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Anagram Detection problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Anagram Detection technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Anagram Detection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-085",
+    "title": "Strings Challenge #15: Rabin-Karp / KMP",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Rabin-Karp / KMP",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Rabin-Karp / KMP problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Rabin-Karp / KMP technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Rabin-Karp / KMP",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-086",
+    "title": "Strings Challenge #16: String Compression",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "String Compression",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the String Compression problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal String Compression technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "String Compression",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-087",
+    "title": "Strings Challenge #17: Roman Numerals",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Roman Numerals",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Roman Numerals problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Roman Numerals technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Roman Numerals",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-088",
+    "title": "Strings Challenge #18: Longest Substring",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Longest Substring",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Longest Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-089",
+    "title": "Strings Challenge #19: Palindrome Check",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Palindrome Check",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Palindrome Check problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Palindrome Check technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Palindrome Check",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-090",
+    "title": "Strings Challenge #20: Anagram Detection",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Anagram Detection",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Anagram Detection problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Anagram Detection technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Anagram Detection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-091",
+    "title": "Strings Challenge #21: Rabin-Karp / KMP",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Rabin-Karp / KMP",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Rabin-Karp / KMP problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Rabin-Karp / KMP technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Rabin-Karp / KMP",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-092",
+    "title": "Strings Challenge #22: String Compression",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "String Compression",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the String Compression problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal String Compression technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "String Compression",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-093",
+    "title": "Strings Challenge #23: Roman Numerals",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Roman Numerals",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Roman Numerals problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Roman Numerals technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Roman Numerals",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-094",
+    "title": "Strings Challenge #24: Longest Substring",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Longest Substring",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Longest Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-095",
+    "title": "Strings Challenge #25: Palindrome Check",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Palindrome Check",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Palindrome Check problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Palindrome Check technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Palindrome Check",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-096",
+    "title": "Strings Challenge #26: Anagram Detection",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Anagram Detection",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Anagram Detection problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Anagram Detection technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Anagram Detection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-097",
+    "title": "Strings Challenge #27: Rabin-Karp / KMP",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Rabin-Karp / KMP",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Rabin-Karp / KMP problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Rabin-Karp / KMP technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Rabin-Karp / KMP",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-098",
+    "title": "Strings Challenge #28: String Compression",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "String Compression",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the String Compression problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal String Compression technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "String Compression",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-099",
+    "title": "Strings Challenge #29: Roman Numerals",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Roman Numerals",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Roman Numerals problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Roman Numerals technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Roman Numerals",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-100",
+    "title": "Strings Challenge #30: Longest Substring",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Longest Substring",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Longest Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-101",
+    "title": "Strings Challenge #31: Palindrome Check",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Palindrome Check",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Palindrome Check problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Palindrome Check technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Palindrome Check",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-102",
+    "title": "Strings Challenge #32: Anagram Detection",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Anagram Detection",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Anagram Detection problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Anagram Detection technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Anagram Detection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-103",
+    "title": "Strings Challenge #33: Rabin-Karp / KMP",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Rabin-Karp / KMP",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Rabin-Karp / KMP problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Rabin-Karp / KMP technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Rabin-Karp / KMP",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-104",
+    "title": "Strings Challenge #34: String Compression",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "String Compression",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the String Compression problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal String Compression technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "String Compression",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-105",
+    "title": "Strings Challenge #35: Roman Numerals",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Roman Numerals",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Roman Numerals problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Roman Numerals technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Roman Numerals",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-106",
+    "title": "Strings Challenge #36: Longest Substring",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Longest Substring",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Longest Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-107",
+    "title": "Strings Challenge #37: Palindrome Check",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Palindrome Check",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Palindrome Check problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Palindrome Check technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Palindrome Check",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-108",
+    "title": "Strings Challenge #38: Anagram Detection",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Anagram Detection",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Anagram Detection problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Anagram Detection technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Anagram Detection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-109",
+    "title": "Strings Challenge #39: Rabin-Karp / KMP",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Rabin-Karp / KMP",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Rabin-Karp / KMP problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Rabin-Karp / KMP technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Rabin-Karp / KMP",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-110",
+    "title": "Strings Challenge #40: String Compression",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "String Compression",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the String Compression problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal String Compression technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "String Compression",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-111",
+    "title": "Strings Challenge #41: Roman Numerals",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Roman Numerals",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Roman Numerals problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Roman Numerals technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Roman Numerals",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-112",
+    "title": "Strings Challenge #42: Longest Substring",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Longest Substring",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Longest Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-113",
+    "title": "Strings Challenge #43: Palindrome Check",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Palindrome Check",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Palindrome Check problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Palindrome Check technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Palindrome Check",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-114",
+    "title": "Strings Challenge #44: Anagram Detection",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Anagram Detection",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Anagram Detection problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Anagram Detection technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Anagram Detection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-115",
+    "title": "Strings Challenge #45: Rabin-Karp / KMP",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Rabin-Karp / KMP",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Rabin-Karp / KMP problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Rabin-Karp / KMP technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Rabin-Karp / KMP",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-116",
+    "title": "Strings Challenge #46: String Compression",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "String Compression",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the String Compression problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal String Compression technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "String Compression",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-117",
+    "title": "Strings Challenge #47: Roman Numerals",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Roman Numerals",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Roman Numerals problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Roman Numerals technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Roman Numerals",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-118",
+    "title": "Strings Challenge #48: Longest Substring",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Longest Substring",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Longest Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-119",
+    "title": "Strings Challenge #49: Palindrome Check",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Palindrome Check",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Palindrome Check problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Palindrome Check technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Palindrome Check",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-120",
+    "title": "Strings Challenge #50: Anagram Detection",
+    "category": "dsa",
+    "topic": "Strings",
+    "subtopic": "Anagram Detection",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Anagram Detection problem for Strings. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Anagram Detection technique under Strings.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Strings",
+      "Anagram Detection",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  }
+]

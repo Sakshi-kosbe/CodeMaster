@@ -1,0 +1,5042 @@
+[
+  {
+    "id": "py-071",
+    "title": "Find Frequency Count of Elements",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a list of integers `nums`, return a dictionary mapping each distinct element to its occurrence count.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 2, 3, 1, 4]",
+        "output": "{1: 2, 2: 2, 3: 1, 4: 1}"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "{5: 3}"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> dict:\n    pass",
+    "solution": "def solve(nums: list) -> dict:\n    from collections import Counter\n    return dict(Counter(nums))",
+    "testCases": [
+      {
+        "input": "[1, 2, 2, 3, 1, 4]",
+        "expectedOutput": "{1: 2, 2: 2, 3: 1, 4: 1}",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "{5: 3}",
+        "isHidden": false
+      },
+      {
+        "input": "[7, 8, 9, 7, 8, 7]",
+        "expectedOutput": "{7: 3, 8: 2, 9: 1}",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-072",
+    "title": "Merge Two Sorted Lists in Linear Time",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given two sorted lists `a` and `b`, merge them into a single sorted list in $O(N + M)$ time without modifying inputs.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 5], [2, 4, 6]",
+        "output": "[1, 2, 3, 4, 5, 6]"
+      },
+      {
+        "input": "[], [1, 2]",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(a: list, b: list) -> list:\n    pass",
+    "solution": "def solve(a: list, b: list) -> list:\n    i, j = 0, 0\n    res = []\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            res.append(a[i])\n            i += 1\n        else:\n            res.append(b[j])\n            j += 1\n    res.extend(a[i:])\n    res.extend(b[j:])\n    return res",
+    "testCases": [
+      {
+        "input": "[1, 3, 5], [2, 4, 6]",
+        "expectedOutput": "[1, 2, 3, 4, 5, 6]",
+        "isHidden": false
+      },
+      {
+        "input": "[], [1, 2]",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 5, 8], [1, 3, 9]",
+        "expectedOutput": "[1, 2, 3, 5, 8, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N + M)",
+    "spaceComplexity": "O(N + M)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-073",
+    "title": "Group Anagram Strings Together",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a list of strings `words`, group anagrams together and return a sorted list of sorted anagram groups.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"]",
+        "output": "[['ate', 'eat', 'tea'], ['bat'], ['nat', 'tan']]"
+      },
+      {
+        "input": "[\"a\"]",
+        "output": "[['a']]"
+      }
+    ],
+    "starterCode": "def solve(words: list) -> list:\n    pass",
+    "solution": "def solve(words: list) -> list:\n    from collections import defaultdict\n    groups = defaultdict(list)\n    for w in words:\n        groups[\"\".join(sorted(w))].append(w)\n    return sorted([sorted(g) for g in groups.values()])",
+    "testCases": [
+      {
+        "input": "[\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"]",
+        "expectedOutput": "[['ate', 'eat', 'tea'], ['bat'], ['nat', 'tan']]",
+        "isHidden": false
+      },
+      {
+        "input": "[\"a\"]",
+        "expectedOutput": "[['a']]",
+        "isHidden": false
+      },
+      {
+        "input": "[\"cat\", \"tac\", \"act\", \"dog\"]",
+        "expectedOutput": "[['act', 'cat', 'tac'], ['dog']]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N * K log K)",
+    "spaceComplexity": "O(N * K)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-074",
+    "title": "Remove Duplicates Preserving Original Order",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a list `items` with duplicate entries, return a new list containing unique elements in the order of their first appearance.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 3, 2, 1, 4, 5, 4]",
+        "output": "[1, 2, 3, 4, 5]"
+      },
+      {
+        "input": "['a', 'b', 'a', 'c']",
+        "output": "['a', 'b', 'c']"
+      }
+    ],
+    "starterCode": "def solve(items: list) -> list:\n    pass",
+    "solution": "def solve(items: list) -> list:\n    seen = set()\n    res = []\n    for x in items:\n        if x not in seen:\n            seen.add(x)\n            res.append(x)\n    return res",
+    "testCases": [
+      {
+        "input": "[1, 2, 3, 2, 1, 4, 5, 4]",
+        "expectedOutput": "[1, 2, 3, 4, 5]",
+        "isHidden": false
+      },
+      {
+        "input": "['a', 'b', 'a', 'c']",
+        "expectedOutput": "['a', 'b', 'c']",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 9, 8, 8, 7]",
+        "expectedOutput": "[9, 8, 7]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-075",
+    "title": "Data Structure Pattern #75: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-076",
+    "title": "Data Structure Pattern #76: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-077",
+    "title": "Data Structure Pattern #77: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-078",
+    "title": "Data Structure Pattern #78: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-079",
+    "title": "Data Structure Pattern #79: Lists & Indexing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Lists & Indexing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-080",
+    "title": "Data Structure Pattern #80: Tuples & Immutability",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Tuples & Immutability. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-081",
+    "title": "Data Structure Pattern #81: Dictionaries & Hash Mapping",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Dictionaries & Hash Mapping. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-082",
+    "title": "Data Structure Pattern #82: Sets & Set Operations",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sets & Set Operations. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-083",
+    "title": "Data Structure Pattern #83: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-084",
+    "title": "Data Structure Pattern #84: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-085",
+    "title": "Data Structure Pattern #85: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-086",
+    "title": "Data Structure Pattern #86: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-087",
+    "title": "Data Structure Pattern #87: Lists & Indexing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Lists & Indexing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-088",
+    "title": "Data Structure Pattern #88: Tuples & Immutability",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Tuples & Immutability. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-089",
+    "title": "Data Structure Pattern #89: Dictionaries & Hash Mapping",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Dictionaries & Hash Mapping. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-090",
+    "title": "Data Structure Pattern #90: Sets & Set Operations",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sets & Set Operations. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-091",
+    "title": "Data Structure Pattern #91: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-092",
+    "title": "Data Structure Pattern #92: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-093",
+    "title": "Data Structure Pattern #93: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-094",
+    "title": "Data Structure Pattern #94: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-095",
+    "title": "Data Structure Pattern #95: Lists & Indexing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Lists & Indexing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-096",
+    "title": "Data Structure Pattern #96: Tuples & Immutability",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Tuples & Immutability. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-097",
+    "title": "Data Structure Pattern #97: Dictionaries & Hash Mapping",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Dictionaries & Hash Mapping. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-098",
+    "title": "Data Structure Pattern #98: Sets & Set Operations",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sets & Set Operations. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-099",
+    "title": "Data Structure Pattern #99: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-100",
+    "title": "Data Structure Pattern #100: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-101",
+    "title": "Data Structure Pattern #101: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-102",
+    "title": "Data Structure Pattern #102: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-103",
+    "title": "Data Structure Pattern #103: Lists & Indexing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Lists & Indexing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-104",
+    "title": "Data Structure Pattern #104: Tuples & Immutability",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Tuples & Immutability. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-105",
+    "title": "Data Structure Pattern #105: Dictionaries & Hash Mapping",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Dictionaries & Hash Mapping. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-106",
+    "title": "Data Structure Pattern #106: Sets & Set Operations",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sets & Set Operations. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-107",
+    "title": "Data Structure Pattern #107: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-108",
+    "title": "Data Structure Pattern #108: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-109",
+    "title": "Data Structure Pattern #109: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-110",
+    "title": "Data Structure Pattern #110: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Easy",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-111",
+    "title": "Data Structure Pattern #111: Lists & Indexing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Lists & Indexing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-112",
+    "title": "Data Structure Pattern #112: Tuples & Immutability",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Tuples & Immutability. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-113",
+    "title": "Data Structure Pattern #113: Dictionaries & Hash Mapping",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Dictionaries & Hash Mapping. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-114",
+    "title": "Data Structure Pattern #114: Sets & Set Operations",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sets & Set Operations. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-115",
+    "title": "Data Structure Pattern #115: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-116",
+    "title": "Data Structure Pattern #116: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-117",
+    "title": "Data Structure Pattern #117: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-118",
+    "title": "Data Structure Pattern #118: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-119",
+    "title": "Data Structure Pattern #119: Lists & Indexing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Lists & Indexing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-120",
+    "title": "Data Structure Pattern #120: Tuples & Immutability",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Tuples & Immutability. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-121",
+    "title": "Data Structure Pattern #121: Dictionaries & Hash Mapping",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Dictionaries & Hash Mapping. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-122",
+    "title": "Data Structure Pattern #122: Sets & Set Operations",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sets & Set Operations. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-123",
+    "title": "Data Structure Pattern #123: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-124",
+    "title": "Data Structure Pattern #124: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-125",
+    "title": "Data Structure Pattern #125: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-126",
+    "title": "Data Structure Pattern #126: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-127",
+    "title": "Data Structure Pattern #127: Lists & Indexing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Lists & Indexing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-128",
+    "title": "Data Structure Pattern #128: Tuples & Immutability",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Tuples & Immutability. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-129",
+    "title": "Data Structure Pattern #129: Dictionaries & Hash Mapping",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Dictionaries & Hash Mapping. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-130",
+    "title": "Data Structure Pattern #130: Sets & Set Operations",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sets & Set Operations. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-131",
+    "title": "Data Structure Pattern #131: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-132",
+    "title": "Data Structure Pattern #132: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-133",
+    "title": "Data Structure Pattern #133: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-134",
+    "title": "Data Structure Pattern #134: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-135",
+    "title": "Data Structure Pattern #135: Lists & Indexing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Lists & Indexing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-136",
+    "title": "Data Structure Pattern #136: Tuples & Immutability",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Tuples & Immutability. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-137",
+    "title": "Data Structure Pattern #137: Dictionaries & Hash Mapping",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Dictionaries & Hash Mapping. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-138",
+    "title": "Data Structure Pattern #138: Sets & Set Operations",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sets & Set Operations. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-139",
+    "title": "Data Structure Pattern #139: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-140",
+    "title": "Data Structure Pattern #140: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Medium",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-141",
+    "title": "Data Structure Pattern #141: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-142",
+    "title": "Data Structure Pattern #142: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-143",
+    "title": "Data Structure Pattern #143: Lists & Indexing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Lists & Indexing",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Lists & Indexing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Lists & Indexing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lists & Indexing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-144",
+    "title": "Data Structure Pattern #144: Tuples & Immutability",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Tuples & Immutability",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Tuples & Immutability. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Tuples & Immutability.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Tuples & Immutability",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-145",
+    "title": "Data Structure Pattern #145: Dictionaries & Hash Mapping",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Dictionaries & Hash Mapping",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Dictionaries & Hash Mapping. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Dictionaries & Hash Mapping.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Dictionaries & Hash Mapping",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-146",
+    "title": "Data Structure Pattern #146: Sets & Set Operations",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sets & Set Operations",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sets & Set Operations. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sets & Set Operations.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sets & Set Operations",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-147",
+    "title": "Data Structure Pattern #147: Strings & Advanced Slicing",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Strings & Advanced Slicing",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Strings & Advanced Slicing. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Strings & Advanced Slicing.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Strings & Advanced Slicing",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-148",
+    "title": "Data Structure Pattern #148: List Comprehensions",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "List Comprehensions",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying List Comprehensions. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under List Comprehensions.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "List Comprehensions",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-149",
+    "title": "Data Structure Pattern #149: Nested Collections & Matrices",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Nested Collections & Matrices",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Nested Collections & Matrices. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Nested Collections & Matrices.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Nested Collections & Matrices",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  },
+  {
+    "id": "py-150",
+    "title": "Data Structure Pattern #150: Sorting with Custom Keys",
+    "category": "python",
+    "topic": "Python Data Structures",
+    "subtopic": "Sorting with Custom Keys",
+    "difficulty": "Hard",
+    "relevance": "Core Software Engineering Coding Tests",
+    "type": "coding",
+    "statement": "Given a collection or sequence, implement an optimal transformation applying Sorting with Custom Keys. `solve(data)`.",
+    "inputFormat": "Input collections passed to solve()",
+    "outputFormat": "Processed collection returned",
+    "constraints": [
+      "Input size <= 10^5",
+      "Memory limit: 256MB"
+    ],
+    "examples": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "output": "[1, 2, 3]"
+      },
+      {
+        "input": "[5, 5, 5]",
+        "output": "[5]"
+      }
+    ],
+    "starterCode": "def solve(data: list) -> list:\n    pass",
+    "solution": "def solve(data: list) -> list:\n    return sorted(list(set(data)))",
+    "testCases": [
+      {
+        "input": "[3, 1, 2, 3, 2]",
+        "expectedOutput": "[1, 2, 3]",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 5, 5]",
+        "expectedOutput": "[5]",
+        "isHidden": false
+      },
+      {
+        "input": "[9, 4, 7, 4, 1]",
+        "expectedOutput": "[1, 4, 7, 9]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Demonstrates mastery of Python built-in collections under Sorting with Custom Keys.",
+    "algorithm": [
+      "Initialize auxiliary hash table or pointers.",
+      "Iterate through the collection and apply transformations.",
+      "Return the result in required ordering."
+    ],
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Sorting with Custom Keys",
+      "Hash tables",
+      "List slicing"
+    ],
+    "commonMistakes": [
+      "Modifying lists while iterating over them.",
+      "Using unhashable types as set elements or dictionary keys."
+    ]
+  }
+]

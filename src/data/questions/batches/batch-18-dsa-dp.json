@@ -1,0 +1,3577 @@
+[
+  {
+    "id": "dsa-506",
+    "title": "Coin Change Minimum Coins #1",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-507",
+    "title": "Coin Change Minimum Coins #2",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Common Subsequence (LCS)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Common Subsequence (LCS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Common Subsequence (LCS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-508",
+    "title": "Coin Change Minimum Coins #3",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Increasing Subsequence (LIS)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Increasing Subsequence (LIS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Increasing Subsequence (LIS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-509",
+    "title": "Coin Change Minimum Coins #4",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Coin Change",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Coin Change technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Coin Change",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-510",
+    "title": "Coin Change Minimum Coins #5",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Edit Distance",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Edit Distance technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Edit Distance",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-511",
+    "title": "Coin Change Minimum Coins #6",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Matrix Chain Multiplication",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Chain Multiplication technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Matrix Chain Multiplication",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-512",
+    "title": "Coin Change Minimum Coins #7",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-513",
+    "title": "Coin Change Minimum Coins #8",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Common Subsequence (LCS)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Common Subsequence (LCS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Common Subsequence (LCS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-514",
+    "title": "Coin Change Minimum Coins #9",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Increasing Subsequence (LIS)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Increasing Subsequence (LIS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Increasing Subsequence (LIS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-515",
+    "title": "Coin Change Minimum Coins #10",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Coin Change",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Coin Change technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Coin Change",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-516",
+    "title": "Coin Change Minimum Coins #11",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Edit Distance",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Edit Distance technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Edit Distance",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-517",
+    "title": "Coin Change Minimum Coins #12",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Matrix Chain Multiplication",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Chain Multiplication technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Matrix Chain Multiplication",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-518",
+    "title": "Coin Change Minimum Coins #13",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-519",
+    "title": "Coin Change Minimum Coins #14",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Common Subsequence (LCS)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Common Subsequence (LCS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Common Subsequence (LCS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-520",
+    "title": "Coin Change Minimum Coins #15",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Increasing Subsequence (LIS)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Increasing Subsequence (LIS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Increasing Subsequence (LIS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-521",
+    "title": "Coin Change Minimum Coins #16",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Coin Change",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Coin Change technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Coin Change",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-522",
+    "title": "Coin Change Minimum Coins #17",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Edit Distance",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Edit Distance technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Edit Distance",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-523",
+    "title": "Coin Change Minimum Coins #18",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Matrix Chain Multiplication",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Chain Multiplication technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Matrix Chain Multiplication",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-524",
+    "title": "Coin Change Minimum Coins #19",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-525",
+    "title": "Coin Change Minimum Coins #20",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Common Subsequence (LCS)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Common Subsequence (LCS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Common Subsequence (LCS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-526",
+    "title": "Coin Change Minimum Coins #21",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Increasing Subsequence (LIS)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Increasing Subsequence (LIS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Increasing Subsequence (LIS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-527",
+    "title": "Coin Change Minimum Coins #22",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Coin Change",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Coin Change technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Coin Change",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-528",
+    "title": "Coin Change Minimum Coins #23",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Edit Distance",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Edit Distance technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Edit Distance",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-529",
+    "title": "Coin Change Minimum Coins #24",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Matrix Chain Multiplication",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Chain Multiplication technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Matrix Chain Multiplication",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-530",
+    "title": "Coin Change Minimum Coins #25",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-531",
+    "title": "Coin Change Minimum Coins #26",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Common Subsequence (LCS)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Common Subsequence (LCS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Common Subsequence (LCS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-532",
+    "title": "Coin Change Minimum Coins #27",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Increasing Subsequence (LIS)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Increasing Subsequence (LIS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Increasing Subsequence (LIS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-533",
+    "title": "Coin Change Minimum Coins #28",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Coin Change",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Coin Change technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Coin Change",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-534",
+    "title": "Coin Change Minimum Coins #29",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Edit Distance",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Edit Distance technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Edit Distance",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-535",
+    "title": "Coin Change Minimum Coins #30",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Matrix Chain Multiplication",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Chain Multiplication technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Matrix Chain Multiplication",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-536",
+    "title": "Coin Change Minimum Coins #31",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-537",
+    "title": "Coin Change Minimum Coins #32",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Common Subsequence (LCS)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Common Subsequence (LCS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Common Subsequence (LCS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-538",
+    "title": "Coin Change Minimum Coins #33",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Increasing Subsequence (LIS)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Increasing Subsequence (LIS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Increasing Subsequence (LIS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-539",
+    "title": "Coin Change Minimum Coins #34",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Coin Change",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Coin Change technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Coin Change",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-540",
+    "title": "Coin Change Minimum Coins #35",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Edit Distance",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Edit Distance technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Edit Distance",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-541",
+    "title": "Coin Change Minimum Coins #36",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Matrix Chain Multiplication",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Chain Multiplication technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Matrix Chain Multiplication",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-542",
+    "title": "Coin Change Minimum Coins #37",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-543",
+    "title": "Coin Change Minimum Coins #38",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Common Subsequence (LCS)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Common Subsequence (LCS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Common Subsequence (LCS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-544",
+    "title": "Coin Change Minimum Coins #39",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Increasing Subsequence (LIS)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Increasing Subsequence (LIS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Increasing Subsequence (LIS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-545",
+    "title": "Coin Change Minimum Coins #40",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Coin Change",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Coin Change technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Coin Change",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-546",
+    "title": "Coin Change Minimum Coins #41",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Edit Distance",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Edit Distance technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Edit Distance",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-547",
+    "title": "Coin Change Minimum Coins #42",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Matrix Chain Multiplication",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Chain Multiplication technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Matrix Chain Multiplication",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-548",
+    "title": "Coin Change Minimum Coins #43",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-549",
+    "title": "Coin Change Minimum Coins #44",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Common Subsequence (LCS)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Common Subsequence (LCS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Common Subsequence (LCS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-550",
+    "title": "Coin Change Minimum Coins #45",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Increasing Subsequence (LIS)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Increasing Subsequence (LIS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Increasing Subsequence (LIS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-551",
+    "title": "Coin Change Minimum Coins #46",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Coin Change",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Coin Change technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Coin Change",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-552",
+    "title": "Coin Change Minimum Coins #47",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Edit Distance",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Edit Distance technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Edit Distance",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-553",
+    "title": "Coin Change Minimum Coins #48",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Matrix Chain Multiplication",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Chain Multiplication technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Matrix Chain Multiplication",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-554",
+    "title": "Coin Change Minimum Coins #49",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-555",
+    "title": "Coin Change Minimum Coins #50",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Common Subsequence (LCS)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Common Subsequence (LCS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Common Subsequence (LCS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-556",
+    "title": "Coin Change Minimum Coins #51",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Longest Increasing Subsequence (LIS)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Increasing Subsequence (LIS) technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Longest Increasing Subsequence (LIS)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-557",
+    "title": "Coin Change Minimum Coins #52",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Coin Change",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Coin Change technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Coin Change",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-558",
+    "title": "Coin Change Minimum Coins #53",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Edit Distance",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Edit Distance technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Edit Distance",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-559",
+    "title": "Coin Change Minimum Coins #54",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "Matrix Chain Multiplication",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Chain Multiplication technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "Matrix Chain Multiplication",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-560",
+    "title": "Coin Change Minimum Coins #55",
+    "category": "dsa",
+    "topic": "Dynamic Programming",
+    "subtopic": "0/1 Knapsack",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `coins` and integer `amount`, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 2, 5], 11",
+        "output": "3"
+      },
+      {
+        "input": "[2], 3",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(coins: list[int], amount: int) -> int:\n    pass",
+    "solution": "def solve(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for x in range(coin, amount + 1):\n            dp[x] = min(dp[x], dp[x - coin] + 1)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+    "testCases": [
+      {
+        "input": "[1, 2, 5], 11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "[2], 3",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[1], 0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 0/1 Knapsack technique under Dynamic Programming.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(amount * coins)",
+    "spaceComplexity": "O(amount)",
+    "relatedConcepts": [
+      "Dynamic Programming",
+      "0/1 Knapsack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  }
+]

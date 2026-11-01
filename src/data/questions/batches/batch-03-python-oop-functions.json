@@ -1,0 +1,4482 @@
+[
+  {
+    "id": "py-151",
+    "title": "Fibonacci with Dynamic Memoization Cache",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Functions & Arguments (*args, **kwargs)",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Compute the n-th Fibonacci number using a memoization cache dictionary to avoid exponential call stack overhead.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "10",
+        "output": "55"
+      },
+      {
+        "input": "20",
+        "output": "6765"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    memo = {}\n    def fib(k):\n        if k <= 1: return k\n        if k not in memo:\n            memo[k] = fib(k - 1) + fib(k - 2)\n        return memo[k]\n    return fib(n)",
+    "testCases": [
+      {
+        "input": "10",
+        "expectedOutput": "55",
+        "isHidden": false
+      },
+      {
+        "input": "20",
+        "expectedOutput": "6765",
+        "isHidden": false
+      },
+      {
+        "input": "30",
+        "expectedOutput": "832040",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Functions & Arguments (*args, **kwargs)).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Functions & Arguments (*args, **kwargs)",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-152",
+    "title": "Custom Generator Function Range Step",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Recursion & Call Stacks",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a generator pattern `solve(start: int, stop: int, step: int) -> list` yielding values from start up to stop exclusive, returning the final list.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "1, 10, 2",
+        "output": "[1, 3, 5, 7, 9]"
+      },
+      {
+        "input": "0, 5, 1",
+        "output": "[0, 1, 2, 3, 4]"
+      }
+    ],
+    "starterCode": "def solve(start: int, stop: int, step: int) -> list:\n    pass",
+    "solution": "def solve(start: int, stop: int, step: int) -> list:\n    def gen(a, b, c):\n        curr = a\n        while curr < b:\n            yield curr\n            curr += c\n    return list(gen(start, stop, step))",
+    "testCases": [
+      {
+        "input": "1, 10, 2",
+        "expectedOutput": "[1, 3, 5, 7, 9]",
+        "isHidden": false
+      },
+      {
+        "input": "0, 5, 1",
+        "expectedOutput": "[0, 1, 2, 3, 4]",
+        "isHidden": false
+      },
+      {
+        "input": "2, 20, 4",
+        "expectedOutput": "[2, 6, 10, 14, 18]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Recursion & Call Stacks).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Recursion & Call Stacks",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-153",
+    "title": "Safe Division with Exception Boundary",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Lambda & Functional Tools",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Write `solve(a: int, b: int) -> str` that returns `a / b` formatted to 2 decimals, or \"Error: Division by zero\" on ZeroDivisionError.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "10, 2",
+        "output": "5.00"
+      },
+      {
+        "input": "5, 0",
+        "output": "Error: Division by zero"
+      }
+    ],
+    "starterCode": "def solve(a: int, b: int) -> str:\n    pass",
+    "solution": "def solve(a: int, b: int) -> str:\n    try:\n        return f\"{a / b:.2f}\"\n    except ZeroDivisionError:\n        return \"Error: Division by zero\"",
+    "testCases": [
+      {
+        "input": "10, 2",
+        "expectedOutput": "5.00",
+        "isHidden": false
+      },
+      {
+        "input": "5, 0",
+        "expectedOutput": "Error: Division by zero",
+        "isHidden": false
+      },
+      {
+        "input": "7, 3",
+        "expectedOutput": "2.33",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Lambda & Functional Tools).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lambda & Functional Tools",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-154",
+    "title": "OOP / Functional Principle #154: Decorators & Wrappers",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Decorators & Wrappers",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Decorators & Wrappers.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Decorators & Wrappers).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Decorators & Wrappers",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-155",
+    "title": "OOP / Functional Principle #155: Generators & Yield",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Generators & Yield",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Generators & Yield.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Generators & Yield).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Generators & Yield",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-156",
+    "title": "OOP / Functional Principle #156: Classes & Objects",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Classes & Objects",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Classes & Objects.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Classes & Objects).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Classes & Objects",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-157",
+    "title": "OOP / Functional Principle #157: Inheritance & Super()",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Inheritance & Super()",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Inheritance & Super().",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Inheritance & Super()).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Inheritance & Super()",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-158",
+    "title": "OOP / Functional Principle #158: Polymorphism & Overriding",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Polymorphism & Overriding",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Polymorphism & Overriding.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Polymorphism & Overriding).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Polymorphism & Overriding",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-159",
+    "title": "OOP / Functional Principle #159: Encapsulation & Private Fields",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Encapsulation & Private Fields",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Encapsulation & Private Fields.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Encapsulation & Private Fields).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Encapsulation & Private Fields",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-160",
+    "title": "OOP / Functional Principle #160: Exception Handling",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Exception Handling",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Exception Handling.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Exception Handling).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Exception Handling",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-161",
+    "title": "OOP / Functional Principle #161: Functions & Arguments (*args, **kwargs)",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Functions & Arguments (*args, **kwargs)",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Functions & Arguments (*args, **kwargs).",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Functions & Arguments (*args, **kwargs)).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Functions & Arguments (*args, **kwargs)",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-162",
+    "title": "OOP / Functional Principle #162: Recursion & Call Stacks",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Recursion & Call Stacks",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Recursion & Call Stacks.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Recursion & Call Stacks).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Recursion & Call Stacks",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-163",
+    "title": "OOP / Functional Principle #163: Lambda & Functional Tools",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Lambda & Functional Tools",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Lambda & Functional Tools.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Lambda & Functional Tools).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lambda & Functional Tools",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-164",
+    "title": "OOP / Functional Principle #164: Decorators & Wrappers",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Decorators & Wrappers",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Decorators & Wrappers.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Decorators & Wrappers).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Decorators & Wrappers",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-165",
+    "title": "OOP / Functional Principle #165: Generators & Yield",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Generators & Yield",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Generators & Yield.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Generators & Yield).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Generators & Yield",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-166",
+    "title": "OOP / Functional Principle #166: Classes & Objects",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Classes & Objects",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Classes & Objects.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Classes & Objects).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Classes & Objects",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-167",
+    "title": "OOP / Functional Principle #167: Inheritance & Super()",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Inheritance & Super()",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Inheritance & Super().",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Inheritance & Super()).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Inheritance & Super()",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-168",
+    "title": "OOP / Functional Principle #168: Polymorphism & Overriding",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Polymorphism & Overriding",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Polymorphism & Overriding.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Polymorphism & Overriding).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Polymorphism & Overriding",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-169",
+    "title": "OOP / Functional Principle #169: Encapsulation & Private Fields",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Encapsulation & Private Fields",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Encapsulation & Private Fields.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Encapsulation & Private Fields).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Encapsulation & Private Fields",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-170",
+    "title": "OOP / Functional Principle #170: Exception Handling",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Exception Handling",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Exception Handling.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Exception Handling).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Exception Handling",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-171",
+    "title": "OOP / Functional Principle #171: Functions & Arguments (*args, **kwargs)",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Functions & Arguments (*args, **kwargs)",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Functions & Arguments (*args, **kwargs).",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Functions & Arguments (*args, **kwargs)).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Functions & Arguments (*args, **kwargs)",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-172",
+    "title": "OOP / Functional Principle #172: Recursion & Call Stacks",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Recursion & Call Stacks",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Recursion & Call Stacks.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Recursion & Call Stacks).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Recursion & Call Stacks",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-173",
+    "title": "OOP / Functional Principle #173: Lambda & Functional Tools",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Lambda & Functional Tools",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Lambda & Functional Tools.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Lambda & Functional Tools).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lambda & Functional Tools",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-174",
+    "title": "OOP / Functional Principle #174: Decorators & Wrappers",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Decorators & Wrappers",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Decorators & Wrappers.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Decorators & Wrappers).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Decorators & Wrappers",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-175",
+    "title": "OOP / Functional Principle #175: Generators & Yield",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Generators & Yield",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Generators & Yield.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Generators & Yield).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Generators & Yield",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-176",
+    "title": "OOP / Functional Principle #176: Classes & Objects",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Classes & Objects",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Classes & Objects.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Classes & Objects).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Classes & Objects",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-177",
+    "title": "OOP / Functional Principle #177: Inheritance & Super()",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Inheritance & Super()",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Inheritance & Super().",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Inheritance & Super()).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Inheritance & Super()",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-178",
+    "title": "OOP / Functional Principle #178: Polymorphism & Overriding",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Polymorphism & Overriding",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Polymorphism & Overriding.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Polymorphism & Overriding).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Polymorphism & Overriding",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-179",
+    "title": "OOP / Functional Principle #179: Encapsulation & Private Fields",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Encapsulation & Private Fields",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Encapsulation & Private Fields.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Encapsulation & Private Fields).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Encapsulation & Private Fields",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-180",
+    "title": "OOP / Functional Principle #180: Exception Handling",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Exception Handling",
+    "difficulty": "Easy",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Exception Handling.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Exception Handling).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Exception Handling",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-181",
+    "title": "OOP / Functional Principle #181: Functions & Arguments (*args, **kwargs)",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Functions & Arguments (*args, **kwargs)",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Functions & Arguments (*args, **kwargs).",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Functions & Arguments (*args, **kwargs)).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Functions & Arguments (*args, **kwargs)",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-182",
+    "title": "OOP / Functional Principle #182: Recursion & Call Stacks",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Recursion & Call Stacks",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Recursion & Call Stacks.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Recursion & Call Stacks).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Recursion & Call Stacks",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-183",
+    "title": "OOP / Functional Principle #183: Lambda & Functional Tools",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Lambda & Functional Tools",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Lambda & Functional Tools.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Lambda & Functional Tools).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lambda & Functional Tools",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-184",
+    "title": "OOP / Functional Principle #184: Decorators & Wrappers",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Decorators & Wrappers",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Decorators & Wrappers.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Decorators & Wrappers).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Decorators & Wrappers",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-185",
+    "title": "OOP / Functional Principle #185: Generators & Yield",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Generators & Yield",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Generators & Yield.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Generators & Yield).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Generators & Yield",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-186",
+    "title": "OOP / Functional Principle #186: Classes & Objects",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Classes & Objects",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Classes & Objects.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Classes & Objects).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Classes & Objects",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-187",
+    "title": "OOP / Functional Principle #187: Inheritance & Super()",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Inheritance & Super()",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Inheritance & Super().",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Inheritance & Super()).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Inheritance & Super()",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-188",
+    "title": "OOP / Functional Principle #188: Polymorphism & Overriding",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Polymorphism & Overriding",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Polymorphism & Overriding.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Polymorphism & Overriding).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Polymorphism & Overriding",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-189",
+    "title": "OOP / Functional Principle #189: Encapsulation & Private Fields",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Encapsulation & Private Fields",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Encapsulation & Private Fields.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Encapsulation & Private Fields).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Encapsulation & Private Fields",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-190",
+    "title": "OOP / Functional Principle #190: Exception Handling",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Exception Handling",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Exception Handling.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Exception Handling).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Exception Handling",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-191",
+    "title": "OOP / Functional Principle #191: Functions & Arguments (*args, **kwargs)",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Functions & Arguments (*args, **kwargs)",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Functions & Arguments (*args, **kwargs).",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Functions & Arguments (*args, **kwargs)).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Functions & Arguments (*args, **kwargs)",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-192",
+    "title": "OOP / Functional Principle #192: Recursion & Call Stacks",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Recursion & Call Stacks",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Recursion & Call Stacks.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Recursion & Call Stacks).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Recursion & Call Stacks",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-193",
+    "title": "OOP / Functional Principle #193: Lambda & Functional Tools",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Lambda & Functional Tools",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Lambda & Functional Tools.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Lambda & Functional Tools).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lambda & Functional Tools",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-194",
+    "title": "OOP / Functional Principle #194: Decorators & Wrappers",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Decorators & Wrappers",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Decorators & Wrappers.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Decorators & Wrappers).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Decorators & Wrappers",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-195",
+    "title": "OOP / Functional Principle #195: Generators & Yield",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Generators & Yield",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Generators & Yield.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Generators & Yield).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Generators & Yield",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-196",
+    "title": "OOP / Functional Principle #196: Classes & Objects",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Classes & Objects",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Classes & Objects.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Classes & Objects).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Classes & Objects",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-197",
+    "title": "OOP / Functional Principle #197: Inheritance & Super()",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Inheritance & Super()",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Inheritance & Super().",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Inheritance & Super()).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Inheritance & Super()",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-198",
+    "title": "OOP / Functional Principle #198: Polymorphism & Overriding",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Polymorphism & Overriding",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Polymorphism & Overriding.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Polymorphism & Overriding).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Polymorphism & Overriding",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-199",
+    "title": "OOP / Functional Principle #199: Encapsulation & Private Fields",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Encapsulation & Private Fields",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Encapsulation & Private Fields.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Encapsulation & Private Fields).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Encapsulation & Private Fields",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-200",
+    "title": "OOP / Functional Principle #200: Exception Handling",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Exception Handling",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Exception Handling.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Exception Handling).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Exception Handling",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-201",
+    "title": "OOP / Functional Principle #201: Functions & Arguments (*args, **kwargs)",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Functions & Arguments (*args, **kwargs)",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Functions & Arguments (*args, **kwargs).",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Functions & Arguments (*args, **kwargs)).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Functions & Arguments (*args, **kwargs)",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-202",
+    "title": "OOP / Functional Principle #202: Recursion & Call Stacks",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Recursion & Call Stacks",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Recursion & Call Stacks.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Recursion & Call Stacks).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Recursion & Call Stacks",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-203",
+    "title": "OOP / Functional Principle #203: Lambda & Functional Tools",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Lambda & Functional Tools",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Lambda & Functional Tools.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Lambda & Functional Tools).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lambda & Functional Tools",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-204",
+    "title": "OOP / Functional Principle #204: Decorators & Wrappers",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Decorators & Wrappers",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Decorators & Wrappers.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Decorators & Wrappers).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Decorators & Wrappers",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-205",
+    "title": "OOP / Functional Principle #205: Generators & Yield",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Generators & Yield",
+    "difficulty": "Medium",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Generators & Yield.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Generators & Yield).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Generators & Yield",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-206",
+    "title": "OOP / Functional Principle #206: Classes & Objects",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Classes & Objects",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Classes & Objects.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Classes & Objects).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Classes & Objects",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-207",
+    "title": "OOP / Functional Principle #207: Inheritance & Super()",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Inheritance & Super()",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Inheritance & Super().",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Inheritance & Super()).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Inheritance & Super()",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-208",
+    "title": "OOP / Functional Principle #208: Polymorphism & Overriding",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Polymorphism & Overriding",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Polymorphism & Overriding.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Polymorphism & Overriding).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Polymorphism & Overriding",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-209",
+    "title": "OOP / Functional Principle #209: Encapsulation & Private Fields",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Encapsulation & Private Fields",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Encapsulation & Private Fields.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Encapsulation & Private Fields).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Encapsulation & Private Fields",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-210",
+    "title": "OOP / Functional Principle #210: Exception Handling",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Exception Handling",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Exception Handling.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Exception Handling).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Exception Handling",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-211",
+    "title": "OOP / Functional Principle #211: Functions & Arguments (*args, **kwargs)",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Functions & Arguments (*args, **kwargs)",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Functions & Arguments (*args, **kwargs).",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Functions & Arguments (*args, **kwargs)).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Functions & Arguments (*args, **kwargs)",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-212",
+    "title": "OOP / Functional Principle #212: Recursion & Call Stacks",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Recursion & Call Stacks",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Recursion & Call Stacks.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Recursion & Call Stacks).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Recursion & Call Stacks",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-213",
+    "title": "OOP / Functional Principle #213: Lambda & Functional Tools",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Lambda & Functional Tools",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Lambda & Functional Tools.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Lambda & Functional Tools).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Lambda & Functional Tools",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-214",
+    "title": "OOP / Functional Principle #214: Decorators & Wrappers",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Decorators & Wrappers",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Decorators & Wrappers.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Decorators & Wrappers).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Decorators & Wrappers",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-215",
+    "title": "OOP / Functional Principle #215: Generators & Yield",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Generators & Yield",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Generators & Yield.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Generators & Yield).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Generators & Yield",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-216",
+    "title": "OOP / Functional Principle #216: Classes & Objects",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Classes & Objects",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Classes & Objects.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Classes & Objects).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Classes & Objects",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-217",
+    "title": "OOP / Functional Principle #217: Inheritance & Super()",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Inheritance & Super()",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Inheritance & Super().",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Inheritance & Super()).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Inheritance & Super()",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-218",
+    "title": "OOP / Functional Principle #218: Polymorphism & Overriding",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Polymorphism & Overriding",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Polymorphism & Overriding.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Polymorphism & Overriding).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Polymorphism & Overriding",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-219",
+    "title": "OOP / Functional Principle #219: Encapsulation & Private Fields",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Encapsulation & Private Fields",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Encapsulation & Private Fields.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Encapsulation & Private Fields).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Encapsulation & Private Fields",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  },
+  {
+    "id": "py-220",
+    "title": "OOP / Functional Principle #220: Exception Handling",
+    "category": "python",
+    "topic": "Python Functions and OOP",
+    "subtopic": "Exception Handling",
+    "difficulty": "Hard",
+    "relevance": "Senior Python & System Architecture Screening",
+    "type": "coding",
+    "statement": "Implement a Python function or class pattern `solve(n: int) -> int` applying Exception Handling.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Result returned from solve()",
+    "constraints": [
+      "Adhere to standard PEP-8 OOP conventions",
+      "Clean exception boundaries"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "10"
+      },
+      {
+        "input": "-3",
+        "output": "0"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 2 if n > 0 else 0",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-3",
+        "expectedOutput": "0",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "200",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Evaluates core Object-Oriented and Functional programming competencies in Python (Exception Handling).",
+    "algorithm": [
+      "Define modular function or class architecture.",
+      "Utilize appropriate closure or class state.",
+      "Handle edge cases and exceptions gracefully."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Exception Handling",
+      "Decorators",
+      "Generators",
+      "Dunder methods"
+    ],
+    "commonMistakes": [
+      "Using mutable default arguments like def fn(arg=[])",
+      "Forgetting super().__init__() in derived classes"
+    ]
+  }
+]

@@ -1,0 +1,4902 @@
+[
+  {
+    "id": "cs-001",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#1)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-002",
+    "title": "SQL ACID Properties: Isolation Levels (#2)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-003",
+    "title": "OS Process Scheduling: Process vs Thread (#3)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-004",
+    "title": "Computer Networks: TCP 3-Way Handshake (#4)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-005",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#5)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-006",
+    "title": "REST vs RPC Architectural Patterns (#6)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-007",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#7)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-008",
+    "title": "SQL ACID Properties: Isolation Levels (#8)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-009",
+    "title": "OS Process Scheduling: Process vs Thread (#9)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-010",
+    "title": "Computer Networks: TCP 3-Way Handshake (#10)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-011",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#11)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-012",
+    "title": "REST vs RPC Architectural Patterns (#12)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-013",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#13)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-014",
+    "title": "SQL ACID Properties: Isolation Levels (#14)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-015",
+    "title": "OS Process Scheduling: Process vs Thread (#15)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-016",
+    "title": "Computer Networks: TCP 3-Way Handshake (#16)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-017",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#17)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-018",
+    "title": "REST vs RPC Architectural Patterns (#18)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-019",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#19)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-020",
+    "title": "SQL ACID Properties: Isolation Levels (#20)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-021",
+    "title": "OS Process Scheduling: Process vs Thread (#21)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-022",
+    "title": "Computer Networks: TCP 3-Way Handshake (#22)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-023",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#23)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-024",
+    "title": "REST vs RPC Architectural Patterns (#24)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-025",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#25)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-026",
+    "title": "SQL ACID Properties: Isolation Levels (#26)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-027",
+    "title": "OS Process Scheduling: Process vs Thread (#27)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-028",
+    "title": "Computer Networks: TCP 3-Way Handshake (#28)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-029",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#29)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-030",
+    "title": "REST vs RPC Architectural Patterns (#30)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-031",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#31)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-032",
+    "title": "SQL ACID Properties: Isolation Levels (#32)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-033",
+    "title": "OS Process Scheduling: Process vs Thread (#33)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-034",
+    "title": "Computer Networks: TCP 3-Way Handshake (#34)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-035",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#35)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-036",
+    "title": "REST vs RPC Architectural Patterns (#36)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-037",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#37)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-038",
+    "title": "SQL ACID Properties: Isolation Levels (#38)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-039",
+    "title": "OS Process Scheduling: Process vs Thread (#39)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-040",
+    "title": "Computer Networks: TCP 3-Way Handshake (#40)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Easy",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-041",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#41)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-042",
+    "title": "REST vs RPC Architectural Patterns (#42)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-043",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#43)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-044",
+    "title": "SQL ACID Properties: Isolation Levels (#44)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-045",
+    "title": "OS Process Scheduling: Process vs Thread (#45)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-046",
+    "title": "Computer Networks: TCP 3-Way Handshake (#46)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-047",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#47)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-048",
+    "title": "REST vs RPC Architectural Patterns (#48)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-049",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#49)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-050",
+    "title": "SQL ACID Properties: Isolation Levels (#50)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-051",
+    "title": "OS Process Scheduling: Process vs Thread (#51)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-052",
+    "title": "Computer Networks: TCP 3-Way Handshake (#52)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-053",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#53)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-054",
+    "title": "REST vs RPC Architectural Patterns (#54)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-055",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#55)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-056",
+    "title": "SQL ACID Properties: Isolation Levels (#56)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-057",
+    "title": "OS Process Scheduling: Process vs Thread (#57)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-058",
+    "title": "Computer Networks: TCP 3-Way Handshake (#58)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-059",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#59)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-060",
+    "title": "REST vs RPC Architectural Patterns (#60)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-061",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#61)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-062",
+    "title": "SQL ACID Properties: Isolation Levels (#62)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-063",
+    "title": "OS Process Scheduling: Process vs Thread (#63)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-064",
+    "title": "Computer Networks: TCP 3-Way Handshake (#64)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-065",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#65)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-066",
+    "title": "REST vs RPC Architectural Patterns (#66)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-067",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#67)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-068",
+    "title": "SQL ACID Properties: Isolation Levels (#68)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-069",
+    "title": "OS Process Scheduling: Process vs Thread (#69)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-070",
+    "title": "Computer Networks: TCP 3-Way Handshake (#70)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-071",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#71)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-072",
+    "title": "REST vs RPC Architectural Patterns (#72)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-073",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#73)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-074",
+    "title": "SQL ACID Properties: Isolation Levels (#74)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-075",
+    "title": "OS Process Scheduling: Process vs Thread (#75)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Medium",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-076",
+    "title": "Computer Networks: TCP 3-Way Handshake (#76)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-077",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#77)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-078",
+    "title": "REST vs RPC Architectural Patterns (#78)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-079",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#79)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-080",
+    "title": "SQL ACID Properties: Isolation Levels (#80)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-081",
+    "title": "OS Process Scheduling: Process vs Thread (#81)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-082",
+    "title": "Computer Networks: TCP 3-Way Handshake (#82)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-083",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#83)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-084",
+    "title": "REST vs RPC Architectural Patterns (#84)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-085",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#85)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-086",
+    "title": "SQL ACID Properties: Isolation Levels (#86)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-087",
+    "title": "OS Process Scheduling: Process vs Thread (#87)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-088",
+    "title": "Computer Networks: TCP 3-Way Handshake (#88)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-089",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#89)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-090",
+    "title": "REST vs RPC Architectural Patterns (#90)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-091",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#91)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-092",
+    "title": "SQL ACID Properties: Isolation Levels (#92)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-093",
+    "title": "OS Process Scheduling: Process vs Thread (#93)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-094",
+    "title": "Computer Networks: TCP 3-Way Handshake (#94)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-095",
+    "title": "Asymptotic Analysis: Amortized Doubling Time (#95)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Time and Space Complexity Analysis",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the amortized time complexity of appending an element to a dynamic array (like Python list) using doubling reallocation?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "O(1)",
+        "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1)."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "O(1)",
+    "testCases": [],
+    "explanation": "Although copying takes O(N) when resizing, amortized cost over N inserts averages out to O(1).",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Time and Space Complexity Analysis",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-096",
+    "title": "REST vs RPC Architectural Patterns (#96)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Software Engineering & System Architecture",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which HTTP method in RESTful architecture is specified as idempotent and used for full resource replacement?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "PUT",
+        "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "PUT",
+    "testCases": [],
+    "explanation": "PUT is idempotent by standard: calling PUT with identical payload yields identical resource state.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Software Engineering & System Architecture",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-097",
+    "title": "Four Pillars of OOP: Abstraction vs Encapsulation (#97)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Object-Oriented Programming (OOP Principles)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "Which statement most accurately distinguishes Encapsulation from Abstraction?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+        "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+    "testCases": [],
+    "explanation": "Encapsulation binds data and functions while restricting direct access to internal state. Abstraction focuses on showing what an object does rather than how it does it.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Object-Oriented Programming (OOP Principles)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Encapsulation is data hiding and bundling, while Abstraction is hiding implementation details and exposing only essentials.",
+      "Encapsulation refers to multiple inheritance, while Abstraction refers to polymorphism.",
+      "Abstraction only applies to database queries, while Encapsulation is exclusive to Python classes.",
+      "They are identical terms with no architectural distinction."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-098",
+    "title": "SQL ACID Properties: Isolation Levels (#98)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Database Management Systems (DBMS & SQL)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "In relational database transaction management (ACID), which anomaly occurs when a transaction reads data that has been modified by another concurrent transaction that has NOT yet committed?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Dirty Read",
+        "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Dirty Read",
+    "testCases": [],
+    "explanation": "A Dirty Read occurs when transaction T1 updates a row without committing, and transaction T2 reads that uncommitted row.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Database Management Systems (DBMS & SQL)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Dirty Read",
+      "Non-Repeatable Read",
+      "Phantom Read",
+      "Serialization Failure"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-099",
+    "title": "OS Process Scheduling: Process vs Thread (#99)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Operating Systems (Processes, Threads & Memory)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "What is the primary memory distinction between a Process and a Thread within the same process?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+        "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+    "testCases": [],
+    "explanation": "Threads created within the same process share code, data, and heap, but maintain distinct thread control blocks, register states, and call stacks.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operating Systems (Processes, Threads & Memory)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "Threads share the same virtual address space, heap, and code segment, but each maintains its own stack and registers.",
+      "Processes share their stack with all other processes on the operating system.",
+      "Threads have independent virtual address spaces and cannot communicate without IPC sockets.",
+      "Threads do not have program counters."
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": "cs-100",
+    "title": "Computer Networks: TCP 3-Way Handshake (#100)",
+    "category": "cs-fundamentals",
+    "topic": "Computer Science Fundamentals",
+    "subtopic": "Computer Networks (OSI, TCP/IP & HTTP)",
+    "difficulty": "Hard",
+    "relevance": "Core University Exams & Technical Screening",
+    "type": "conceptual",
+    "statement": "During the establishment of a TCP connection between client and server, what is the exact packet sequence transmitted?",
+    "inputFormat": "Multiple Choice Selection",
+    "outputFormat": "Index of correct answer",
+    "constraints": [
+      "Standard CS Curricula (ACM IEEE guidelines)"
+    ],
+    "examples": [
+      {
+        "input": "Select option",
+        "output": "SYN -> SYN-ACK -> ACK",
+        "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK."
+      }
+    ],
+    "starterCode": "# Select option from UI",
+    "solution": "SYN -> SYN-ACK -> ACK",
+    "testCases": [],
+    "explanation": "The client sends SYN; the server responds with SYN-ACK; the client finalizes with ACK.",
+    "algorithm": [
+      "Analyze concept.",
+      "Select verified answer."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Computer Networks (OSI, TCP/IP & HTTP)",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks"
+    ],
+    "commonMistakes": [
+      "Confusing process isolation with thread concurrency."
+    ],
+    "conceptualOptions": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "PING -> PONG -> CONNECT"
+    ],
+    "correctOptionIndex": 0
+  }
+]

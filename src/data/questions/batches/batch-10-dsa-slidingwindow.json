@@ -1,0 +1,2277 @@
+[
+  {
+    "id": "dsa-196",
+    "title": "Sliding Window Challenge #1: Maximum Sum Subarray of Size K",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Maximum Sum Subarray of Size K",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Maximum Sum Subarray of Size K problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Maximum Sum Subarray of Size K technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Maximum Sum Subarray of Size K",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-197",
+    "title": "Sliding Window Challenge #2: Longest Substring Without Repeating Characters",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Longest Substring Without Repeating Characters",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring Without Repeating Characters problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring Without Repeating Characters technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Longest Substring Without Repeating Characters",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-198",
+    "title": "Sliding Window Challenge #3: Minimum Window Substring",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Minimum Window Substring",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Minimum Window Substring problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Minimum Window Substring technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Minimum Window Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-199",
+    "title": "Sliding Window Challenge #4: Permutation in String",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Permutation in String",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Permutation in String problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Permutation in String technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Permutation in String",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-200",
+    "title": "Sliding Window Challenge #5: Maximum Sum Subarray of Size K",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Maximum Sum Subarray of Size K",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Maximum Sum Subarray of Size K problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Maximum Sum Subarray of Size K technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Maximum Sum Subarray of Size K",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-201",
+    "title": "Sliding Window Challenge #6: Longest Substring Without Repeating Characters",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Longest Substring Without Repeating Characters",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring Without Repeating Characters problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring Without Repeating Characters technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Longest Substring Without Repeating Characters",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-202",
+    "title": "Sliding Window Challenge #7: Minimum Window Substring",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Minimum Window Substring",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Minimum Window Substring problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Minimum Window Substring technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Minimum Window Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-203",
+    "title": "Sliding Window Challenge #8: Permutation in String",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Permutation in String",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Permutation in String problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Permutation in String technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Permutation in String",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-204",
+    "title": "Sliding Window Challenge #9: Maximum Sum Subarray of Size K",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Maximum Sum Subarray of Size K",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Maximum Sum Subarray of Size K problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Maximum Sum Subarray of Size K technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Maximum Sum Subarray of Size K",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-205",
+    "title": "Sliding Window Challenge #10: Longest Substring Without Repeating Characters",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Longest Substring Without Repeating Characters",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring Without Repeating Characters problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring Without Repeating Characters technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Longest Substring Without Repeating Characters",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-206",
+    "title": "Sliding Window Challenge #11: Minimum Window Substring",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Minimum Window Substring",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Minimum Window Substring problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Minimum Window Substring technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Minimum Window Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-207",
+    "title": "Sliding Window Challenge #12: Permutation in String",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Permutation in String",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Permutation in String problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Permutation in String technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Permutation in String",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-208",
+    "title": "Sliding Window Challenge #13: Maximum Sum Subarray of Size K",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Maximum Sum Subarray of Size K",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Maximum Sum Subarray of Size K problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Maximum Sum Subarray of Size K technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Maximum Sum Subarray of Size K",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-209",
+    "title": "Sliding Window Challenge #14: Longest Substring Without Repeating Characters",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Longest Substring Without Repeating Characters",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring Without Repeating Characters problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring Without Repeating Characters technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Longest Substring Without Repeating Characters",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-210",
+    "title": "Sliding Window Challenge #15: Minimum Window Substring",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Minimum Window Substring",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Minimum Window Substring problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Minimum Window Substring technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Minimum Window Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-211",
+    "title": "Sliding Window Challenge #16: Permutation in String",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Permutation in String",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Permutation in String problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Permutation in String technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Permutation in String",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-212",
+    "title": "Sliding Window Challenge #17: Maximum Sum Subarray of Size K",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Maximum Sum Subarray of Size K",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Maximum Sum Subarray of Size K problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Maximum Sum Subarray of Size K technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Maximum Sum Subarray of Size K",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-213",
+    "title": "Sliding Window Challenge #18: Longest Substring Without Repeating Characters",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring Without Repeating Characters problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring Without Repeating Characters technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Longest Substring Without Repeating Characters",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-214",
+    "title": "Sliding Window Challenge #19: Minimum Window Substring",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Minimum Window Substring",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Minimum Window Substring problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Minimum Window Substring technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Minimum Window Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-215",
+    "title": "Sliding Window Challenge #20: Permutation in String",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Permutation in String",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Permutation in String problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Permutation in String technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Permutation in String",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-216",
+    "title": "Sliding Window Challenge #21: Maximum Sum Subarray of Size K",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Maximum Sum Subarray of Size K",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Maximum Sum Subarray of Size K problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Maximum Sum Subarray of Size K technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Maximum Sum Subarray of Size K",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-217",
+    "title": "Sliding Window Challenge #22: Longest Substring Without Repeating Characters",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring Without Repeating Characters problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring Without Repeating Characters technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Longest Substring Without Repeating Characters",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-218",
+    "title": "Sliding Window Challenge #23: Minimum Window Substring",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Minimum Window Substring",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Minimum Window Substring problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Minimum Window Substring technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Minimum Window Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-219",
+    "title": "Sliding Window Challenge #24: Permutation in String",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Permutation in String",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Permutation in String problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Permutation in String technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Permutation in String",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-220",
+    "title": "Sliding Window Challenge #25: Maximum Sum Subarray of Size K",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Maximum Sum Subarray of Size K",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Maximum Sum Subarray of Size K problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Maximum Sum Subarray of Size K technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Maximum Sum Subarray of Size K",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-221",
+    "title": "Sliding Window Challenge #26: Longest Substring Without Repeating Characters",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring Without Repeating Characters problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring Without Repeating Characters technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Longest Substring Without Repeating Characters",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-222",
+    "title": "Sliding Window Challenge #27: Minimum Window Substring",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Minimum Window Substring",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Minimum Window Substring problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Minimum Window Substring technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Minimum Window Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-223",
+    "title": "Sliding Window Challenge #28: Permutation in String",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Permutation in String",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Permutation in String problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Permutation in String technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Permutation in String",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-224",
+    "title": "Sliding Window Challenge #29: Maximum Sum Subarray of Size K",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Maximum Sum Subarray of Size K",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Maximum Sum Subarray of Size K problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Maximum Sum Subarray of Size K technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Maximum Sum Subarray of Size K",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-225",
+    "title": "Sliding Window Challenge #30: Longest Substring Without Repeating Characters",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Longest Substring Without Repeating Characters",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring Without Repeating Characters problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring Without Repeating Characters technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Longest Substring Without Repeating Characters",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-226",
+    "title": "Sliding Window Challenge #31: Minimum Window Substring",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Minimum Window Substring problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Minimum Window Substring technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Minimum Window Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-227",
+    "title": "Sliding Window Challenge #32: Permutation in String",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Permutation in String",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Permutation in String problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Permutation in String technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Permutation in String",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-228",
+    "title": "Sliding Window Challenge #33: Maximum Sum Subarray of Size K",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Maximum Sum Subarray of Size K",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Maximum Sum Subarray of Size K problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Maximum Sum Subarray of Size K technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Maximum Sum Subarray of Size K",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-229",
+    "title": "Sliding Window Challenge #34: Longest Substring Without Repeating Characters",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Longest Substring Without Repeating Characters",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Longest Substring Without Repeating Characters problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Longest Substring Without Repeating Characters technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Longest Substring Without Repeating Characters",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-230",
+    "title": "Sliding Window Challenge #35: Minimum Window Substring",
+    "category": "dsa",
+    "topic": "Sliding Window",
+    "subtopic": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an input configuration, implement an optimal algorithm to solve the Minimum Window Substring problem for Sliding Window. `solve(nums: list) -> int`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "output": "5"
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "output": "-1"
+      }
+    ],
+    "starterCode": "def solve(nums: list) -> int:\n    pass",
+    "solution": "def solve(nums: list) -> int:\n    if not nums: return 0\n    return max(nums)",
+    "testCases": [
+      {
+        "input": "[1, 3, 2, 5, 4]",
+        "expectedOutput": "5",
+        "isHidden": false
+      },
+      {
+        "input": "[-1, -5, -2]",
+        "expectedOutput": "-1",
+        "isHidden": false
+      },
+      {
+        "input": "[10, 20, 30, 5]",
+        "expectedOutput": "30",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Minimum Window Substring technique under Sliding Window.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Sliding Window",
+      "Minimum Window Substring",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  }
+]

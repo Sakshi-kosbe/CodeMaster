@@ -1,0 +1,2277 @@
+[
+  {
+    "id": "dsa-161",
+    "title": "Container With Most Water #1",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Pair Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Pair Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Pair Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-162",
+    "title": "Container With Most Water #2",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "3Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 3Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "3Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-163",
+    "title": "Container With Most Water #3",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Container with Most Water",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Container with Most Water technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Container with Most Water",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-164",
+    "title": "Container With Most Water #4",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Move Zeroes",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Move Zeroes technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Move Zeroes",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-165",
+    "title": "Container With Most Water #5",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Remove Duplicates",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Remove Duplicates technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Remove Duplicates",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-166",
+    "title": "Container With Most Water #6",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Pair Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Pair Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Pair Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-167",
+    "title": "Container With Most Water #7",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "3Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 3Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "3Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-168",
+    "title": "Container With Most Water #8",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Container with Most Water",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Container with Most Water technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Container with Most Water",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-169",
+    "title": "Container With Most Water #9",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Move Zeroes",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Move Zeroes technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Move Zeroes",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-170",
+    "title": "Container With Most Water #10",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Remove Duplicates",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Remove Duplicates technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Remove Duplicates",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-171",
+    "title": "Container With Most Water #11",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Pair Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Pair Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Pair Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-172",
+    "title": "Container With Most Water #12",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "3Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 3Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "3Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-173",
+    "title": "Container With Most Water #13",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Container with Most Water",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Container with Most Water technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Container with Most Water",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-174",
+    "title": "Container With Most Water #14",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Move Zeroes",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Move Zeroes technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Move Zeroes",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-175",
+    "title": "Container With Most Water #15",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Remove Duplicates",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Remove Duplicates technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Remove Duplicates",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-176",
+    "title": "Container With Most Water #16",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Pair Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Pair Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Pair Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-177",
+    "title": "Container With Most Water #17",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "3Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 3Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "3Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-178",
+    "title": "Container With Most Water #18",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Container with Most Water",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Container with Most Water technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Container with Most Water",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-179",
+    "title": "Container With Most Water #19",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Move Zeroes",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Move Zeroes technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Move Zeroes",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-180",
+    "title": "Container With Most Water #20",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Remove Duplicates",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Remove Duplicates technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Remove Duplicates",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-181",
+    "title": "Container With Most Water #21",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Pair Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Pair Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Pair Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-182",
+    "title": "Container With Most Water #22",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "3Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 3Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "3Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-183",
+    "title": "Container With Most Water #23",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Container with Most Water",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Container with Most Water technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Container with Most Water",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-184",
+    "title": "Container With Most Water #24",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Move Zeroes",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Move Zeroes technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Move Zeroes",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-185",
+    "title": "Container With Most Water #25",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Remove Duplicates",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Remove Duplicates technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Remove Duplicates",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-186",
+    "title": "Container With Most Water #26",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Pair Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Pair Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Pair Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-187",
+    "title": "Container With Most Water #27",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "3Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 3Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "3Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-188",
+    "title": "Container With Most Water #28",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Container with Most Water",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Container with Most Water technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Container with Most Water",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-189",
+    "title": "Container With Most Water #29",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Move Zeroes",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Move Zeroes technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Move Zeroes",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-190",
+    "title": "Container With Most Water #30",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Remove Duplicates",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Remove Duplicates technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Remove Duplicates",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-191",
+    "title": "Container With Most Water #31",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Pair Sum",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Pair Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Pair Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-192",
+    "title": "Container With Most Water #32",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "3Sum",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal 3Sum technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "3Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-193",
+    "title": "Container With Most Water #33",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Container with Most Water",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Container with Most Water technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Container with Most Water",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-194",
+    "title": "Container With Most Water #34",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Move Zeroes",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Move Zeroes technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Move Zeroes",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-195",
+    "title": "Container With Most Water #35",
+    "category": "dsa",
+    "topic": "Two Pointers",
+    "subtopic": "Remove Duplicates",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given n non-negative integers representing heights of vertical lines, find two lines that together with the x-axis contain the most water.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "output": "49"
+      },
+      {
+        "input": "[1, 1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(height: list[int]) -> int:\n    pass",
+    "solution": "def solve(height: list[int]) -> int:\n    l, r = 0, len(height) - 1\n    max_area = 0\n    while l < r:\n        w = r - l\n        h = min(height[l], height[r])\n        max_area = max(max_area, w * h)\n        if height[l] < height[r]:\n            l += 1\n        else:\n            r -= 1\n    return max_area",
+    "testCases": [
+      {
+        "input": "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "[1, 1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[4, 3, 2, 1, 4]",
+        "expectedOutput": "16",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Remove Duplicates technique under Two Pointers.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Two Pointers",
+      "Remove Duplicates",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  }
+]

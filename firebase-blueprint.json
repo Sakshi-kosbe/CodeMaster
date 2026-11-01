@@ -1,0 +1,116 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and account information",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128 },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 200 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "preferences": { "type": "object" }
+      },
+      "required": ["userId", "displayName"]
+    },
+    "Question": {
+      "title": "Question",
+      "description": "Curated coding problem or interview question",
+      "type": "object",
+      "properties": {
+        "questionId": { "type": "string", "maxLength": 64 },
+        "title": { "type": "string", "maxLength": 200 },
+        "category": { "type": "string", "maxLength": 50 },
+        "topic": { "type": "string", "maxLength": 100 },
+        "difficulty": { "type": "string", "enum": ["Easy", "Medium", "Hard"] },
+        "starterCode": { "type": "string" },
+        "solution": { "type": "string" },
+        "timeComplexity": { "type": "string", "maxLength": 50 },
+        "spaceComplexity": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["questionId", "title", "category", "topic", "difficulty"]
+    },
+    "Submission": {
+      "title": "Submission",
+      "description": "User code submission record and test results",
+      "type": "object",
+      "properties": {
+        "submissionId": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "questionId": { "type": "string", "maxLength": 64 },
+        "submittedCode": { "type": "string", "maxLength": 50000 },
+        "status": { "type": "string", "enum": ["Accepted", "Wrong Answer", "Runtime Error", "Time Limit Exceeded"] },
+        "passedTests": { "type": "number" },
+        "totalTests": { "type": "number" },
+        "executionTime": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["submissionId", "userId", "questionId", "status"]
+    },
+    "UserProgress": {
+      "title": "UserProgress",
+      "description": "User solved status, streak, and XP aggregation",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128 },
+        "solvedQuestions": { "type": "object" },
+        "attemptedQuestions": { "type": "object" },
+        "bookmarkedQuestions": { "type": "array" },
+        "streak": { "type": "number" },
+        "xp": { "type": "number" },
+        "accuracy": { "type": "number" }
+      },
+      "required": ["userId", "streak", "xp"]
+    },
+    "DailyChallenge": {
+      "title": "DailyChallenge",
+      "description": "Daily coding challenge completion record",
+      "type": "object",
+      "properties": {
+        "date": { "type": "string", "maxLength": 20 },
+        "questionId": { "type": "string", "maxLength": 64 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "completionStatus": { "type": "string", "maxLength": 20 }
+      },
+      "required": ["date", "questionId", "userId", "completionStatus"]
+    },
+    "RevisionQueue": {
+      "title": "RevisionQueue",
+      "description": "Spaced repetition revision record",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128 },
+        "questionId": { "type": "string", "maxLength": 64 },
+        "nextReviewDate": { "type": "string", "maxLength": 20 },
+        "revisionLevel": { "type": "number" }
+      },
+      "required": ["userId", "questionId", "nextReviewDate", "revisionLevel"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile documents"
+    },
+    "/questions/{questionId}": {
+      "schema": "Question",
+      "description": "Public verified question bank"
+    },
+    "/submissions/{submissionId}": {
+      "schema": "Submission",
+      "description": "User coding submission history"
+    },
+    "/userProgress/{userId}": {
+      "schema": "UserProgress",
+      "description": "Persistent aggregated user progress"
+    },
+    "/dailyChallenges/{challengeId}": {
+      "schema": "DailyChallenge",
+      "description": "Daily challenge audit records"
+    },
+    "/revisionQueue/{revisionId}": {
+      "schema": "RevisionQueue",
+      "description": "Spaced repetition intervals"
+    }
+  }
+}

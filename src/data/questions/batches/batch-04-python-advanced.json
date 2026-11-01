@@ -1,0 +1,2562 @@
+[
+  {
+    "id": "py-221",
+    "title": "Email Address Regular Expression Validator",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "File Handling & Streams",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Validate if an input string is a valid email address using Python’s `re` module conforming to standard username@domain.tld syntax.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (File Handling & Streams).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "File Handling & Streams",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-222",
+    "title": "Find All Words Exceeding Length Threshold",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Iterators & Itertools",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Extract all distinct words from a text string with length > 3, converted to lowercase, sorted alphabetically.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"The quick brown fox jumps over the lazy dog\"",
+        "output": "['brown', 'jumps', 'lazy', 'over', 'quick']"
+      },
+      {
+        "input": "\"cat and bat\"",
+        "output": "[]"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> list:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> list:\n    words = re.findall(r\"\\b[a-zA-Z]{4,}\\b\", text)\n    return sorted(list(set(w.lower() for w in words)))",
+    "testCases": [
+      {
+        "input": "\"The quick brown fox jumps over the lazy dog\"",
+        "expectedOutput": "['brown', 'jumps', 'lazy', 'over', 'quick']",
+        "isHidden": false
+      },
+      {
+        "input": "\"cat and bat\"",
+        "expectedOutput": "[]",
+        "isHidden": false
+      },
+      {
+        "input": "\"Python programming is super awesome\"",
+        "expectedOutput": "['awesome', 'programming', 'python', 'super']",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Iterators & Itertools).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Iterators & Itertools",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-223",
+    "title": "Advanced Python Specialty #223: Regular Expressions (re)",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Regular Expressions (re)",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Regular Expressions (re). `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Regular Expressions (re)).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Regular Expressions (re)",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-224",
+    "title": "Advanced Python Specialty #224: Context Managers",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Context Managers",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Context Managers. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Context Managers).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Context Managers",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-225",
+    "title": "Advanced Python Specialty #225: Memory Profiling & GC",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Memory Profiling & GC",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Memory Profiling & GC. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Memory Profiling & GC).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Memory Profiling & GC",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-226",
+    "title": "Advanced Python Specialty #226: Time Complexity of Built-ins",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Time Complexity of Built-ins",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Time Complexity of Built-ins. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Time Complexity of Built-ins).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Time Complexity of Built-ins",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-227",
+    "title": "Advanced Python Specialty #227: File Handling & Streams",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "File Handling & Streams",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under File Handling & Streams. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (File Handling & Streams).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "File Handling & Streams",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-228",
+    "title": "Advanced Python Specialty #228: Iterators & Itertools",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Iterators & Itertools",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Iterators & Itertools. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Iterators & Itertools).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Iterators & Itertools",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-229",
+    "title": "Advanced Python Specialty #229: Regular Expressions (re)",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Regular Expressions (re)",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Regular Expressions (re). `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Regular Expressions (re)).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Regular Expressions (re)",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-230",
+    "title": "Advanced Python Specialty #230: Context Managers",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Context Managers",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Context Managers. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Context Managers).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Context Managers",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-231",
+    "title": "Advanced Python Specialty #231: Memory Profiling & GC",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Memory Profiling & GC",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Memory Profiling & GC. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Memory Profiling & GC).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Memory Profiling & GC",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-232",
+    "title": "Advanced Python Specialty #232: Time Complexity of Built-ins",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Time Complexity of Built-ins",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Time Complexity of Built-ins. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Time Complexity of Built-ins).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Time Complexity of Built-ins",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-233",
+    "title": "Advanced Python Specialty #233: File Handling & Streams",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "File Handling & Streams",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under File Handling & Streams. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (File Handling & Streams).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "File Handling & Streams",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-234",
+    "title": "Advanced Python Specialty #234: Iterators & Itertools",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Iterators & Itertools",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Iterators & Itertools. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Iterators & Itertools).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Iterators & Itertools",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-235",
+    "title": "Advanced Python Specialty #235: Regular Expressions (re)",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Regular Expressions (re)",
+    "difficulty": "Medium",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Regular Expressions (re). `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Regular Expressions (re)).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Regular Expressions (re)",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-236",
+    "title": "Advanced Python Specialty #236: Context Managers",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Context Managers",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Context Managers. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Context Managers).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Context Managers",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-237",
+    "title": "Advanced Python Specialty #237: Memory Profiling & GC",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Memory Profiling & GC",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Memory Profiling & GC. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Memory Profiling & GC).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Memory Profiling & GC",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-238",
+    "title": "Advanced Python Specialty #238: Time Complexity of Built-ins",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Time Complexity of Built-ins",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Time Complexity of Built-ins. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Time Complexity of Built-ins).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Time Complexity of Built-ins",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-239",
+    "title": "Advanced Python Specialty #239: File Handling & Streams",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "File Handling & Streams",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under File Handling & Streams. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (File Handling & Streams).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "File Handling & Streams",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-240",
+    "title": "Advanced Python Specialty #240: Iterators & Itertools",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Iterators & Itertools",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Iterators & Itertools. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Iterators & Itertools).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Iterators & Itertools",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-241",
+    "title": "Advanced Python Specialty #241: Regular Expressions (re)",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Regular Expressions (re)",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Regular Expressions (re). `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Regular Expressions (re)).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Regular Expressions (re)",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-242",
+    "title": "Advanced Python Specialty #242: Context Managers",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Context Managers",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Context Managers. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Context Managers).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Context Managers",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-243",
+    "title": "Advanced Python Specialty #243: Memory Profiling & GC",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Memory Profiling & GC",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Memory Profiling & GC. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Memory Profiling & GC).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Memory Profiling & GC",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-244",
+    "title": "Advanced Python Specialty #244: Time Complexity of Built-ins",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Time Complexity of Built-ins",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Time Complexity of Built-ins. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Time Complexity of Built-ins).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Time Complexity of Built-ins",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-245",
+    "title": "Advanced Python Specialty #245: File Handling & Streams",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "File Handling & Streams",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under File Handling & Streams. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (File Handling & Streams).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "File Handling & Streams",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-246",
+    "title": "Advanced Python Specialty #246: Iterators & Itertools",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Iterators & Itertools",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Iterators & Itertools. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Iterators & Itertools).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Iterators & Itertools",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-247",
+    "title": "Advanced Python Specialty #247: Regular Expressions (re)",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Regular Expressions (re)",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Regular Expressions (re). `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Regular Expressions (re)).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Regular Expressions (re)",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-248",
+    "title": "Advanced Python Specialty #248: Context Managers",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Context Managers",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Context Managers. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Context Managers).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Context Managers",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-249",
+    "title": "Advanced Python Specialty #249: Memory Profiling & GC",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Memory Profiling & GC",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Memory Profiling & GC. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Memory Profiling & GC).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Memory Profiling & GC",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-250",
+    "title": "Advanced Python Specialty #250: Time Complexity of Built-ins",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Time Complexity of Built-ins",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Time Complexity of Built-ins. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Time Complexity of Built-ins).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Time Complexity of Built-ins",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-251",
+    "title": "Advanced Python Specialty #251: File Handling & Streams",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "File Handling & Streams",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under File Handling & Streams. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (File Handling & Streams).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "File Handling & Streams",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-252",
+    "title": "Advanced Python Specialty #252: Iterators & Itertools",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Iterators & Itertools",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Iterators & Itertools. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Iterators & Itertools).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Iterators & Itertools",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-253",
+    "title": "Advanced Python Specialty #253: Regular Expressions (re)",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Regular Expressions (re)",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Regular Expressions (re). `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Regular Expressions (re)).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Regular Expressions (re)",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-254",
+    "title": "Advanced Python Specialty #254: Context Managers",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Context Managers",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Context Managers. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Context Managers).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Context Managers",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-255",
+    "title": "Advanced Python Specialty #255: Memory Profiling & GC",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Memory Profiling & GC",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Memory Profiling & GC. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Memory Profiling & GC).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Memory Profiling & GC",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-256",
+    "title": "Advanced Python Specialty #256: Time Complexity of Built-ins",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Time Complexity of Built-ins",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Time Complexity of Built-ins. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Time Complexity of Built-ins).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Time Complexity of Built-ins",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-257",
+    "title": "Advanced Python Specialty #257: File Handling & Streams",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "File Handling & Streams",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under File Handling & Streams. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (File Handling & Streams).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "File Handling & Streams",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-258",
+    "title": "Advanced Python Specialty #258: Iterators & Itertools",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Iterators & Itertools",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Iterators & Itertools. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Iterators & Itertools).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Iterators & Itertools",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-259",
+    "title": "Advanced Python Specialty #259: Regular Expressions (re)",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Regular Expressions (re)",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Regular Expressions (re). `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Regular Expressions (re)).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Regular Expressions (re)",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  },
+  {
+    "id": "py-260",
+    "title": "Advanced Python Specialty #260: Context Managers",
+    "category": "python",
+    "topic": "Advanced Python",
+    "subtopic": "Context Managers",
+    "difficulty": "Hard",
+    "relevance": "Production Python & Architecture Engineering",
+    "type": "coding",
+    "statement": "Implement a solution using Python advanced runtime tools under Context Managers. `solve(text: str) -> bool`.",
+    "inputFormat": "Arguments passed to solve()",
+    "outputFormat": "Evaluated result returned from solve()",
+    "constraints": [
+      "Standard Python 3 standard library only",
+      "Timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"test@example.com\"",
+        "output": "True"
+      },
+      {
+        "input": "\"invalid-email\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "import re\n\ndef solve(text: str) -> bool:\n    pass",
+    "solution": "import re\n\ndef solve(text: str) -> bool:\n    return bool(re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", text))",
+    "testCases": [
+      {
+        "input": "\"test@example.com\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"invalid-email\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"user.name+tag@company.co.uk\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Covers deep Python internals and built-in standard library utilities (Context Managers).",
+    "algorithm": [
+      "Parse the string or stream.",
+      "Compile pattern or initialize context.",
+      "Process and return verified outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "relatedConcepts": [
+      "Context Managers",
+      "re module",
+      "Itertools",
+      "Memory management"
+    ],
+    "commonMistakes": [
+      "Catastrophic backtracking in regex.",
+      "Failing to close file descriptors."
+    ]
+  }
+]

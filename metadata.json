@@ -1,0 +1,6 @@
+{
+  "name": "CodeMaster – Python & DSA Academy",
+  "description": "Master Python programming, Data Structures & Algorithms, and technical interviews with 1,000+ interactive problems, browser-based Python WebAssembly execution, AI mentor, and real-time progress analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

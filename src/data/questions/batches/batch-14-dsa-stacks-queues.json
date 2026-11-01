@@ -1,0 +1,2277 @@
+[
+  {
+    "id": "dsa-356",
+    "title": "Balanced Parentheses Verification #1",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Valid Parentheses",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Valid Parentheses technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Valid Parentheses",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-357",
+    "title": "Balanced Parentheses Verification #2",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Next Greater Element",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Next Greater Element technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Next Greater Element",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-358",
+    "title": "Balanced Parentheses Verification #3",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Largest Rectangle in Histogram",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Largest Rectangle in Histogram technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Largest Rectangle in Histogram",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-359",
+    "title": "Balanced Parentheses Verification #4",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Sliding Window Maximum (Monotonic Queue)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Sliding Window Maximum (Monotonic Queue) technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Sliding Window Maximum (Monotonic Queue)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-360",
+    "title": "Balanced Parentheses Verification #5",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Min Stack",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Min Stack technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Min Stack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-361",
+    "title": "Balanced Parentheses Verification #6",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Valid Parentheses",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Valid Parentheses technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Valid Parentheses",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-362",
+    "title": "Balanced Parentheses Verification #7",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Next Greater Element",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Next Greater Element technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Next Greater Element",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-363",
+    "title": "Balanced Parentheses Verification #8",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Largest Rectangle in Histogram",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Largest Rectangle in Histogram technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Largest Rectangle in Histogram",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-364",
+    "title": "Balanced Parentheses Verification #9",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Sliding Window Maximum (Monotonic Queue)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Sliding Window Maximum (Monotonic Queue) technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Sliding Window Maximum (Monotonic Queue)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-365",
+    "title": "Balanced Parentheses Verification #10",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Min Stack",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Min Stack technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Min Stack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-366",
+    "title": "Balanced Parentheses Verification #11",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Valid Parentheses",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Valid Parentheses technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Valid Parentheses",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-367",
+    "title": "Balanced Parentheses Verification #12",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Next Greater Element",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Next Greater Element technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Next Greater Element",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-368",
+    "title": "Balanced Parentheses Verification #13",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Largest Rectangle in Histogram",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Largest Rectangle in Histogram technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Largest Rectangle in Histogram",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-369",
+    "title": "Balanced Parentheses Verification #14",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Sliding Window Maximum (Monotonic Queue)",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Sliding Window Maximum (Monotonic Queue) technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Sliding Window Maximum (Monotonic Queue)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-370",
+    "title": "Balanced Parentheses Verification #15",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Min Stack",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Min Stack technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Min Stack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-371",
+    "title": "Balanced Parentheses Verification #16",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Valid Parentheses",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Valid Parentheses technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Valid Parentheses",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-372",
+    "title": "Balanced Parentheses Verification #17",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Next Greater Element",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Next Greater Element technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Next Greater Element",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-373",
+    "title": "Balanced Parentheses Verification #18",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Largest Rectangle in Histogram",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Largest Rectangle in Histogram technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Largest Rectangle in Histogram",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-374",
+    "title": "Balanced Parentheses Verification #19",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Sliding Window Maximum (Monotonic Queue)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Sliding Window Maximum (Monotonic Queue) technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Sliding Window Maximum (Monotonic Queue)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-375",
+    "title": "Balanced Parentheses Verification #20",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Min Stack",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Min Stack technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Min Stack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-376",
+    "title": "Balanced Parentheses Verification #21",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Valid Parentheses",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Valid Parentheses technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Valid Parentheses",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-377",
+    "title": "Balanced Parentheses Verification #22",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Next Greater Element",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Next Greater Element technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Next Greater Element",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-378",
+    "title": "Balanced Parentheses Verification #23",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Largest Rectangle in Histogram",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Largest Rectangle in Histogram technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Largest Rectangle in Histogram",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-379",
+    "title": "Balanced Parentheses Verification #24",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Sliding Window Maximum (Monotonic Queue)",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Sliding Window Maximum (Monotonic Queue) technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Sliding Window Maximum (Monotonic Queue)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-380",
+    "title": "Balanced Parentheses Verification #25",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Min Stack",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Min Stack technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Min Stack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-381",
+    "title": "Balanced Parentheses Verification #26",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Valid Parentheses",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Valid Parentheses technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Valid Parentheses",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-382",
+    "title": "Balanced Parentheses Verification #27",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Next Greater Element",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Next Greater Element technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Next Greater Element",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-383",
+    "title": "Balanced Parentheses Verification #28",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Largest Rectangle in Histogram",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Largest Rectangle in Histogram technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Largest Rectangle in Histogram",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-384",
+    "title": "Balanced Parentheses Verification #29",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Sliding Window Maximum (Monotonic Queue)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Sliding Window Maximum (Monotonic Queue) technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Sliding Window Maximum (Monotonic Queue)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-385",
+    "title": "Balanced Parentheses Verification #30",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Min Stack",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Min Stack technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Min Stack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-386",
+    "title": "Balanced Parentheses Verification #31",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Valid Parentheses",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Valid Parentheses technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Valid Parentheses",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-387",
+    "title": "Balanced Parentheses Verification #32",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Next Greater Element",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Next Greater Element technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Next Greater Element",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-388",
+    "title": "Balanced Parentheses Verification #33",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Largest Rectangle in Histogram",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Largest Rectangle in Histogram technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Largest Rectangle in Histogram",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-389",
+    "title": "Balanced Parentheses Verification #34",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Sliding Window Maximum (Monotonic Queue)",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Sliding Window Maximum (Monotonic Queue) technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Sliding Window Maximum (Monotonic Queue)",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-390",
+    "title": "Balanced Parentheses Verification #35",
+    "category": "dsa",
+    "topic": "Stacks and Queues",
+    "subtopic": "Min Stack",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given a string `s` containing only characters \"(\", \")\", \"{\", \"}\", \"[\", and \"]\", determine if the input string is valid.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "\"()[]{}\"",
+        "output": "True"
+      },
+      {
+        "input": "\"(]\"",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> bool:\n    pass",
+    "solution": "def solve(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != top: return False\n        else:\n            stack.append(char)\n    return not stack",
+    "testCases": [
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "\"{[]}\"",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Min Stack technique under Stacks and Queues.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Stacks and Queues",
+      "Min Stack",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  }
+]

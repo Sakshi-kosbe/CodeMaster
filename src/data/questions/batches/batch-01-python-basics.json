@@ -1,0 +1,4532 @@
+[
+  {
+    "id": "py-001",
+    "title": "Sum of Natural Numbers up to N",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Variables and Operators",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given a positive integer `n`, compute and return the sum of all natural numbers from 1 to `n` inclusive using the arithmetic progression formula.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "15"
+      },
+      {
+        "input": "10",
+        "output": "55"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * (n + 1) // 2",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "15",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "55",
+        "isHidden": false
+      },
+      {
+        "input": "100",
+        "expectedOutput": "5050",
+        "isHidden": true
+      },
+      {
+        "input": "1",
+        "expectedOutput": "1",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Variables and Operators.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Variables and Operators",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-002",
+    "title": "Even, Odd, or Zero Classifier",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Conditional Statements",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given an integer `num`, return \"Zero\" if `num == 0`, \"Even\" if `num` is divisible by 2, and \"Odd\" otherwise.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "4",
+        "output": "Even"
+      },
+      {
+        "input": "7",
+        "output": "Odd"
+      }
+    ],
+    "starterCode": "def solve(num: int) -> str:\n    pass",
+    "solution": "def solve(num: int) -> str:\n    if num == 0:\n        return \"Zero\"\n    return \"Even\" if num % 2 == 0 else \"Odd\"",
+    "testCases": [
+      {
+        "input": "4",
+        "expectedOutput": "Even",
+        "isHidden": false
+      },
+      {
+        "input": "7",
+        "expectedOutput": "Odd",
+        "isHidden": false
+      },
+      {
+        "input": "0",
+        "expectedOutput": "Zero",
+        "isHidden": true
+      },
+      {
+        "input": "-6",
+        "expectedOutput": "Even",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Conditional Statements.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Conditional Statements",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-003",
+    "title": "Reverse Digits of Signed Integer",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Number Theory and Math",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given an integer `n`, reverse its decimal digits while preserving its algebraic sign (e.g. -123 becomes -321).",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "123",
+        "output": "321"
+      },
+      {
+        "input": "-456",
+        "output": "-654"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    sign = -1 if n < 0 else 1\n    s = str(abs(n))[::-1]\n    return sign * int(s)",
+    "testCases": [
+      {
+        "input": "123",
+        "expectedOutput": "321",
+        "isHidden": false
+      },
+      {
+        "input": "-456",
+        "expectedOutput": "-654",
+        "isHidden": false
+      },
+      {
+        "input": "10200",
+        "expectedOutput": "201",
+        "isHidden": true
+      },
+      {
+        "input": "0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Number Theory and Math.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Number Theory and Math",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-004",
+    "title": "Count Vowels and Consonants in String",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "String Manipulation",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given a string `s`, return a tuple `(vowels_count, consonants_count)` for all ASCII letters in `s` (ignoring whitespace, numbers, and punctuation).",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "\"hello\"",
+        "output": "(2, 3)"
+      },
+      {
+        "input": "\"python\"",
+        "output": "(1, 5)"
+      }
+    ],
+    "starterCode": "def solve(s: str) -> tuple:\n    pass",
+    "solution": "def solve(s: str) -> tuple:\n    vowels = set(\"aeiou\")\n    v_cnt = sum(1 for c in s.lower() if c in vowels)\n    c_cnt = sum(1 for c in s.lower() if c.isalpha() and c not in vowels)\n    return (v_cnt, c_cnt)",
+    "testCases": [
+      {
+        "input": "\"hello\"",
+        "expectedOutput": "(2, 3)",
+        "isHidden": false
+      },
+      {
+        "input": "\"python\"",
+        "expectedOutput": "(1, 5)",
+        "isHidden": false
+      },
+      {
+        "input": "\"education\"",
+        "expectedOutput": "(5, 4)",
+        "isHidden": true
+      },
+      {
+        "input": "\"123! #\"",
+        "expectedOutput": "(0, 0)",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in String Manipulation.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "String Manipulation",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-005",
+    "title": "Compute Factorial of Non-Negative Integer",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops and Iteration",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Calculate and return the factorial of non-negative integer `n`. Note that `0! = 1`.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "5",
+        "output": "120"
+      },
+      {
+        "input": "0",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    ans = 1\n    for i in range(1, n + 1):\n        ans *= i\n    return ans",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "120",
+        "isHidden": false
+      },
+      {
+        "input": "0",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "7",
+        "expectedOutput": "5040",
+        "isHidden": true
+      },
+      {
+        "input": "1",
+        "expectedOutput": "1",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops and Iteration.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops and Iteration",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-006",
+    "title": "Euclidean Greatest Common Divisor",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Basic Mathematical Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given two positive integers `a` and `b`, compute their greatest common divisor (GCD) using Euclid’s algorithm.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "24, 36",
+        "output": "12"
+      },
+      {
+        "input": "17, 19",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(a: int, b: int) -> int:\n    pass",
+    "solution": "def solve(a: int, b: int) -> int:\n    while b:\n        a, b = b, a % b\n    return a",
+    "testCases": [
+      {
+        "input": "24, 36",
+        "expectedOutput": "12",
+        "isHidden": false
+      },
+      {
+        "input": "17, 19",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "100, 75",
+        "expectedOutput": "25",
+        "isHidden": true
+      },
+      {
+        "input": "48, 18",
+        "expectedOutput": "6",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Basic Mathematical Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log(min(a, b)))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Basic Mathematical Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-007",
+    "title": "Fibonacci Term Calculator",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops and State Machine",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Return the `n`-th Fibonacci number where `F(0) = 0` and `F(1) = 1` in linear time and O(1) memory.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "6",
+        "output": "8"
+      },
+      {
+        "input": "10",
+        "output": "55"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    if n <= 1: return n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b",
+    "testCases": [
+      {
+        "input": "6",
+        "expectedOutput": "8",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "55",
+        "isHidden": false
+      },
+      {
+        "input": "15",
+        "expectedOutput": "610",
+        "isHidden": true
+      },
+      {
+        "input": "0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops and State Machine.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops and State Machine",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-008",
+    "title": "Armstrong Number Verification",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Type Conversion and Digits",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "A number is an Armstrong (narcissistic) number if the sum of its digits raised to the power of the number of digits equals the number itself. Return `True` or `False`.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "153",
+        "output": "True"
+      },
+      {
+        "input": "123",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> bool:\n    pass",
+    "solution": "def solve(n: int) -> bool:\n    s = str(n)\n    k = len(s)\n    return sum(int(c) ** k for c in s) == n",
+    "testCases": [
+      {
+        "input": "153",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "123",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "370",
+        "expectedOutput": "True",
+        "isHidden": true
+      },
+      {
+        "input": "9",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Type Conversion and Digits.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Type Conversion and Digits",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-009",
+    "title": "Prime Number Primality Tester",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Mathematical Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Determine whether a positive integer `n` is prime in $O(\\sqrt{n})$ time.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "29",
+        "output": "True"
+      },
+      {
+        "input": "49",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> bool:\n    pass",
+    "solution": "def solve(n: int) -> bool:\n    if n <= 1: return False\n    if n <= 3: return True\n    if n % 2 == 0 or n % 3 == 0: return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True",
+    "testCases": [
+      {
+        "input": "29",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "49",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "97",
+        "expectedOutput": "True",
+        "isHidden": true
+      },
+      {
+        "input": "1",
+        "expectedOutput": "False",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Mathematical Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(sqrt(N))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Mathematical Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-010",
+    "title": "Decimal to Binary String Formatter",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Bitwise and String Formatting",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Convert an integer `n >= 0` to its binary string representation without the \"0b\" prefix.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "10",
+        "output": "1010"
+      },
+      {
+        "input": "7",
+        "output": "111"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> str:\n    pass",
+    "solution": "def solve(n: int) -> str:\n    return bin(n)[2:]",
+    "testCases": [
+      {
+        "input": "10",
+        "expectedOutput": "1010",
+        "isHidden": false
+      },
+      {
+        "input": "7",
+        "expectedOutput": "111",
+        "isHidden": false
+      },
+      {
+        "input": "32",
+        "expectedOutput": "100000",
+        "isHidden": true
+      },
+      {
+        "input": "0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Bitwise and String Formatting.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(log N)",
+    "relatedConcepts": [
+      "Bitwise and String Formatting",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-011",
+    "title": "Calculate Sum of Squares of First N Numbers",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given positive integer `n`, compute the sum 1^2 + 2^2 + ... + n^2 using formula `n*(n+1)*(2n+1)//6`.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "3",
+        "output": "14"
+      },
+      {
+        "input": "5",
+        "output": "55"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * (n + 1) * (2 * n + 1) // 6",
+    "testCases": [
+      {
+        "input": "3",
+        "expectedOutput": "14",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "55",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "385",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-012",
+    "title": "Leap Year Checker",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given a year `y`, return `True` if it is a leap year (divisible by 4 and not 100, or divisible by 400), else `False`.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2024",
+        "output": "True"
+      },
+      {
+        "input": "1900",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(y: int) -> bool:\n    pass",
+    "solution": "def solve(y: int) -> bool:\n    return (y % 4 == 0 and y % 100 != 0) or (y % 400 == 0)",
+    "testCases": [
+      {
+        "input": "2024",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "1900",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "2000",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-013",
+    "title": "Find Celsius from Fahrenheit",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given temperature in Fahrenheit `f`, convert it to Celsius rounded to 2 decimal places. Return float.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "32.0",
+        "output": "0.0"
+      },
+      {
+        "input": "100.0",
+        "output": "37.78"
+      }
+    ],
+    "starterCode": "def solve(f: float) -> float:\n    pass",
+    "solution": "def solve(f: float) -> float:\n    return round((f - 32) * 5 / 9, 2)",
+    "testCases": [
+      {
+        "input": "32.0",
+        "expectedOutput": "0.0",
+        "isHidden": false
+      },
+      {
+        "input": "100.0",
+        "expectedOutput": "37.78",
+        "isHidden": false
+      },
+      {
+        "input": "-40.0",
+        "expectedOutput": "-40.0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-014",
+    "title": "Calculate Simple Interest",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given principal `p`, rate `r`, and time `t`, return simple interest `(p * r * t) / 100` rounded to 2 decimals.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "1000, 5, 2",
+        "output": "100.0"
+      },
+      {
+        "input": "500, 3.5, 4",
+        "output": "70.0"
+      }
+    ],
+    "starterCode": "def solve(p: float, r: float, t: float) -> float:\n    pass",
+    "solution": "def solve(p: float, r: float, t: float) -> float:\n    return round((p * r * t) / 100, 2)",
+    "testCases": [
+      {
+        "input": "1000, 5, 2",
+        "expectedOutput": "100.0",
+        "isHidden": false
+      },
+      {
+        "input": "500, 3.5, 4",
+        "expectedOutput": "70.0",
+        "isHidden": false
+      },
+      {
+        "input": "1200, 7.5, 3",
+        "expectedOutput": "270.0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-015",
+    "title": "Sum of Digits of an Integer",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given an integer `n`, return the sum of its absolute decimal digits.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "1234",
+        "output": "10"
+      },
+      {
+        "input": "-905",
+        "output": "14"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return sum(int(c) for c in str(abs(n)))",
+    "testCases": [
+      {
+        "input": "1234",
+        "expectedOutput": "10",
+        "isHidden": false
+      },
+      {
+        "input": "-905",
+        "expectedOutput": "14",
+        "isHidden": false
+      },
+      {
+        "input": "0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-016",
+    "title": "Check Perfect Square",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given an integer `n >= 0`, return `True` if `n` is a perfect square, else `False`.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "16",
+        "output": "True"
+      },
+      {
+        "input": "14",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> bool:\n    pass",
+    "solution": "def solve(n: int) -> bool:\n    if n < 0: return False\n    r = int(n ** 0.5)\n    return r * r == n",
+    "testCases": [
+      {
+        "input": "16",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "14",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "0",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log(min(a, b)))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-017",
+    "title": "Find Maximum of Three Numbers",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given three integers `a`, `b`, and `c`, return the maximum value without using Python built-in `max()`.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "3, 7, 5",
+        "output": "7"
+      },
+      {
+        "input": "-10, -2, -5",
+        "output": "-2"
+      }
+    ],
+    "starterCode": "def solve(a: int, b: int, c: int) -> int:\n    pass",
+    "solution": "def solve(a: int, b: int, c: int) -> int:\n    m = a\n    if b > m: m = b\n    if c > m: m = c\n    return m",
+    "testCases": [
+      {
+        "input": "3, 7, 5",
+        "expectedOutput": "7",
+        "isHidden": false
+      },
+      {
+        "input": "-10, -2, -5",
+        "expectedOutput": "-2",
+        "isHidden": false
+      },
+      {
+        "input": "8, 8, 8",
+        "expectedOutput": "8",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-018",
+    "title": "Check Power of Two",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given an integer `n`, return `True` if it is a power of two (`n > 0` and `(n & (n - 1)) == 0`), else `False`.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "16",
+        "output": "True"
+      },
+      {
+        "input": "18",
+        "output": "False"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> bool:\n    pass",
+    "solution": "def solve(n: int) -> bool:\n    return n > 0 and (n & (n - 1)) == 0",
+    "testCases": [
+      {
+        "input": "16",
+        "expectedOutput": "True",
+        "isHidden": false
+      },
+      {
+        "input": "18",
+        "expectedOutput": "False",
+        "isHidden": false
+      },
+      {
+        "input": "1",
+        "expectedOutput": "True",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-019",
+    "title": "Count Set Bits in Integer",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given integer `n >= 0`, return the count of 1s in its binary representation using Brian Kernighan algorithm.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "11",
+        "output": "3"
+      },
+      {
+        "input": "128",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    cnt = 0\n    while n:\n        n &= (n - 1)\n        cnt += 1\n    return cnt",
+    "testCases": [
+      {
+        "input": "11",
+        "expectedOutput": "3",
+        "isHidden": false
+      },
+      {
+        "input": "128",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "0",
+        "expectedOutput": "0",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(sqrt(N))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-020",
+    "title": "Swap Two Variables Without Temp Variable",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Operators & Arithmetic Expressions",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Given two integers `a` and `b`, return tuple `(b, a)` demonstrating in-place tuple assignment.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "5, 10",
+        "output": "(10, 5)"
+      },
+      {
+        "input": "-1, 4",
+        "output": "(4, -1)"
+      }
+    ],
+    "starterCode": "def solve(a: int, b: int) -> tuple:\n    pass",
+    "solution": "def solve(a: int, b: int) -> tuple:\n    a, b = b, a\n    return (a, b)",
+    "testCases": [
+      {
+        "input": "5, 10",
+        "expectedOutput": "(10, 5)",
+        "isHidden": false
+      },
+      {
+        "input": "-1, 4",
+        "expectedOutput": "(4, -1)",
+        "isHidden": false
+      },
+      {
+        "input": "0, 0",
+        "expectedOutput": "(0, 0)",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Operators & Arithmetic Expressions.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(log N)",
+    "relatedConcepts": [
+      "Operators & Arithmetic Expressions",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-021",
+    "title": "Basic Math & Algorithm Challenge #21",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=21$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "43"
+      },
+      {
+        "input": "5",
+        "output": "106"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 21 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "43",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "106",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "211",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-022",
+    "title": "Basic Math & Algorithm Challenge #22",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=22$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "45"
+      },
+      {
+        "input": "5",
+        "output": "111"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 22 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "45",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "111",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "221",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-023",
+    "title": "Basic Math & Algorithm Challenge #23",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=23$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "47"
+      },
+      {
+        "input": "5",
+        "output": "116"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 23 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "47",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "116",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "231",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-024",
+    "title": "Basic Math & Algorithm Challenge #24",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=24$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "49"
+      },
+      {
+        "input": "5",
+        "output": "121"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 24 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "49",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "121",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "241",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-025",
+    "title": "Basic Math & Algorithm Challenge #25",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=25$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "51"
+      },
+      {
+        "input": "5",
+        "output": "126"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 25 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "51",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "126",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "251",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-026",
+    "title": "Basic Math & Algorithm Challenge #26",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=26$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "53"
+      },
+      {
+        "input": "5",
+        "output": "131"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 26 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "53",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "131",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "261",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log(min(a, b)))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-027",
+    "title": "Basic Math & Algorithm Challenge #27",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=27$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "55"
+      },
+      {
+        "input": "5",
+        "output": "136"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 27 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "55",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "136",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "271",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-028",
+    "title": "Basic Math & Algorithm Challenge #28",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=28$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "57"
+      },
+      {
+        "input": "5",
+        "output": "141"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 28 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "57",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "141",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "281",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-029",
+    "title": "Basic Math & Algorithm Challenge #29",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=29$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "59"
+      },
+      {
+        "input": "5",
+        "output": "146"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 29 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "59",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "146",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "291",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(sqrt(N))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-030",
+    "title": "Basic Math & Algorithm Challenge #30",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=30$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "61"
+      },
+      {
+        "input": "5",
+        "output": "151"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 30 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "61",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "151",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "301",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(log N)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-031",
+    "title": "Basic Math & Algorithm Challenge #31",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=31$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "63"
+      },
+      {
+        "input": "5",
+        "output": "156"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 31 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "63",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "156",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "311",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-032",
+    "title": "Basic Math & Algorithm Challenge #32",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=32$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "65"
+      },
+      {
+        "input": "5",
+        "output": "161"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 32 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "65",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "161",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "321",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-033",
+    "title": "Basic Math & Algorithm Challenge #33",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=33$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "67"
+      },
+      {
+        "input": "5",
+        "output": "166"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 33 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "67",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "166",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "331",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-034",
+    "title": "Basic Math & Algorithm Challenge #34",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=34$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "69"
+      },
+      {
+        "input": "5",
+        "output": "171"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 34 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "69",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "171",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "341",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-035",
+    "title": "Basic Math & Algorithm Challenge #35",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=35$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "71"
+      },
+      {
+        "input": "5",
+        "output": "176"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 35 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "71",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "176",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "351",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-036",
+    "title": "Basic Math & Algorithm Challenge #36",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=36$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "73"
+      },
+      {
+        "input": "5",
+        "output": "181"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 36 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "73",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "181",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "361",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log(min(a, b)))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-037",
+    "title": "Basic Math & Algorithm Challenge #37",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=37$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "75"
+      },
+      {
+        "input": "5",
+        "output": "186"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 37 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "75",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "186",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "371",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-038",
+    "title": "Basic Math & Algorithm Challenge #38",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=38$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "77"
+      },
+      {
+        "input": "5",
+        "output": "191"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 38 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "77",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "191",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "381",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-039",
+    "title": "Basic Math & Algorithm Challenge #39",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=39$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "79"
+      },
+      {
+        "input": "5",
+        "output": "196"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 39 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "79",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "196",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "391",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(sqrt(N))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-040",
+    "title": "Basic Math & Algorithm Challenge #40",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=40$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "81"
+      },
+      {
+        "input": "5",
+        "output": "201"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 40 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "81",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "201",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "401",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(log N)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-041",
+    "title": "Basic Math & Algorithm Challenge #41",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=41$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "83"
+      },
+      {
+        "input": "5",
+        "output": "206"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 41 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "83",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "206",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "411",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-042",
+    "title": "Basic Math & Algorithm Challenge #42",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=42$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "85"
+      },
+      {
+        "input": "5",
+        "output": "211"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 42 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "85",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "211",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "421",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-043",
+    "title": "Basic Math & Algorithm Challenge #43",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=43$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "87"
+      },
+      {
+        "input": "5",
+        "output": "216"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 43 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "87",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "216",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "431",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-044",
+    "title": "Basic Math & Algorithm Challenge #44",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=44$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "89"
+      },
+      {
+        "input": "5",
+        "output": "221"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 44 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "89",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "221",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "441",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-045",
+    "title": "Basic Math & Algorithm Challenge #45",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=45$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "91"
+      },
+      {
+        "input": "5",
+        "output": "226"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 45 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "91",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "226",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "451",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-046",
+    "title": "Basic Math & Algorithm Challenge #46",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=46$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "93"
+      },
+      {
+        "input": "5",
+        "output": "231"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 46 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "93",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "231",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "461",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log(min(a, b)))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-047",
+    "title": "Basic Math & Algorithm Challenge #47",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=47$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "95"
+      },
+      {
+        "input": "5",
+        "output": "236"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 47 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "95",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "236",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "471",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-048",
+    "title": "Basic Math & Algorithm Challenge #48",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=48$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "97"
+      },
+      {
+        "input": "5",
+        "output": "241"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 48 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "97",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "241",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "481",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-049",
+    "title": "Basic Math & Algorithm Challenge #49",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=49$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "99"
+      },
+      {
+        "input": "5",
+        "output": "246"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 49 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "99",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "246",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "491",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(sqrt(N))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-050",
+    "title": "Basic Math & Algorithm Challenge #50",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=50$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "101"
+      },
+      {
+        "input": "5",
+        "output": "251"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 50 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "101",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "251",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "501",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(log N)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-051",
+    "title": "Basic Math & Algorithm Challenge #51",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=51$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "103"
+      },
+      {
+        "input": "5",
+        "output": "256"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 51 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "103",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "256",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "511",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-052",
+    "title": "Basic Math & Algorithm Challenge #52",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=52$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "105"
+      },
+      {
+        "input": "5",
+        "output": "261"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 52 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "105",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "261",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "521",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-053",
+    "title": "Basic Math & Algorithm Challenge #53",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=53$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "107"
+      },
+      {
+        "input": "5",
+        "output": "266"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 53 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "107",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "266",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "531",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-054",
+    "title": "Basic Math & Algorithm Challenge #54",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=54$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "109"
+      },
+      {
+        "input": "5",
+        "output": "271"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 54 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "109",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "271",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "541",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-055",
+    "title": "Basic Math & Algorithm Challenge #55",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=55$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "111"
+      },
+      {
+        "input": "5",
+        "output": "276"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 55 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "111",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "276",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "551",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-056",
+    "title": "Basic Math & Algorithm Challenge #56",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=56$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "113"
+      },
+      {
+        "input": "5",
+        "output": "281"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 56 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "113",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "281",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "561",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log(min(a, b)))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-057",
+    "title": "Basic Math & Algorithm Challenge #57",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=57$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "115"
+      },
+      {
+        "input": "5",
+        "output": "286"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 57 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "115",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "286",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "571",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-058",
+    "title": "Basic Math & Algorithm Challenge #58",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=58$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "117"
+      },
+      {
+        "input": "5",
+        "output": "291"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 58 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "117",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "291",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "581",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-059",
+    "title": "Basic Math & Algorithm Challenge #59",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=59$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "119"
+      },
+      {
+        "input": "5",
+        "output": "296"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 59 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "119",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "296",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "591",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(sqrt(N))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-060",
+    "title": "Basic Math & Algorithm Challenge #60",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=60$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "121"
+      },
+      {
+        "input": "5",
+        "output": "301"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 60 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "121",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "301",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "601",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(log N)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-061",
+    "title": "Basic Math & Algorithm Challenge #61",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=61$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "123"
+      },
+      {
+        "input": "5",
+        "output": "306"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 61 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "123",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "306",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "611",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-062",
+    "title": "Basic Math & Algorithm Challenge #62",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=62$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "125"
+      },
+      {
+        "input": "5",
+        "output": "311"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 62 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "125",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "311",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "621",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-063",
+    "title": "Basic Math & Algorithm Challenge #63",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=63$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "127"
+      },
+      {
+        "input": "5",
+        "output": "316"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 63 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "127",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "316",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "631",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-064",
+    "title": "Basic Math & Algorithm Challenge #64",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=64$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "129"
+      },
+      {
+        "input": "5",
+        "output": "321"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 64 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "129",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "321",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "641",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-065",
+    "title": "Basic Math & Algorithm Challenge #65",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=65$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "131"
+      },
+      {
+        "input": "5",
+        "output": "326"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 65 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "131",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "326",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "651",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-066",
+    "title": "Basic Math & Algorithm Challenge #66",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=66$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "133"
+      },
+      {
+        "input": "5",
+        "output": "331"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 66 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "133",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "331",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "661",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log(min(a, b)))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-067",
+    "title": "Basic Math & Algorithm Challenge #67",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=67$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "135"
+      },
+      {
+        "input": "5",
+        "output": "336"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 67 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "135",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "336",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "671",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-068",
+    "title": "Basic Math & Algorithm Challenge #68",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=68$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "137"
+      },
+      {
+        "input": "5",
+        "output": "341"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 68 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "137",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "341",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "681",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(d)",
+    "spaceComplexity": "O(d)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-069",
+    "title": "Basic Math & Algorithm Challenge #69",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=69$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "139"
+      },
+      {
+        "input": "5",
+        "output": "346"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 69 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "139",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "346",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "691",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(sqrt(N))",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  },
+  {
+    "id": "py-070",
+    "title": "Basic Math & Algorithm Challenge #70",
+    "category": "python",
+    "topic": "Python Basics",
+    "subtopic": "Loops & Fundamental Algorithms",
+    "difficulty": "Easy",
+    "relevance": "Standard University & Screening Assessments",
+    "type": "coding",
+    "statement": "Write a function `solve(n: int) -> int` that computes the mathematical transformation for parameter $n=70$ adhering to strict complexity constraints.",
+    "inputFormat": "Function parameter(s) passed to solve()",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "Standard 64-bit integer limits",
+      "Execution timeout: 2.0s"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "141"
+      },
+      {
+        "input": "5",
+        "output": "351"
+      }
+    ],
+    "starterCode": "def solve(n: int) -> int:\n    pass",
+    "solution": "def solve(n: int) -> int:\n    return n * 70 + 1",
+    "testCases": [
+      {
+        "input": "2",
+        "expectedOutput": "141",
+        "isHidden": false
+      },
+      {
+        "input": "5",
+        "expectedOutput": "351",
+        "isHidden": false
+      },
+      {
+        "input": "10",
+        "expectedOutput": "701",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using optimal language constructs in Loops & Fundamental Algorithms.",
+    "algorithm": [
+      "Parse the input arguments.",
+      "Apply formula or iteration with clean boundary conditions.",
+      "Return the expected result."
+    ],
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(log N)",
+    "relatedConcepts": [
+      "Loops & Fundamental Algorithms",
+      "Python standard arithmetic",
+      "Control flow"
+    ],
+    "commonMistakes": [
+      "Off-by-one errors in range bounds.",
+      "Unintended float casting with single division /.",
+      "Not validating negative inputs."
+    ]
+  }
+]

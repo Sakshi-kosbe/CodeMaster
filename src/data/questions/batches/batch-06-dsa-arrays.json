@@ -1,0 +1,4552 @@
+[
+  {
+    "id": "dsa-001",
+    "title": "Target Pair Sum Indices #1",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-002",
+    "title": "Maximum Subarray Sum (Kadane) #2",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-003",
+    "title": "Sort Colors 0s, 1s, and 2s #3",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-004",
+    "title": "Target Pair Sum Indices #4",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-005",
+    "title": "Target Pair Sum Indices #5",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-006",
+    "title": "Target Pair Sum Indices #6",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-007",
+    "title": "Target Pair Sum Indices #7",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-008",
+    "title": "Maximum Subarray Sum (Kadane) #8",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-009",
+    "title": "Sort Colors 0s, 1s, and 2s #9",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-010",
+    "title": "Target Pair Sum Indices #10",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-011",
+    "title": "Target Pair Sum Indices #11",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-012",
+    "title": "Target Pair Sum Indices #12",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-013",
+    "title": "Target Pair Sum Indices #13",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-014",
+    "title": "Maximum Subarray Sum (Kadane) #14",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-015",
+    "title": "Sort Colors 0s, 1s, and 2s #15",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-016",
+    "title": "Target Pair Sum Indices #16",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-017",
+    "title": "Target Pair Sum Indices #17",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-018",
+    "title": "Target Pair Sum Indices #18",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-019",
+    "title": "Target Pair Sum Indices #19",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-020",
+    "title": "Maximum Subarray Sum (Kadane) #20",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-021",
+    "title": "Sort Colors 0s, 1s, and 2s #21",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-022",
+    "title": "Target Pair Sum Indices #22",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-023",
+    "title": "Target Pair Sum Indices #23",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-024",
+    "title": "Target Pair Sum Indices #24",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-025",
+    "title": "Target Pair Sum Indices #25",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-026",
+    "title": "Maximum Subarray Sum (Kadane) #26",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-027",
+    "title": "Sort Colors 0s, 1s, and 2s #27",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-028",
+    "title": "Target Pair Sum Indices #28",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Easy",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-029",
+    "title": "Target Pair Sum Indices #29",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-030",
+    "title": "Target Pair Sum Indices #30",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-031",
+    "title": "Target Pair Sum Indices #31",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-032",
+    "title": "Maximum Subarray Sum (Kadane) #32",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-033",
+    "title": "Sort Colors 0s, 1s, and 2s #33",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-034",
+    "title": "Target Pair Sum Indices #34",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-035",
+    "title": "Target Pair Sum Indices #35",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-036",
+    "title": "Target Pair Sum Indices #36",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-037",
+    "title": "Target Pair Sum Indices #37",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-038",
+    "title": "Maximum Subarray Sum (Kadane) #38",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-039",
+    "title": "Sort Colors 0s, 1s, and 2s #39",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-040",
+    "title": "Target Pair Sum Indices #40",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-041",
+    "title": "Target Pair Sum Indices #41",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-042",
+    "title": "Target Pair Sum Indices #42",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-043",
+    "title": "Target Pair Sum Indices #43",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-044",
+    "title": "Maximum Subarray Sum (Kadane) #44",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-045",
+    "title": "Sort Colors 0s, 1s, and 2s #45",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-046",
+    "title": "Target Pair Sum Indices #46",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-047",
+    "title": "Target Pair Sum Indices #47",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-048",
+    "title": "Target Pair Sum Indices #48",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-049",
+    "title": "Target Pair Sum Indices #49",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-050",
+    "title": "Maximum Subarray Sum (Kadane) #50",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-051",
+    "title": "Sort Colors 0s, 1s, and 2s #51",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-052",
+    "title": "Target Pair Sum Indices #52",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-053",
+    "title": "Target Pair Sum Indices #53",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-054",
+    "title": "Target Pair Sum Indices #54",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-055",
+    "title": "Target Pair Sum Indices #55",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-056",
+    "title": "Maximum Subarray Sum (Kadane) #56",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Medium",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-057",
+    "title": "Sort Colors 0s, 1s, and 2s #57",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-058",
+    "title": "Target Pair Sum Indices #58",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-059",
+    "title": "Target Pair Sum Indices #59",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-060",
+    "title": "Target Pair Sum Indices #60",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-061",
+    "title": "Target Pair Sum Indices #61",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-062",
+    "title": "Maximum Subarray Sum (Kadane) #62",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-063",
+    "title": "Sort Colors 0s, 1s, and 2s #63",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-064",
+    "title": "Target Pair Sum Indices #64",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-065",
+    "title": "Target Pair Sum Indices #65",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Subarray Sum",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Subarray Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Subarray Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-066",
+    "title": "Target Pair Sum Indices #66",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Trapping Rainwater",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Trapping Rainwater technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Trapping Rainwater",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-067",
+    "title": "Target Pair Sum Indices #67",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Prefix Sum",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Prefix Sum technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Prefix Sum",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-068",
+    "title": "Maximum Subarray Sum (Kadane) #68",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Kadane Algorithm",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an integer array `nums`, find the contiguous subarray with the largest sum and return its sum.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> int:\n    pass",
+    "solution": "def solve(nums: list[int]) -> int:\n    curr = best = nums[0]\n    for x in nums[1:]:\n        curr = max(x, curr + x)\n        best = max(best, curr)\n    return best",
+    "testCases": [
+      {
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expectedOutput": "6",
+        "isHidden": false
+      },
+      {
+        "input": "[1]",
+        "expectedOutput": "1",
+        "isHidden": false
+      },
+      {
+        "input": "[5, 4, -1, 7, 8]",
+        "expectedOutput": "23",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Kadane Algorithm technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Kadane Algorithm",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-069",
+    "title": "Sort Colors 0s, 1s, and 2s #69",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Dutch National Flag",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array with n objects colored red (0), white (1), or blue (2), sort them in-place in linear time and O(1) space.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "output": "[0, 0, 1, 1, 2, 2]"
+      },
+      {
+        "input": "[2, 0, 1]",
+        "output": "[0, 1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int]) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int]) -> list[int]:\n    nums = list(nums)\n    low, mid, high = 0, 0, len(nums) - 1\n    while mid <= high:\n        if nums[mid] == 0:\n            nums[low], nums[mid] = nums[mid], nums[low]\n            low += 1; mid += 1\n        elif nums[mid] == 1:\n            mid += 1\n        else:\n            nums[mid], nums[high] = nums[high], nums[mid]\n            high -= 1\n    return nums",
+    "testCases": [
+      {
+        "input": "[2, 0, 2, 1, 1, 0]",
+        "expectedOutput": "[0, 0, 1, 1, 2, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[2, 0, 1]",
+        "expectedOutput": "[0, 1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[0]",
+        "expectedOutput": "[0]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Dutch National Flag technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Dutch National Flag",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  },
+  {
+    "id": "dsa-070",
+    "title": "Target Pair Sum Indices #70",
+    "category": "dsa",
+    "topic": "Arrays",
+    "subtopic": "Matrix Rotation",
+    "difficulty": "Hard",
+    "relevance": "Tier-1 Tech & High-Frequency DSA Interview",
+    "type": "coding",
+    "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two numbers such that they add up to `target`.",
+    "inputFormat": "Arguments passed to solve() function",
+    "outputFormat": "Calculated value returned from solve()",
+    "constraints": [
+      "1 <= input size <= 10^5",
+      "Time limit: 2.0s",
+      "Memory limit: 512MB"
+    ],
+    "examples": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "output": "[0, 1]"
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "starterCode": "def solve(nums: list[int], target: int) -> list[int]:\n    pass",
+    "solution": "def solve(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i\n    return []",
+    "testCases": [
+      {
+        "input": "[2, 7, 11, 15], 9",
+        "expectedOutput": "[0, 1]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 2, 4], 6",
+        "expectedOutput": "[1, 2]",
+        "isHidden": false
+      },
+      {
+        "input": "[3, 3], 6",
+        "expectedOutput": "[0, 1]",
+        "isHidden": true
+      }
+    ],
+    "explanation": "Solves the problem using an optimal Matrix Rotation technique under Arrays.",
+    "algorithm": [
+      "Analyze constraints and boundary conditions.",
+      "Initialize state variables and pointers/tables.",
+      "Execute the core invariant logic.",
+      "Return the computed optimal outcome."
+    ],
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "relatedConcepts": [
+      "Arrays",
+      "Matrix Rotation",
+      "Time & Space Trade-off"
+    ],
+    "commonMistakes": [
+      "Boundary indexing errors on empty or single-element inputs.",
+      "Unnecessary nested loops degrading complexity to O(N^2)."
+    ]
+  }
+]
