@@ -1,7 +1,11 @@
 /**
  * Pyodide WebAssembly Python Execution Service
- * Executes Python code completely in-browser safely with stdout/stderr capture,
- * timeout limits, and automated test case assertion verification.
+ * Executes Python code completely in-browser safely with:
+ * - stdout and stderr capture
+ * - custom stdin support
+ * - sys.settrace execution guard for infinite loop and timeout protection
+ * - sample test cases evaluation
+ * - secure hidden test evaluation (concealing hidden inputs & expected answers)
  */
 
 import { ExecutionResult, TestCase } from '../types';
@@ -51,7 +55,6 @@ class PyodideRunner {
 
     this.initPromise = (async () => {
       try {
-        // Ensure script is loaded
         if (!window.loadPyodide) {
           await new Promise<void>((resolve, reject) => {
             const existingScript = document.querySelector('script[src*="pyodide.js"]');
@@ -63,7 +66,7 @@ class PyodideRunner {
               script.src = 'https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js';
               script.async = true;
               script.onload = () => resolve();
-              script.onerror = () => reject(new Error('Failed to download Pyodide WebAssembly engine'));
+              script.onerror = () => reject(new Error('Failed to download Pyodide WebAssembly runtime'));
               document.head.appendChild(script);
             }
           });
@@ -77,10 +80,11 @@ class PyodideRunner {
           indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.27.2/full/'
         });
 
-        // Initialize standard redirection harness
+        // Initialize standard redirection and execution guard harness
         await py.runPythonAsync(`
 import sys
 import io
+import time
 
 class OutputCapture:
     def __init__(self):
@@ -100,6 +104,22 @@ class OutputCapture:
         return self.stderr_buf.getvalue()
 
 _capture = OutputCapture()
+
+class ExecutionGuard:
+    def __init__(self, max_seconds=3.0, max_steps=3000000):
+        self.start_time = time.time()
+        self.max_seconds = max_seconds
+        self.steps = 0
+        self.max_steps = max_steps
+
+    def trace_func(self, frame, event, arg):
+        self.steps += 1
+        if self.steps % 1000 == 0:
+            if time.time() - self.start_time > self.max_seconds:
+                raise TimeoutError(f"Time Limit Exceeded ({self.max_seconds:.1f}s): Infinite loop protection triggered.")
+        if self.steps > self.max_steps:
+            raise TimeoutError("Step Limit Exceeded: Potential infinite loop detected.")
+        return self.trace_func
 `);
 
         this.pyodide = py;
@@ -121,33 +141,34 @@ _capture = OutputCapture()
   public async runPython(
     code: string,
     customInput?: string,
-    timeoutMs: number = 5000
+    timeoutMs: number = 4000
   ): Promise<ExecutionResult> {
     const py = await this.init();
     const startTime = performance.now();
+    const maxSeconds = timeoutMs / 1000;
 
-    // Prepare execution harness
     const harness = `
 _capture.reset()
 _capture.start()
 
-# Mock stdin if customInput provided
-${customInput !== undefined ? `
+# Handle custom input
 import sys, io
-sys.stdin = io.StringIO(${JSON.stringify(customInput)})
-` : ''}
+sys.stdin = io.StringIO(${JSON.stringify(customInput || '')})
 
 __user_code_error__ = None
+_guard = ExecutionGuard(max_seconds=${maxSeconds})
+sys.settrace(_guard.trace_func)
+
 try:
-    # Execute user code in dedicated scope
     _ns = {}
     exec(${JSON.stringify(code)}, _ns)
-    # Expose solve function or outputs if any
     if 'solve' in _ns:
         globals()['solve'] = _ns['solve']
 except Exception as _e:
     import traceback
     __user_code_error__ = traceback.format_exc()
+finally:
+    sys.settrace(None)
 
 _captured_stdout = _capture.get_stdout()
 _captured_stderr = _capture.get_stderr()
@@ -169,7 +190,7 @@ _captured_stderr = _capture.get_stderr()
     })();
 
     const timeoutPromise = new Promise<ExecutionResult>((_, reject) =>
-      setTimeout(() => reject(new Error(`Execution timed out after ${timeoutMs / 1000} seconds. Check for infinite loops!`)), timeoutMs)
+      setTimeout(() => reject(new Error(`Time Limit Exceeded: Execution halted after ${maxSeconds}s.`)), timeoutMs + 1000)
     );
 
     try {
@@ -187,10 +208,11 @@ _captured_stderr = _capture.get_stderr()
   public async evaluateTestCases(
     userCode: string,
     testCases: TestCase[],
-    timeoutMs: number = 8000
+    timeoutPerTestMs: number = 3000
   ): Promise<ExecutionResult> {
     const py = await this.init();
     const startTime = performance.now();
+    const maxSeconds = timeoutPerTestMs / 1000;
 
     const results: Array<{
       testIndex: number;
@@ -206,17 +228,22 @@ _captured_stderr = _capture.get_stderr()
     let anyError: string | undefined = undefined;
     let fullStdout = '';
 
-    // First, load the user code definition
+    // First load user code definitions
     const initHarness = `
 _capture.reset()
 _capture.start()
 _ns = {}
 __load_err__ = None
+_guard = ExecutionGuard(max_seconds=${maxSeconds})
+sys.settrace(_guard.trace_func)
+
 try:
     exec(${JSON.stringify(userCode)}, _ns)
 except Exception as _e:
     import traceback
     __load_err__ = traceback.format_exc()
+finally:
+    sys.settrace(None)
 `;
 
     await py.runPythonAsync(initHarness);
@@ -233,18 +260,18 @@ except Exception as _e:
           failed: testCases.length,
           details: testCases.map((tc, idx) => ({
             testIndex: idx + 1,
-            input: tc.input,
-            expected: tc.expectedOutput,
+            input: tc.isHidden ? '[Hidden Interview Test Input]' : tc.input,
+            expected: tc.isHidden ? '[Hidden Expected Output]' : tc.expectedOutput,
             actual: '',
             passed: false,
             isHidden: tc.isHidden,
-            error: 'Compilation / Syntax error in submitted code'
+            error: 'Syntax / Compilation error in submitted solution'
           }))
         }
       };
     }
 
-    // Now evaluate each test case
+    // Evaluate each test case
     for (let i = 0; i < testCases.length; i++) {
       const tc = testCases[i];
       const testHarness = `
@@ -252,20 +279,50 @@ _capture.reset()
 _capture.start()
 _res = None
 _tc_err = None
+_guard = ExecutionGuard(max_seconds=${maxSeconds})
+sys.settrace(_guard.trace_func)
 
 try:
     if 'solve' in _ns:
-        # evaluate test case expression
-        _args = eval("(${tc.input})")
-        if isinstance(_args, tuple):
-            _res = _ns['solve'](*_args)
-        else:
-            _res = _ns['solve'](_args)
+        import inspect
+        _raw_input = ${JSON.stringify(tc.input)}
+        _args = None
+        try:
+            _args = eval(f"({_raw_input})")
+        except Exception:
+            try:
+                _args = eval(_raw_input)
+            except Exception:
+                _args = _raw_input
+
+        _fn = _ns['solve']
+        try:
+            _sig = inspect.signature(_fn)
+            _param_count = len(_sig.parameters)
+            if isinstance(_args, tuple) and _param_count > 1:
+                _res = _fn(*_args)
+            elif isinstance(_args, tuple) and _param_count == 1:
+                _res = _fn(_args)
+            else:
+                try:
+                    _res = _fn(*_args) if isinstance(_args, tuple) else _fn(_args)
+                except TypeError:
+                    _res = _fn(_args)
+        except Exception:
+            if isinstance(_args, tuple):
+                try:
+                    _res = _fn(*_args)
+                except TypeError:
+                    _res = _fn(_args)
+            else:
+                _res = _fn(_args)
     else:
-        _tc_err = "No function named 'solve' found in solution."
+        _tc_err = "No function named 'solve' found in solution. Ensure you define 'def solve(...) -> ...'"
 except Exception as _e:
     import traceback
     _tc_err = traceback.format_exc()
+finally:
+    sys.settrace(None)
 
 _res_str = str(_res)
 _out = _capture.get_stdout()
@@ -280,43 +337,53 @@ _out = _capture.get_stdout()
         fullStdout += caseOut;
 
         if (tcErr) {
+          const errStr = String(tcErr);
+          const isTimeout = errStr.includes('TimeoutError') || errStr.includes('Time Limit Exceeded') || errStr.includes('Step Limit Exceeded');
+          const displayErr = isTimeout 
+            ? `Time Limit Exceeded (${maxSeconds.toFixed(1)}s): Execution halted by infinite loop guard.`
+            : errStr;
+
           results.push({
             testIndex: i + 1,
-            input: tc.input,
-            expected: tc.expectedOutput,
+            input: tc.isHidden ? '[Hidden Interview Test Input]' : tc.input,
+            expected: tc.isHidden ? '[Hidden Expected Output]' : tc.expectedOutput,
             actual: '',
             passed: false,
             isHidden: tc.isHidden,
-            error: String(tcErr)
+            error: tc.isHidden ? (isTimeout ? 'Time Limit Exceeded' : 'Runtime Error on Hidden Test Case') : displayErr
           });
-          if (!anyError) anyError = String(tcErr);
+          if (!anyError) anyError = displayErr;
         } else {
-          // Normalize string comparison: strip trailing whitespace/quotes
           const actualClean = String(resStr).trim();
           const expectedClean = String(tc.expectedOutput).trim();
-          const passed = actualClean === expectedClean || actualClean.toLowerCase() === expectedClean.toLowerCase();
+          const normActual = actualClean.replace(/\s+/g, '').toLowerCase();
+          const normExpected = expectedClean.replace(/\s+/g, '').toLowerCase();
+          const passed = actualClean === expectedClean || normActual === normExpected;
 
           if (passed) passedCount++;
 
           results.push({
             testIndex: i + 1,
-            input: tc.input,
-            expected: tc.expectedOutput,
-            actual: actualClean,
+            // SECURITY: Never expose hidden test case input or expected answer to client
+            input: tc.isHidden ? '[Hidden Interview Test Input]' : tc.input,
+            expected: tc.isHidden ? '[Hidden Expected Output]' : tc.expectedOutput,
+            actual: tc.isHidden ? (passed ? '[Output Matched Expected Criteria]' : '[Output Mismatched Expected Criteria]') : actualClean,
             passed,
             isHidden: tc.isHidden
           });
         }
       } catch (err: any) {
+        const isTimeout = (err.message || '').includes('Time Limit') || (err.message || '').includes('timeout');
         results.push({
           testIndex: i + 1,
-          input: tc.input,
-          expected: tc.expectedOutput,
+          input: tc.isHidden ? '[Hidden Interview Test Input]' : tc.input,
+          expected: tc.isHidden ? '[Hidden Expected Output]' : tc.expectedOutput,
           actual: '',
           passed: false,
           isHidden: tc.isHidden,
-          error: err.message || 'Execution error'
+          error: isTimeout ? `Time Limit Exceeded (${maxSeconds.toFixed(1)}s)` : (err.message || 'Execution error')
         });
+        if (!anyError) anyError = isTimeout ? `Time Limit Exceeded (${maxSeconds.toFixed(1)}s)` : err.message;
       }
     }
 

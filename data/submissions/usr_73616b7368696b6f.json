@@ -1,0 +1,12 @@
+[
+  {
+    "id": "sub_1",
+    "questionId": "py-001",
+    "code": "def solve(n: int) -> int:\n    return n * (n + 1) // 2",
+    "status": "Accepted",
+    "passedTests": 4,
+    "totalTests": 4,
+    "executionTimeMs": 15,
+    "timestamp": 1730467200000
+  }
+]

@@ -43,12 +43,14 @@ import { AIMentorView } from './components/pages/AIMentorView';
 import { SettingsView } from './components/pages/SettingsView';
 import { QuestionBankStatsView } from './components/pages/QuestionBankStatsView';
 import { CodeWorkspace } from './components/workspace/CodeWorkspace';
+import { AuthModal } from './components/modals/AuthModal';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<string>('dashboard');
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [searchModalOpen, setSearchModalOpen] = useState<boolean>(false);
+  const [authModalOpen, setAuthModalOpen] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [progress, setProgress] = useState(userStore.getProgress());
   const [preferences, setPreferences] = useState(userStore.getPreferences());
@@ -171,17 +173,44 @@ export default function App() {
             <span>{progress.xp} XP</span>
           </div>
 
-          {/* User Profile / Guest Badge */}
-          <div className="flex items-center gap-2 pl-2 border-l border-slate-800">
-            <div className="w-8 h-8 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300">
-              <User className="w-4 h-4" />
+          {/* Cloud Sync Status Indicator */}
+          {!progress.isGuest ? (
+            <button
+              onClick={() => setAuthModalOpen(true)}
+              className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold hover:bg-emerald-500/20 transition"
+              title="Persistent Cloud Active across devices"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Cloud Synced</span>
+            </button>
+          ) : (
+            <button
+              onClick={() => setAuthModalOpen(true)}
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-md shadow-indigo-600/30 transition"
+            >
+              <span>Sign In</span>
+            </button>
+          )}
+
+          {/* User Profile / Guest Badge (Clickable to open AuthModal) */}
+          <div
+            onClick={() => setAuthModalOpen(true)}
+            className="flex items-center gap-2 pl-2 border-l border-slate-800 cursor-pointer hover:opacity-90 transition group"
+            title="Manage account and sync settings"
+          >
+            <div className={`w-8 h-8 rounded-xl border flex items-center justify-center font-bold text-xs ${
+              progress.isGuest 
+                ? 'bg-slate-800 border-slate-700 text-slate-300' 
+                : 'bg-gradient-to-tr from-indigo-500 to-purple-500 border-indigo-400 text-white shadow-sm'
+            }`}>
+              {progress.isGuest ? <User className="w-4 h-4" /> : progress.displayName.charAt(0).toUpperCase()}
             </div>
             <div className="hidden lg:block text-left">
-              <div className="text-xs font-bold text-slate-200 leading-tight">
+              <div className="text-xs font-bold text-slate-200 group-hover:text-indigo-300 transition leading-tight">
                 {progress.displayName}
               </div>
-              <div className="text-[10px] text-slate-500 font-medium">
-                {progress.isGuest ? 'Guest Mode' : 'Verified Student'}
+              <div className="text-[10px] text-slate-400 font-medium">
+                {progress.isGuest ? 'Guest Mode' : 'Persistent Student'}
               </div>
             </div>
           </div>
@@ -407,6 +436,9 @@ export default function App() {
           </div>
         </div>
       )}
+
+      {/* Authentication & Cloud Sync Modal */}
+      <AuthModal isOpen={authModalOpen} onClose={() => setAuthModalOpen(false)} />
     </div>
   );
 }

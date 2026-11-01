@@ -101,6 +101,176 @@ app.get('/api/questions/batch-stats', (req: Request, res: Response) => {
   }
 });
 
+// ----------------------------------------------------
+// USER DATABASE PERSISTENCE & AUTHENTICATION ENDPOINTS
+// ----------------------------------------------------
+const USERS_DB_DIR = path.resolve(__dirname, 'data/users');
+const SUBMISSIONS_DB_DIR = path.resolve(__dirname, 'data/submissions');
+
+if (!fs.existsSync(USERS_DB_DIR)) {
+  fs.mkdirSync(USERS_DB_DIR, { recursive: true });
+}
+if (!fs.existsSync(SUBMISSIONS_DB_DIR)) {
+  fs.mkdirSync(SUBMISSIONS_DB_DIR, { recursive: true });
+}
+
+// Helper: Sanitize User ID
+const sanitizeId = (id: string) => id.replace(/[^a-zA-Z0-9_\-]/g, '_').substring(0, 128);
+
+// Google Authentication endpoint
+app.post('/api/auth/google-login', (req: Request, res: Response) => {
+  const { email, displayName, photoURL, guestProgressToMerge } = req.body;
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required for Google authentication.' });
+  }
+
+  // Stable user ID derived from email
+  const cleanEmail = email.toLowerCase().trim();
+  const userId = `usr_${Buffer.from(cleanEmail).toString('hex').slice(0, 16)}`;
+  const userFile = path.join(USERS_DB_DIR, `${sanitizeId(userId)}.json`);
+
+  let userProgress: any = null;
+  let isNewUser = false;
+
+  if (fs.existsSync(userFile)) {
+    try {
+      userProgress = JSON.parse(fs.readFileSync(userFile, 'utf-8'));
+      // Update profile info in case changed
+      userProgress.displayName = displayName || userProgress.displayName || cleanEmail.split('@')[0];
+      userProgress.email = cleanEmail;
+      userProgress.isGuest = false;
+      userProgress.photoURL = photoURL || userProgress.photoURL;
+    } catch (e) {
+      console.error('Error reading existing user file, creating fresh:', e);
+    }
+  }
+
+  if (!userProgress) {
+    isNewUser = true;
+    userProgress = {
+      userId,
+      displayName: displayName || cleanEmail.split('@')[0],
+      email: cleanEmail,
+      photoURL: photoURL || null,
+      isGuest: false,
+      xp: 200, // Welcome XP
+      streak: 1,
+      longestStreak: 1,
+      lastActiveDate: new Date().toISOString().split('T')[0],
+      totalCodingTimeSeconds: 600,
+      solvedQuestions: {},
+      attemptedQuestions: {},
+      bookmarkedQuestionIds: [],
+      difficultQuestionIds: [],
+      notes: {},
+      revisionQueue: [],
+      dailyChallenges: {},
+      timedTestHistory: [],
+      activityCalendar: {
+        [new Date().toISOString().split('T')[0]]: 1
+      },
+      completedLessons: ['py-les-01'],
+      unlockedAchievements: ['first_login', 'google_verified'],
+      submissionHistory: []
+    };
+  }
+
+  // Merge guest progress if requested
+  if (guestProgressToMerge && typeof guestProgressToMerge === 'object') {
+    if (guestProgressToMerge.solvedQuestions) {
+      userProgress.solvedQuestions = {
+        ...userProgress.solvedQuestions,
+        ...guestProgressToMerge.solvedQuestions
+      };
+    }
+    if (guestProgressToMerge.attemptedQuestions) {
+      userProgress.attemptedQuestions = {
+        ...userProgress.attemptedQuestions,
+        ...guestProgressToMerge.attemptedQuestions
+      };
+    }
+    if (Array.isArray(guestProgressToMerge.bookmarkedQuestionIds)) {
+      userProgress.bookmarkedQuestionIds = Array.from(
+        new Set([...userProgress.bookmarkedQuestionIds, ...guestProgressToMerge.bookmarkedQuestionIds])
+      );
+    }
+    if (guestProgressToMerge.notes) {
+      userProgress.notes = { ...userProgress.notes, ...guestProgressToMerge.notes };
+    }
+    if (Array.isArray(guestProgressToMerge.submissionHistory)) {
+      userProgress.submissionHistory = [
+        ...userProgress.submissionHistory,
+        ...guestProgressToMerge.submissionHistory
+      ];
+    }
+    if (guestProgressToMerge.xp) {
+      userProgress.xp = Math.max(userProgress.xp, (userProgress.xp || 0) + (guestProgressToMerge.xp || 0));
+    }
+  }
+
+  fs.writeFileSync(userFile, JSON.stringify(userProgress, null, 2), 'utf-8');
+
+  res.json({
+    success: true,
+    isNewUser,
+    user: {
+      userId,
+      email: cleanEmail,
+      displayName: userProgress.displayName,
+      photoURL: userProgress.photoURL
+    },
+    progress: userProgress
+  });
+});
+
+// GET User Progress (Primary Database for Authenticated Users)
+app.get('/api/users/:userId/progress', (req: Request, res: Response) => {
+  const userId = sanitizeId(req.params.userId);
+  const userFile = path.join(USERS_DB_DIR, `${userId}.json`);
+
+  if (!fs.existsSync(userFile)) {
+    return res.status(404).json({ error: 'User progress not found', found: false });
+  }
+
+  try {
+    const data = JSON.parse(fs.readFileSync(userFile, 'utf-8'));
+    res.json({ success: true, progress: data });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Failed to read user progress', details: err.message });
+  }
+});
+
+// POST User Progress (Atomic Cloud Save for Authenticated Users)
+app.post('/api/users/:userId/progress', (req: Request, res: Response) => {
+  const userId = sanitizeId(req.params.userId);
+  const userFile = path.join(USERS_DB_DIR, `${userId}.json`);
+  const progressData = req.body;
+
+  if (!progressData || typeof progressData !== 'object') {
+    return res.status(400).json({ error: 'Invalid progress data payload.' });
+  }
+
+  try {
+    progressData.userId = userId;
+    progressData.updatedAt = new Date().toISOString();
+    fs.writeFileSync(userFile, JSON.stringify(progressData, null, 2), 'utf-8');
+
+    // Also persist submissions audit log separately
+    if (Array.isArray(progressData.submissionHistory) && progressData.submissionHistory.length > 0) {
+      const subFile = path.join(SUBMISSIONS_DB_DIR, `${userId}.json`);
+      fs.writeFileSync(subFile, JSON.stringify(progressData.submissionHistory, null, 2), 'utf-8');
+    }
+
+    res.json({
+      success: true,
+      savedAt: Date.now(),
+      message: 'User progress persisted to primary database'
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Failed to write user progress', details: err.message });
+  }
+});
+
 // Admin Firestore Import Endpoint
 app.post('/api/admin/import-firestore', async (req: Request, res: Response) => {
   try {

@@ -41,18 +41,39 @@ export const DEFAULT_USER_PROGRESS: UserProgressData = {
     [new Date().toISOString().split('T')[0]]: 1
   },
   completedLessons: ['py-les-01'],
-  unlockedAchievements: ['first_login']
+  unlockedAchievements: ['first_login'],
+  submissionHistory: []
 };
 
 class UserStore {
   private progress: UserProgressData;
   private preferences: UserPreferences;
   private listeners: Set<() => void> = new Set();
+  private syncStatus: 'synced' | 'syncing' | 'error' | 'offline' = 'synced';
+  private syncTimeout: any = null;
 
   constructor() {
     this.progress = this.loadProgress();
     this.preferences = this.loadPreferences();
     this.verifyStreak();
+
+    // If previously signed in, immediately revalidate against primary server database
+    if (!this.progress.isGuest && this.progress.userId) {
+      this.syncFromServer(this.progress.userId);
+    }
+  }
+
+  public getSyncStatus(): 'synced' | 'syncing' | 'error' | 'offline' {
+    return this.syncStatus;
+  }
+
+  private setSyncStatus(status: 'synced' | 'syncing' | 'error' | 'offline') {
+    this.syncStatus = status;
+    this.notify();
+  }
+
+  private notify() {
+    this.listeners.forEach(cb => cb());
   }
 
   private loadPreferences(): UserPreferences {
@@ -74,13 +95,147 @@ class UserStore {
   }
 
   private save() {
+    // 1. Keep local cache updated for instant offline feedback
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(this.progress));
       localStorage.setItem(PREFS_KEY, JSON.stringify(this.preferences));
     } catch (e) {
       console.error('Failed to write to localStorage', e);
     }
-    this.listeners.forEach(cb => cb());
+    this.notify();
+
+    // 2. PRIMARY DATABASE: For authenticated users, persist to the server database
+    if (!this.progress.isGuest && this.progress.userId) {
+      this.debouncePersistToServer();
+    }
+  }
+
+  private debouncePersistToServer() {
+    if (this.syncTimeout) {
+      clearTimeout(this.syncTimeout);
+    }
+    this.setSyncStatus('syncing');
+    this.syncTimeout = setTimeout(async () => {
+      try {
+        const payload = {
+          ...this.progress,
+          preferences: this.preferences
+        };
+        const resp = await fetch(`/api/users/${this.progress.userId}/progress`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (resp.ok) {
+          this.setSyncStatus('synced');
+        } else {
+          this.setSyncStatus('error');
+        }
+      } catch (err) {
+        console.warn('Network sync warning (will retry on next activity):', err);
+        this.setSyncStatus('offline');
+      }
+    }, 600);
+  }
+
+  public async syncFromServer(userId: string) {
+    if (!userId || userId.startsWith('guest_')) return;
+    this.setSyncStatus('syncing');
+    try {
+      const resp = await fetch(`/api/users/${userId}/progress`);
+      if (resp.ok) {
+        const data = await resp.json();
+        if (data.success && data.progress) {
+          this.progress = {
+            ...this.progress,
+            ...data.progress,
+            isGuest: false
+          };
+          if (data.progress.preferences) {
+            this.preferences = { ...this.preferences, ...data.progress.preferences };
+          }
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(this.progress));
+            localStorage.setItem(PREFS_KEY, JSON.stringify(this.preferences));
+          } catch {}
+          this.setSyncStatus('synced');
+          this.notify();
+        }
+      } else {
+        // If not found yet on server, persist our current state
+        this.debouncePersistToServer();
+      }
+    } catch (err) {
+      console.warn('Failed to load server progress:', err);
+      this.setSyncStatus('offline');
+    }
+  }
+
+  public async loginWithGoogle(
+    email: string,
+    displayName?: string,
+    photoURL?: string,
+    mergeGuest: boolean = true
+  ): Promise<{ success: boolean; isNewUser: boolean; error?: string }> {
+    this.setSyncStatus('syncing');
+    try {
+      const guestProgress = mergeGuest && this.progress.isGuest ? this.progress : undefined;
+      const resp = await fetch('/api/auth/google-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          displayName: displayName || email.split('@')[0],
+          photoURL,
+          guestProgressToMerge: guestProgress
+        })
+      });
+
+      if (!resp.ok) {
+        const err = await resp.json();
+        this.setSyncStatus('error');
+        return { success: false, isNewUser: false, error: err.error || 'Login failed' };
+      }
+
+      const data = await resp.json();
+      this.progress = {
+        ...DEFAULT_USER_PROGRESS,
+        ...data.progress,
+        isGuest: false
+      };
+      if (data.progress.preferences) {
+        this.preferences = { ...this.preferences, ...data.progress.preferences };
+      }
+
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.progress));
+        localStorage.setItem(PREFS_KEY, JSON.stringify(this.preferences));
+      } catch {}
+
+      this.setSyncStatus('synced');
+      this.notify();
+      return { success: true, isNewUser: data.isNewUser };
+    } catch (e: any) {
+      this.setSyncStatus('error');
+      return { success: false, isNewUser: false, error: e.message || 'Network error' };
+    }
+  }
+
+  public logoutToGuest() {
+    const newGuestId = `guest_${Math.random().toString(36).substring(2, 9)}`;
+    this.progress = {
+      ...DEFAULT_USER_PROGRESS,
+      userId: newGuestId,
+      displayName: 'Guest Developer',
+      email: null,
+      photoURL: null,
+      isGuest: true
+    };
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(this.progress));
+    } catch {}
+    this.setSyncStatus('synced');
+    this.notify();
   }
 
   public subscribe(callback: () => void) {
@@ -112,11 +267,7 @@ class UserStore {
   }
 
   public logoutGuest() {
-    this.progress = {
-      ...DEFAULT_USER_PROGRESS,
-      userId: `guest_${Math.random().toString(36).substring(2, 9)}`
-    };
-    this.save();
+    this.logoutToGuest();
   }
 
   public verifyStreak() {
@@ -153,7 +304,12 @@ class UserStore {
     questionId: string,
     passed: boolean,
     executionTimeMs: number,
-    code: string
+    code: string,
+    submissionMeta?: {
+      status?: 'Accepted' | 'Wrong Answer' | 'Runtime Error' | 'Time Limit Exceeded';
+      passedTests?: number;
+      totalTests?: number;
+    }
   ): { newlySolved: boolean; earnedXp: number } {
     const today = new Date().toISOString().split('T')[0];
     let earnedXp = 0;
@@ -169,6 +325,23 @@ class UserStore {
       attempts: (existingAttempt ? existingAttempt.attempts : 0) + 1,
       lastCode: code
     };
+
+    const status = submissionMeta?.status || (passed ? 'Accepted' : 'Wrong Answer');
+
+    // Add to submission history
+    if (!this.progress.submissionHistory) {
+      this.progress.submissionHistory = [];
+    }
+    this.progress.submissionHistory.unshift({
+      id: `sub_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+      questionId,
+      code,
+      status,
+      passedTests: submissionMeta?.passedTests ?? (passed ? 1 : 0),
+      totalTests: submissionMeta?.totalTests ?? 1,
+      executionTimeMs,
+      timestamp: Date.now()
+    });
 
     if (passed) {
       const alreadySolved = !!this.progress.solvedQuestions[questionId];
@@ -201,6 +374,10 @@ class UserStore {
     this.checkAchievements();
     this.save();
     return { newlySolved, earnedXp };
+  }
+
+  public getSubmissionsForQuestion(questionId: string) {
+    return (this.progress.submissionHistory || []).filter(s => s.questionId === questionId);
   }
 
   public scheduleRevision(questionId: string, level: number = 1) {

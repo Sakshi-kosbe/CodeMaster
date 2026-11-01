@@ -132,7 +132,9 @@ export interface UserProgressData {
   userId: string;
   displayName: string;
   email: string | null;
+  photoURL?: string | null;
   isGuest: boolean;
+  preferences?: UserPreferences;
   xp: number;
   streak: number;
   longestStreak: number;
@@ -163,6 +165,18 @@ export interface UserProgressData {
   activityCalendar: Record<string, number>; // YYYY-MM-DD -> submissions count
   completedLessons: string[]; // lesson IDs
   unlockedAchievements: string[]; // achievement IDs
+  submissionHistory: SubmissionRecord[];
+}
+
+export interface SubmissionRecord {
+  id: string;
+  questionId: string;
+  code: string;
+  status: 'Accepted' | 'Wrong Answer' | 'Runtime Error' | 'Time Limit Exceeded';
+  passedTests: number;
+  totalTests: number;
+  executionTimeMs: number;
+  timestamp: number;
 }
 
 export interface Lesson {

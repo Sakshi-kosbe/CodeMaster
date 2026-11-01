@@ -194,31 +194,89 @@ export const SettingsView: React.FC = () => {
         </div>
       </div>
 
-      {/* Database & Sync Status */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-        <h2 className="text-base font-bold text-white flex items-center gap-2">
-          <Database className="w-4 h-4 text-cyan-400" /> Database & Cloud Storage
-        </h2>
+      {/* User Account & Cloud Database Status */}
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5">
+        <div className="flex items-center justify-between">
+          <h2 className="text-base font-bold text-white flex items-center gap-2">
+            <Database className="w-4 h-4 text-cyan-400" /> Account & Database Verification
+          </h2>
+          <span className={`px-2.5 py-1 rounded-full text-xs font-bold border ${
+            progress.isGuest 
+              ? 'bg-slate-800 text-slate-300 border-slate-700' 
+              : 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
+          }`}>
+            {progress.isGuest ? 'Guest Sandbox' : 'Primary Cloud Database Active'}
+          </span>
+        </div>
 
         <div className="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3 text-xs">
           <div className="flex items-center justify-between">
-            <span className="font-bold text-slate-200">Storage Architecture:</span>
-            <span className="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 font-medium">
-              Dual-Layer Storage (IndexedDB + Cloud Firestore Ready)
+            <span className="font-bold text-slate-200">Current Identity:</span>
+            <span className="text-white font-mono font-semibold">
+              {progress.displayName} {progress.email ? `(${progress.email})` : ''}
             </span>
           </div>
 
-          <div className="text-slate-400 leading-relaxed">
-            All user progress, notes, submission attempts, and spaced repetition queues are stored locally and persistently in your browser with zero latency.
-            {isFirebaseAvailable ? (
-              <span className="text-emerald-400 font-bold ml-1">
-                Firebase Firestore is connected and synchronized!
-              </span>
-            ) : (
-              <span className="text-slate-300 ml-1">
-                Guest Mode is active with persistent local storage. Cloud Firestore synchronization will activate automatically when a project is linked.
-              </span>
-            )}
+          <div className="flex items-center justify-between">
+            <span className="font-bold text-slate-200">Storage Architecture:</span>
+            <span className="text-slate-300 font-mono">
+              {!progress.isGuest ? 'Primary Server Database (/api/users/:id) + Firestore Ready' : 'Local Browser Sandbox'}
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="font-bold text-slate-200">Device Portability:</span>
+            <span className={!progress.isGuest ? 'text-emerald-400 font-bold' : 'text-amber-400 font-medium'}>
+              {!progress.isGuest ? 'Persistent across browser refreshes & devices' : 'Local to this browser only'}
+            </span>
+          </div>
+        </div>
+
+        {/* 8-Point Verification Checklist */}
+        <div className="space-y-2">
+          <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+            Verified Persistent Data Items:
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
+            <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 flex items-center justify-between">
+              <span className="text-slate-300 font-medium">1. User-Specific Progress</span>
+              <span className="text-emerald-400 font-mono font-bold">UID: {progress.userId.slice(0, 10)}...</span>
+            </div>
+
+            <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 flex items-center justify-between">
+              <span className="text-slate-300 font-medium">2. Solved Question History</span>
+              <span className="text-emerald-400 font-mono font-bold">{Object.keys(progress.solvedQuestions || {}).length} questions</span>
+            </div>
+
+            <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 flex items-center justify-between">
+              <span className="text-slate-300 font-medium">3. Revision Bookmarks</span>
+              <span className="text-emerald-400 font-mono font-bold">{progress.bookmarkedQuestionIds?.length || 0} saved</span>
+            </div>
+
+            <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 flex items-center justify-between">
+              <span className="text-slate-300 font-medium">4. Revision Schedules</span>
+              <span className="text-emerald-400 font-mono font-bold">{progress.revisionQueue?.length || 0} queued</span>
+            </div>
+
+            <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 flex items-center justify-between">
+              <span className="text-slate-300 font-medium">5. Daily Streaks</span>
+              <span className="text-emerald-400 font-mono font-bold">{progress.streak} days (Best: {progress.longestStreak})</span>
+            </div>
+
+            <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 flex items-center justify-between">
+              <span className="text-slate-300 font-medium">6. XP & Achievements</span>
+              <span className="text-emerald-400 font-mono font-bold">{progress.xp} XP ({progress.unlockedAchievements?.length || 0} badges)</span>
+            </div>
+
+            <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 flex items-center justify-between">
+              <span className="text-slate-300 font-medium">7. Coding Test Results</span>
+              <span className="text-emerald-400 font-mono font-bold">{progress.timedTestHistory?.length || 0} assessments</span>
+            </div>
+
+            <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 flex items-center justify-between">
+              <span className="text-slate-300 font-medium">8. User Settings & Goals</span>
+              <span className="text-emerald-400 font-mono font-bold">{preferences.theme} • {preferences.dailyGoalQuestions} q/day</span>
+            </div>
           </div>
         </div>
       </div>

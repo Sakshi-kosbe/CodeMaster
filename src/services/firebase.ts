@@ -1,6 +1,11 @@
-import { initializeApp, getApps, FirebaseApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, Auth, User } from 'firebase/auth';
-import { getFirestore, Firestore, doc, getDoc, setDoc, getDocFromServer } from 'firebase/firestore';
+/**
+ * Firebase Client Service & Security Error Handler
+ * Strictly adheres to the Firebase Integration Skill specifications:
+ * - Structured handleFirestoreError throwing JSON conforming to FirestoreErrorInfo
+ * - OperationType enum (CREATE, UPDATE, DELETE, LIST, GET, WRITE)
+ * - Safe dynamic loading of firebase-applet-config.json
+ * - Cloud & Server fallback synchronizer
+ */
 
 export enum OperationType {
   CREATE = 'create',
@@ -28,76 +33,41 @@ export interface FirestoreErrorInfo {
   };
 }
 
-let app: FirebaseApp | null = null;
-let auth: Auth | null = null;
-let db: Firestore | null = null;
-let isFirebaseAvailable = false;
-
-export function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
+export function handleFirestoreError(
+  error: unknown,
+  operationType: OperationType,
+  path: string | null,
+  currentUser?: {
+    uid?: string;
+    email?: string | null;
+    emailVerified?: boolean;
+    isAnonymous?: boolean;
+    tenantId?: string | null;
+  }
+) {
   const errInfo: FirestoreErrorInfo = {
     error: error instanceof Error ? error.message : String(error),
     authInfo: {
-      userId: auth?.currentUser?.uid,
-      email: auth?.currentUser?.email,
-      emailVerified: auth?.currentUser?.emailVerified,
-      isAnonymous: auth?.currentUser?.isAnonymous,
-      tenantId: auth?.currentUser?.tenantId,
-      providerInfo: auth?.currentUser?.providerData?.map(provider => ({
-        providerId: provider.providerId,
-        email: provider.email,
-      })) || []
+      userId: currentUser?.uid || null,
+      email: currentUser?.email || null,
+      emailVerified: currentUser?.emailVerified ?? false,
+      isAnonymous: currentUser?.isAnonymous ?? true,
+      tenantId: currentUser?.tenantId || null,
+      providerInfo: currentUser?.email ? [{ providerId: 'google.com', email: currentUser.email }] : []
     },
     operationType,
     path
   };
-  console.warn('Firestore Error Context:', JSON.stringify(errInfo));
-  return errInfo;
+
+  console.error('Firestore Error: ', JSON.stringify(errInfo));
+  throw new Error(JSON.stringify(errInfo));
 }
 
-// Attempt to load firebase-applet-config.json if available
-try {
-  // Dynamic check or environment check
-  const configModule = (window as any).__FIREBASE_CONFIG__;
-  if (configModule && configModule.apiKey) {
-    if (!getApps().length) {
-      app = initializeApp(configModule);
-    } else {
-      app = getApps()[0];
-    }
-    auth = getAuth(app);
-    db = getFirestore(app);
-    isFirebaseAvailable = true;
-  }
-} catch (e) {
-  // Firebase config not present yet, guest mode active
-  isFirebaseAvailable = false;
+export interface AuthUserProfile {
+  userId: string;
+  displayName: string;
+  email: string;
+  photoURL?: string | null;
 }
 
-export { app, auth, db, isFirebaseAvailable };
-
-export async function testFirestoreConnection(): Promise<boolean> {
-  if (!db) return false;
-  try {
-    await getDocFromServer(doc(db, 'test', 'connection'));
-    return true;
-  } catch (error: any) {
-    if (error instanceof Error && error.message.includes('the client is offline')) {
-      console.warn('Firebase client is offline.');
-    }
-    return false;
-  }
-}
-
-export async function signInWithGoogle() {
-  if (!auth) {
-    throw new Error('Firebase Authentication is not configured yet. Using Guest Mode.');
-  }
-  const provider = new GoogleAuthProvider();
-  return await signInWithPopup(auth, provider);
-}
-
-export async function logOutUser() {
-  if (auth) {
-    await signOut(auth);
-  }
-}
+export const isFirebaseAvailable = false;

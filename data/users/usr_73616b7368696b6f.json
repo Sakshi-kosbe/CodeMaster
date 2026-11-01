@@ -1,0 +1,104 @@
+{
+  "userId": "usr_73616b7368696b6f",
+  "displayName": "Sakshi Kosbe",
+  "email": "sakshikosbe@gmail.com",
+  "isGuest": false,
+  "xp": 350,
+  "streak": 2,
+  "longestStreak": 2,
+  "lastActiveDate": "2026-11-01",
+  "totalCodingTimeSeconds": 1200,
+  "solvedQuestions": {
+    "py-001": {
+      "solvedAt": 1730467200000,
+      "bestTimeMs": 15,
+      "attempts": 1,
+      "code": "def solve(n: int) -> int:\n    return n * (n + 1) // 2"
+    }
+  },
+  "attemptedQuestions": {
+    "py-001": {
+      "lastAttemptAt": 1730467200000,
+      "attempts": 1,
+      "lastCode": "def solve(n: int) -> int:\n    return n * (n + 1) // 2"
+    }
+  },
+  "bookmarkedQuestionIds": [
+    "py-001",
+    "dsa-001"
+  ],
+  "difficultQuestionIds": [],
+  "notes": {
+    "py-001": "Arithmetic progression sum O(1)"
+  },
+  "revisionQueue": [
+    {
+      "questionId": "py-001",
+      "nextReviewDate": "2026-11-02",
+      "revisionLevel": 1,
+      "lastReviewedAt": 1730467200000
+    }
+  ],
+  "dailyChallenges": {
+    "2026-11-01": {
+      "date": "2026-11-01",
+      "questionId": "py-001",
+      "completed": true
+    }
+  },
+  "timedTestHistory": [
+    {
+      "id": "test_001",
+      "testName": "Python Quick Sprint",
+      "category": "python",
+      "difficulty": "Easy",
+      "totalMarks": 100,
+      "score": 100,
+      "correctAnswers": 5,
+      "incorrectAnswers": 0,
+      "unattemptedQuestions": 0,
+      "accuracy": 100,
+      "timeSpentSeconds": 180,
+      "date": "2026-11-01",
+      "topicPerformance": {},
+      "recommendations": [
+        "Excellent grasp of basics"
+      ],
+      "details": []
+    }
+  ],
+  "activityCalendar": {
+    "2026-11-01": 2
+  },
+  "completedLessons": [
+    "py-les-01",
+    "py-les-02"
+  ],
+  "unlockedAchievements": [
+    "first_login",
+    "first_solve",
+    "streak_2"
+  ],
+  "submissionHistory": [
+    {
+      "id": "sub_1",
+      "questionId": "py-001",
+      "code": "def solve(n: int) -> int:\n    return n * (n + 1) // 2",
+      "status": "Accepted",
+      "passedTests": 4,
+      "totalTests": 4,
+      "executionTimeMs": 15,
+      "timestamp": 1730467200000
+    }
+  ],
+  "preferences": {
+    "theme": "dark",
+    "editorFontSize": 14,
+    "uiFontSize": "normal",
+    "autoSaveCode": true,
+    "soundEnabled": true,
+    "dailyGoalQuestions": 5,
+    "weeklyTargetQuestions": 25
+  },
+  "updatedAt": "2026-11-01T14:30:30.941Z"
+}

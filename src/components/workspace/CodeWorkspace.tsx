@@ -23,10 +23,13 @@ import {
   ListOrdered,
   HelpCircle,
   Lightbulb,
-  ExternalLink
+  ExternalLink,
+  History,
+  RefreshCw,
+  Code2
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { Question, ExecutionResult } from '../../types';
+import { Question, ExecutionResult, SubmissionRecord } from '../../types';
 import { pyodideService } from '../../services/pyodide';
 import { userStore } from '../../services/userStore';
 import { QuestionStore } from '../../services/questionStore';
@@ -44,13 +47,15 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
 }) => {
   const [code, setCode] = useState<string>(question.starterCode || '');
   const [isExecuting, setIsExecuting] = useState<boolean>(false);
-  const [activeTab, setActiveTab] = useState<'tests' | 'output' | 'customInput' | 'aiMentor'>('tests');
+  const [activeTab, setActiveTab] = useState<'tests' | 'output' | 'customInput' | 'history' | 'aiMentor'>('tests');
   const [customInput, setCustomInput] = useState<string>('');
   const [executionResult, setExecutionResult] = useState<ExecutionResult | null>(null);
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
   const [copied, setCopied] = useState<boolean>(false);
   const [selectedConceptualOption, setSelectedConceptualOption] = useState<number | null>(null);
   const [conceptualSubmitted, setConceptualSubmitted] = useState<boolean>(false);
+  const [isResettingRuntime, setIsResettingRuntime] = useState<boolean>(false);
+  const [loadedMsg, setLoadedMsg] = useState<string | null>(null);
   
   // Pyodide status
   const [pyStatus, setPyStatus] = useState(pyodideService.getStatus());
@@ -70,6 +75,9 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
 
   const { prev, next } = QuestionStore.getNextAndPrevQuestion(question.id, filteredQuestionIds);
 
+  // Submissions for this question
+  const [submissions, setSubmissions] = useState<SubmissionRecord[]>(userStore.getSubmissionsForQuestion(question.id));
+
   // Reset state on question change
   useEffect(() => {
     // If user previously solved or attempted this question, load their saved code
@@ -80,6 +88,13 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
     setConceptualSubmitted(false);
     setAiResponse('');
     setNoteText(progress.notes[question.id] || '');
+    setSubmissions(userStore.getSubmissionsForQuestion(question.id));
+  }, [question.id]);
+
+  useEffect(() => {
+    return userStore.subscribe(() => {
+      setSubmissions(userStore.getSubmissionsForQuestion(question.id));
+    });
   }, [question.id]);
 
   useEffect(() => {
@@ -109,6 +124,24 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
     setExecutionResult(null);
   };
 
+  const handleResetRuntime = async () => {
+    setIsResettingRuntime(true);
+    try {
+      await pyodideService.reset();
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setIsResettingRuntime(false);
+    }
+  };
+
+  const handleLoadSubmissionCode = (subCode: string, timestamp: number) => {
+    setCode(subCode);
+    const dateStr = new Date(timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    setLoadedMsg(`Loaded code from submission at ${dateStr}`);
+    setTimeout(() => setLoadedMsg(null), 3000);
+  };
+
   const handleRun = async () => {
     if (isExecuting) return;
     setIsExecuting(true);
@@ -116,7 +149,6 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
     try {
       const res = await pyodideService.runPython(code, customInput);
       setExecutionResult(res);
-      userStore.recordSubmission(question.id, false, res.executionTimeMs, code);
     } catch (e: any) {
       setExecutionResult({
         stdout: '',
@@ -136,7 +168,17 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
       if (selectedConceptualOption === null) return;
       setConceptualSubmitted(true);
       const isCorrect = selectedConceptualOption === question.correctOptionIndex;
-      userStore.recordSubmission(question.id, isCorrect, 10, '# Conceptual answer submitted');
+      userStore.recordSubmission(
+        question.id, 
+        isCorrect, 
+        10, 
+        '# Conceptual answer submitted',
+        {
+          status: isCorrect ? 'Accepted' : 'Wrong Answer',
+          passedTests: isCorrect ? 1 : 0,
+          totalTests: 1
+        }
+      );
       if (isCorrect) {
         confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } });
       }
@@ -150,11 +192,27 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
       setExecutionResult(res);
 
       const allPassed = res.testResults?.failed === 0 && (res.testResults?.passed || 0) > 0;
-      const { newlySolved, earnedXp } = userStore.recordSubmission(
+      let status: 'Accepted' | 'Wrong Answer' | 'Runtime Error' | 'Time Limit Exceeded' = 'Wrong Answer';
+      if (allPassed) {
+        status = 'Accepted';
+      } else if (res.error?.includes('Time Limit') || res.error?.includes('TimeoutError')) {
+        status = 'Time Limit Exceeded';
+      } else if (res.error) {
+        status = 'Runtime Error';
+      } else {
+        status = 'Wrong Answer';
+      }
+
+      userStore.recordSubmission(
         question.id,
         allPassed,
         res.executionTimeMs,
-        code
+        code,
+        {
+          status,
+          passedTests: res.testResults?.passed || 0,
+          totalTests: res.testResults?.total || question.testCases.length
+        }
       );
 
       if (allPassed) {
@@ -165,12 +223,25 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
         });
       }
     } catch (e: any) {
+      const isTimeout = (e.message || '').includes('Time Limit') || (e.message || '').includes('Timeout');
+      const status = isTimeout ? 'Time Limit Exceeded' : 'Runtime Error';
       setExecutionResult({
         stdout: '',
         stderr: '',
         error: e.message || 'Error executing test suite',
         executionTimeMs: 0
       });
+      userStore.recordSubmission(
+        question.id,
+        false,
+        0,
+        code,
+        {
+          status,
+          passedTests: 0,
+          totalTests: question.testCases.length
+        }
+      );
     } finally {
       setIsExecuting(false);
     }
@@ -509,9 +580,38 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
                 </div>
 
                 <div className="flex items-center gap-2">
+                  {/* Infinite Loop Guard Verification */}
+                  <button
+                    onClick={() => {
+                      setCode(`# Infinite Loop Protection Test
+# CodeMaster will intercept this loop via sys.settrace and halt safely in 3s.
+print("Executing infinite loop test...")
+count = 0
+while True:
+    count += 1
+`);
+                    }}
+                    className="flex items-center gap-1 px-2.5 py-1 rounded bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition text-[11px]"
+                    title="Load infinite loop snippet to test execution timeout guard"
+                  >
+                    <Flame className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Test Loop Guard</span>
+                  </button>
+
+                  {/* Restart Wasm Runtime */}
+                  <button
+                    onClick={handleResetRuntime}
+                    disabled={isResettingRuntime}
+                    className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 disabled:opacity-50 transition text-[11px]"
+                    title="Restart Pyodide WebAssembly runtime"
+                  >
+                    <RefreshCw className={`w-3.5 h-3.5 ${isResettingRuntime ? 'animate-spin text-indigo-400' : ''}`} />
+                    <span>{isResettingRuntime ? 'Restarting...' : 'Restart Wasm'}</span>
+                  </button>
+
                   <button
                     onClick={handleCopy}
-                    className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition"
+                    className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition text-[11px]"
                     title="Copy code to clipboard"
                   >
                     {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
@@ -520,7 +620,7 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
 
                   <button
                     onClick={handleReset}
-                    className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition"
+                    className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition text-[11px]"
                     title="Reset to starter code"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
@@ -528,6 +628,16 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
                   </button>
                 </div>
               </div>
+
+              {/* Toast when code is restored from submission history */}
+              {loadedMsg && (
+                <div className="bg-emerald-950/80 border-b border-emerald-500/40 text-emerald-300 text-xs px-4 py-1.5 flex items-center justify-between animate-fade-in shrink-0">
+                  <span className="flex items-center gap-1.5 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> {loadedMsg}
+                  </span>
+                  <button onClick={() => setLoadedMsg(null)} className="text-slate-400 hover:text-white text-xs">✕</button>
+                </div>
+              )}
 
               {/* Monaco Editor Canvas */}
               <div className="flex-1 relative overflow-hidden">
@@ -554,11 +664,11 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
             </div>
           )}
 
-          {/* BOTTOM DRAWER: Test Results, Output, Custom Input, AI Mentor */}
+          {/* BOTTOM DRAWER: Test Results, Output, Custom Input, Submissions History, AI Mentor */}
           <div className="h-64 border-t border-slate-800 bg-slate-900/90 flex flex-col shrink-0">
             {/* Drawer Tabs & Action Buttons */}
             <div className="flex items-center justify-between px-4 py-2 border-b border-slate-800 shrink-0">
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 overflow-x-auto">
                 <button
                   onClick={() => setActiveTab('tests')}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition ${
@@ -597,6 +707,22 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
                   }`}
                 >
                   Custom Input
+                </button>
+
+                <button
+                  onClick={() => setActiveTab('history')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition ${
+                    activeTab === 'history'
+                      ? 'bg-slate-800 text-white shadow-sm'
+                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
+                  }`}
+                >
+                  <History className="w-3.5 h-3.5" /> Submissions
+                  {submissions.length > 0 && (
+                    <span className="text-[10px] px-1.5 py-0.2 rounded-full font-bold bg-slate-700 text-slate-300">
+                      {submissions.length}
+                    </span>
+                  )}
                 </button>
 
                 <button
@@ -700,7 +826,7 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
                               </div>
                             ) : (
                               <div className="text-slate-400 text-[11px] pt-1 italic">
-                                Hidden interview evaluation case. {tc.passed ? 'Output matched.' : 'Output did not match.'}
+                                Hidden interview evaluation case. {tc.passed ? 'Output matched.' : (tc.error || 'Output did not match.')}
                               </div>
                             )}
                           </div>
@@ -746,16 +872,98 @@ export const CodeWorkspace: React.FC<CodeWorkspaceProps> = ({
               )}
 
               {activeTab === 'customInput' && (
-                <div className="space-y-2">
-                  <span className="text-slate-400 font-sans text-xs">
-                    Standard input (stdin) passed to your program:
-                  </span>
+                <div className="space-y-3 font-sans">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-400 text-xs">
+                      Standard input (stdin) passed to your program:
+                    </span>
+                    {question.examples?.[0]?.input && (
+                      <button
+                        onClick={() => setCustomInput(question.examples[0].input)}
+                        className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
+                      >
+                        Insert Example 1 Input
+                      </button>
+                    )}
+                  </div>
                   <textarea
                     value={customInput}
                     onChange={(e) => setCustomInput(e.target.value)}
                     placeholder="Enter custom input lines here..."
                     className="w-full h-24 p-3 bg-slate-900 border border-slate-800 rounded-lg text-slate-200 font-mono text-xs focus:outline-none focus:border-indigo-500 resize-none"
                   />
+                  <div className="text-[11px] text-slate-500 font-mono">
+                    Hint: Use Python's <code className="text-indigo-400">input()</code> or <code className="text-indigo-400">sys.stdin.read()</code> to read this stream.
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'history' && (
+                <div className="space-y-3 font-sans">
+                  {submissions.length === 0 ? (
+                    <div className="text-slate-500 flex flex-col items-center justify-center h-32 space-y-2">
+                      <History className="w-6 h-6 text-slate-600" />
+                      <span>No submissions recorded yet for this question.</span>
+                      <span className="text-xs text-slate-600">Submit your solution to track your progress and accuracy!</span>
+                    </div>
+                  ) : (
+                    <div className="space-y-2">
+                      <div className="text-xs font-semibold text-slate-400 flex items-center justify-between">
+                        <span>Past Submissions ({submissions.length})</span>
+                        <span className="text-[11px] text-slate-500">Click "Load Code" to restore any past submission</span>
+                      </div>
+                      <div className="space-y-2">
+                        {submissions.map((sub, idx) => {
+                          const isAcc = sub.status === 'Accepted';
+                          const isTle = sub.status === 'Time Limit Exceeded';
+                          const isErr = sub.status === 'Runtime Error';
+                          const badgeColor = isAcc
+                            ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
+                            : isTle
+                            ? 'bg-amber-500/20 text-amber-400 border-amber-500/30'
+                            : isErr
+                            ? 'bg-purple-500/20 text-purple-400 border-purple-500/30'
+                            : 'bg-rose-500/20 text-rose-400 border-rose-500/30';
+
+                          const dateFormatted = new Date(sub.timestamp).toLocaleString();
+
+                          return (
+                            <div
+                              key={sub.id || idx}
+                              className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between gap-4 text-xs font-mono hover:border-slate-700 transition"
+                            >
+                              <div className="flex items-center gap-3">
+                                <span className={`px-2.5 py-0.5 rounded-full border text-[11px] font-bold font-sans flex items-center gap-1.5 ${badgeColor}`}>
+                                  {isAcc ? <CheckCircle2 className="w-3.5 h-3.5" /> : isTle ? <Clock className="w-3.5 h-3.5" /> : <AlertCircle className="w-3.5 h-3.5" />}
+                                  {sub.status}
+                                </span>
+                                <span className="text-slate-400 font-sans">
+                                  {sub.passedTests} / {sub.totalTests} tests passed
+                                </span>
+                                <span className="text-slate-500">
+                                  • {sub.executionTimeMs}ms
+                                </span>
+                              </div>
+
+                              <div className="flex items-center gap-3 font-sans">
+                                <span className="text-[11px] text-slate-500">
+                                  {dateFormatted}
+                                </span>
+                                <button
+                                  onClick={() => handleLoadSubmissionCode(sub.code, sub.timestamp)}
+                                  className="px-2.5 py-1 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30 text-xs font-semibold flex items-center gap-1 transition"
+                                  title="Load this submission's code into Monaco Editor"
+                                >
+                                  <RotateCcw className="w-3 h-3" />
+                                  <span>Load Code</span>
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
 
